@@ -1,6 +1,6 @@
-# Simple Steam UI
+# Simply Steam UI
 
-Clean and simple Steam Store redesign.  
+Clean and simply Steam Store redesign.  
   
 ![](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/header.jpg)  
 ![](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/wishlist.jpg)  
