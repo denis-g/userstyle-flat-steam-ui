@@ -2,7 +2,7 @@
 
 ## v1.3
 * **wishlist page**
-- sotring restyle
+- sorting restyle
 * **squared**
 - add new elements
 
