@@ -1,5 +1,11 @@
 # Change Log
 
+## v1.3
+* **wishlist page**
+- sotring restyle
+* **squared**
+- add new elements
+
 ## v1.2
 * **main menu**
 - centered and hovered items
