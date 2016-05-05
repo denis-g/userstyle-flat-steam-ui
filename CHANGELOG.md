@@ -1,5 +1,11 @@
 # Change Log
 
+## v1.4
+* **search**
+- fix boxes
+* **squared**
+- add new elements
+
 ## v1.3
 * **wishlist page**
 - sorting restyle
