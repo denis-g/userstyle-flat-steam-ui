@@ -10,310 +10,334 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @-moz-document domain('store.steampowered.com'), domain('steamcommunity.com') {
 
-/*************
-    HEADER
-**************/
-/* fixed position */
-html body {
-	padding-top: 48px; /* menu height */
+	/*************
+	    HEADER
+	**************/
+	/* fixed position */
+	
+	html body {
+	    padding-top: 48px;
+	    /* menu height */
 	}
-html body div#global_header {
-	border: none;
-	position: fixed!important;
-	left: 0;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-	background: rgba(23, 26, 33, 0.9);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+	html body div#global_header {
+	    border: none;
+	    position: fixed!important;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    z-index: 1000;
+	    background: rgba(23, 26, 33, 0.9);
+	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
 	}
 	/* redesign main menu */
+	
 	html body div#global_header .content {
-		height: 48px;
-		background: none;
-		}
-		html body div#global_header div.logo {
-			padding-top: 8px;
-			width: auto;
-			height: auto;
-			}
-			html body div#global_header div.logo img {
-				width: auto;
-				height: 34px;
-				}
-		html body div#global_header .menuitem {
-			width: 180px;
-			text-align: center;
-			padding: 0;
-			line-height: 48px;
-			border-right: 1px solid rgba(255, 255, 255, 0.1);
-			}
-		html body div#global_header .menuitem:first-child {
-			border-left: 1px solid rgba(255, 255, 255, 0.1);
-			}
-		html body div#global_header .menuitem:hover {
-			color: #000;
-			background: #ccc;
-			}
-			html body div#global_header .submenuitem {
-				padding: 10px 14px;
-				text-align: center;
-				}
-			html body div#global_header .submenuitem:not(:last-child) {
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-				}
-			html body div#global_header .submenuitem:hover {
-				color: #000;
-				background: #ccc;
-				}
-			html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"] {
-				color: #00b043;
-				font-weight: bold;
-				}
-			html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"]:hover {
-				color: #fff;
-				background: #00b043;
-				}
-		html body div#global_header .supernav_content {
-			padding: 0;
-			width: 182px;
-			max-width: none;
-			margin: 3px 0 0 0;
-			}
-		html body div#global_header div[data-submenuid] {
-			width: 100%;
-			max-width: none;
-			}
-		/* fix price in userbar */
-		html body div#global_actions a.global_action_link {
-			white-space: nowrap;
-			}
-
-
-/***************
-    HOMEPAGE
-****************/
-/* store menu design fix */
-html body .store_nav .tab {
-	border-right: 1px solid rgba(0, 0, 0, 0.3);
+	    height: 48px;
+	    background: none;
 	}
-html body div#store_search {
-	border-left: 1px solid rgba(0, 0, 0, 0.3);
+	html body div#global_header div.logo {
+	    padding-top: 8px;
+	    width: auto;
+	    height: auto;
+	    left: -200px;
+	    position: absolute;
 	}
-
-
-/***************
-    WISHLIST
-****************/
-/* sort options stylish */
-html body #wishlist_sort_options.sort_options a,
-html body #wishlist_sort_options.sort_options .selected_sort {
-	font-size: 11px;
-	display: inline-block;
-	vertical-align: middle;
-	padding: 6px 8px;
-	color: #407898;
-	text-decoration: none;
+	
+	html body progress#es_progress{
+	    display: inline-block;
+	    position: absolute;
+	    top: -25px;
+	    right: 150px;   
 	}
-html body #wishlist_sort_options.sort_options a:hover {
-	color: #fff;
+	
+	html body div.responsive_page_content {
+	    padding-top: 35px;
 	}
-html body #wishlist_sort_options.sort_options .selected_sort {
-	color: #67c1f5;
-	background: #18222e;
+	
+	html body div#global_header div.logo img {
+	    width: auto;
+	    height: 34px;
 	}
-/* usability fix */
-html body #wishlist_items input.wishlist_rank {
-	font-size: 11px;
+	html body div#global_header .menuitem {
+	    width: 180px;
+	    text-align: center;
+	    padding: 0;
+	    line-height: 48px;
+	    border-right: 1px solid rgba(255, 255, 255, 0.1);
 	}
-html body #wishlist_items .price,
-html body #wishlist_items .discount_block_inline {
-	font-size: 16px;
+	html body div#global_header .menuitem:first-child {
+	    border-left: 1px solid rgba(255, 255, 255, 0.1);
 	}
-html body #wishlist_items .price {
-	color: #eee;
+	html body div#global_header .menuitem:hover {
+	    color: #000;
+	    background: #ccc;
 	}
-
-
-/*************
-    BADGES
-**************/
-html body .profile_xp_block_remaining_bar_progress {
-	background: #ccc;
+	html body div#global_header .submenuitem {
+	    padding: 10px 14px;
+	    text-align: center;
 	}
-
-
-/*************
-    REMOVE
-**************/
-/* remove "Install Steam" button */
-html body .header_installsteam_btn,
-/* remove duplicate links from main menu */
-html body div#global_header .menuitem[href="https://help.steampowered.com/"],
-html body div#global_header .menuitem[href="http://store.steampowered.com/about/"],
-html body div#global_header .submenuitem[href="http://store.steampowered.com/"],
-html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
-	display: none;
+	html body div#global_header .submenuitem:not(:last-child) {
+	    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
-
-
-/**************
-    SQUARED
-***************/
-/* all box */
-html body .home_page_gutter_block,
-html body .profile_xp_block,
-html body .badge_row,
-html body .badge_row_inner,
-html body .gamecard_details .badge_info,
-html body .game_info_badge_border,
-html body .profile_customization,
-html body .recent_game,
-html body .recent_game .game_info_stats,
-html body .favoritegame_showcase .game_info_stats,
-html body .showcase_content_bg,
-html body .game_purchase_action_bg,
-html body #package_savings_bar,
-html body .authcode_entry_box,
-html body .twofactorauthcode_entry_box,
-html body .completed_badge_animation_ctn,
-html body .completed_badge_ctn,
-html body .completed_badge_inner,
-html body .badge_reward_ctn,
-html body .badge_reward,
-html body .alertbox_content,
-html body .warningPanel,
-html body .warningSign,
-html body #rightContents .box,
-html body .miniReviewBlock,
-html body blockquote.bb_blockquote,
-html body .bb_wysiwyg blockquote,
-html body .commentthread_entry_quotebox,
-html body .member_block .rank_icon,
-html body .miniprofile_content,
-html body .miniprofile_favorite_badge,
-html body .community_home_search_apps,
-html body .community_home_search_players,
-html body a.linkbar_active,
-html body .community_tooltip,
-html body #BG_top > .user_info,
-/* all tabs */
-html body .home_tab,
-html body .home_tab .tab_content,
-html body .apphub_sectionTab,
-html body a.apphub_sectionTab,
-html body .apphub_sectionTab.active > span,
-html body .games_list_tabs,
-html body .games_list_tab.first_tab,
-html body a.games_list_tab.first_tab,
-html body .games_list_tab.fourth_tab,
-html body a.games_list_tab.fourth_tab,
-html body .sectionTab,
-html body a.sectionTab,
-html body .tabarea .tab,
-html body .tabarea .tab .tab_content,
-html body .group_tab,
-html body .tabCount,
-html body .tabOff,
-html body .tabOn,
-/* all progress bars */
-html body .achievement_progress_bar_ctn,
-html body .achievement_progress_bar_ctn .progress_bar,
-html body .profile_xp_block_remaining_bar,
-html body .profile_xp_block_remaining_bar_progress,
-/* all buttons */
-html body div.store_header_btn,
-html body .home_btn,
-html body .btn_grey_grey,
-html body .btn_grey_grey > span,
-html body .btn_grey_black,
-html body .btn_grey_black > span,
-html body .btn_black,
-html body .btn_black > span,
-html body .btnv6_grey_black,
-html body .btnv6_grey_black > span,
-html body .btnv6_blue_hoverfade,
-html body .btnv6_blue_hoverfade > span,
-html body .btnv6_green_white_innerfade,
-html body .btnv6_green_white_innerfade > span,
-html body .btnv6_blue_blue_innerfade,
-html body .btnv6_blue_blue_innerfade > span,
-html body .btn_blue_white_innerfade,
-html body .btn_blue_white_innerfade > span,
-html body .btn_darkblue_white_innerfade,
-html body .btn_darkblue_white_innerfade > span,
-html body .btn_green_white_innerfade,
-html body .btn_green_white_innerfade > span,
-html body .btn_grey_white_innerfade,
-html body .btn_grey_white_innerfade > span,
-html body .btn_grey_grey_outer_bevel,
-html body .btn_grey_grey_outer_bevel > span,
-html body .btn_medium,
-html body .btn_medium > span,
-html body .modal_buttons .auth_button,
-html body #ScreenshotUploadLink,
-html body #VideoUploadLink,
-html body .pullup_item,
-html body .general_btn,
-html body #ScreenshotManagementToggle,
-html body .modalFullItemLink,
-html body .ScreenshotManagementButton,
-html body .BroadcastButton,
-html body .hover_details_block,
-html body .hover_details_block_full,
-/* all inputs */
-html body input[type="text"],
-html body input[type="password"],
-html body select,
-html body textarea,
-html body .dselect_container a.trigger,
-html body .dselect_container a.activetrigger,
-html body #term,
-html body input.gray_bevel,
-html body textarea.gray_bevel,
-html body .gray_bevel,
-html body .commentthread_comment_edit_textarea_ctn,
-html body .blotter_status_entry .commentthread_entry_quotebox,
-html body .blotter_comment_thread .commentthread_entry_quotebox,
-html body .profileFriendSearchBox,
-html body div#headerSearch.friend_activity_header_search,
-html body div.filterselect,
-/* popups */
-html body .newmodal_header_border,
-html body .newmodal_header,
-html body #modalContent.modal_frame,
-/* other elements */
-html body .app_tag,
-html body .slider,
-html body .slider_ctn .slider_left,
-html body .slider_ctn .slider_right,
-html body .slider .handle,
-html body .pagebtn,
-html body a.pagebtn {
-	border-radius: 0 !important;
+	html body div#global_header .submenuitem:hover {
+	    color: #000;
+	    background: #ccc;
 	}
-
-/* fix square box background (without bg image) */
-html body .searchbox {
+	html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"] {
+	    color: #00b043;
+	    font-weight: bold;
 	}
-html body .alertbox_header {
-	background: #5c7e10;
+	html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"]:hover {
+	    color: #fff;
+	    background: #00b043;
 	}
-html body .apphub_BackToTopButton.leftcap,
-html body .apphub_BackToTopButton.rightcap {
-	display: none;
+	
+	html body div#global_header .supernav_container {
+	 	left: 0;   
 	}
-html body .alertbox_header .leftcap,
-html body .alertbox_header .rightcap {
-	display: none;
+	
+	html body div#global_header .supernav_content {
+	    padding: 0;
+	    width: 182px;
+	    max-width: none;
+	    margin: 3px 0 0 0;
 	}
-html body .item_market_action_button_left,
-html body .item_market_action_button_right {
-	display: none;
+	html body div#global_header div[data-submenuid] {
+	    width: 100%;
+	    max-width: none;
 	}
-html body .profile_customization {
-	background: #2D3C51;
-	box-shadow: inset -400px 20px 100px rgba(0, 0, 0, 0.5);
+	/* fix price in userbar */
+	
+	html body div#global_actions a.global_action_link {
+	    white-space: nowrap;
 	}
-
+	/***************
+	    HOMEPAGE
+	****************/
+	/* store menu design fix */
+	
+	html body .store_nav .tab {
+	    border-right: 1px solid rgba(0, 0, 0, 0.3);
+	}
+	html body div#store_search {
+	    border-left: 1px solid rgba(0, 0, 0, 0.3);
+	}
+	/***************
+	    WISHLIST
+	****************/
+	/* sort options stylish */
+	
+	html body #wishlist_sort_options.sort_options a,
+	html body #wishlist_sort_options.sort_options .selected_sort {
+	    font-size: 11px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    padding: 6px 8px;
+	    color: #407898;
+	    text-decoration: none;
+	}
+	html body #wishlist_sort_options.sort_options a:hover {
+	    color: #fff;
+	}
+	html body #wishlist_sort_options.sort_options .selected_sort {
+	    color: #67c1f5;
+	    background: #18222e;
+	}
+	/* usability fix */
+	
+	html body #wishlist_items input.wishlist_rank {
+	    font-size: 11px;
+	}
+	html body #wishlist_items .price,
+	html body #wishlist_items .discount_block_inline {
+	    font-size: 16px;
+	}
+	html body #wishlist_items .price {
+	    color: #eee;
+	}
+	/*************
+	    BADGES
+	**************/
+	
+	html body .profile_xp_block_remaining_bar_progress {
+	    background: #ccc;
+	}
+	/*************
+	    REMOVE
+	**************/
+	/* remove "Install Steam" button */
+	
+	html body .header_installsteam_btn,
+	/* remove duplicate links from main menu */
+	
+	html body div#global_header .menuitem[href="https://help.steampowered.com/"],
+	html body div#global_header .menuitem[href="http://store.steampowered.com/about/"],
+	html body div#global_header .submenuitem[href="http://store.steampowered.com/"],
+	html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
+	    display: none;
+	}
+	/**************
+	    SQUARED
+	***************/
+	/* all box */
+	
+	html body .home_page_gutter_block,
+	html body .profile_xp_block,
+	html body .badge_row,
+	html body .badge_row_inner,
+	html body .gamecard_details .badge_info,
+	html body .game_info_badge_border,
+	html body .profile_customization,
+	html body .recent_game,
+	html body .recent_game .game_info_stats,
+	html body .favoritegame_showcase .game_info_stats,
+	html body .showcase_content_bg,
+	html body .game_purchase_action_bg,
+	html body #package_savings_bar,
+	html body .authcode_entry_box,
+	html body .twofactorauthcode_entry_box,
+	html body .completed_badge_animation_ctn,
+	html body .completed_badge_ctn,
+	html body .completed_badge_inner,
+	html body .badge_reward_ctn,
+	html body .badge_reward,
+	html body .alertbox_content,
+	html body .warningPanel,
+	html body .warningSign,
+	html body #rightContents .box,
+	html body .miniReviewBlock,
+	html body blockquote.bb_blockquote,
+	html body .bb_wysiwyg blockquote,
+	html body .commentthread_entry_quotebox,
+	html body .member_block .rank_icon,
+	html body .miniprofile_content,
+	html body .miniprofile_favorite_badge,
+	html body .community_home_search_apps,
+	html body .community_home_search_players,
+	html body a.linkbar_active,
+	html body .community_tooltip,
+	html body #BG_top > .user_info,
+	/* all tabs */
+	
+	html body .home_tab,
+	html body .home_tab .tab_content,
+	html body .apphub_sectionTab,
+	html body a.apphub_sectionTab,
+	html body .apphub_sectionTab.active > span,
+	html body .games_list_tabs,
+	html body .games_list_tab.first_tab,
+	html body a.games_list_tab.first_tab,
+	html body .games_list_tab.fourth_tab,
+	html body a.games_list_tab.fourth_tab,
+	html body .sectionTab,
+	html body a.sectionTab,
+	html body .tabarea .tab,
+	html body .tabarea .tab .tab_content,
+	html body .group_tab,
+	html body .tabCount,
+	html body .tabOff,
+	html body .tabOn,
+	/* all progress bars */
+	
+	html body .achievement_progress_bar_ctn,
+	html body .achievement_progress_bar_ctn .progress_bar,
+	html body .profile_xp_block_remaining_bar,
+	html body .profile_xp_block_remaining_bar_progress,
+	/* all buttons */
+	
+	html body div.store_header_btn,
+	html body .home_btn,
+	html body .btn_grey_grey,
+	html body .btn_grey_grey > span,
+	html body .btn_grey_black,
+	html body .btn_grey_black > span,
+	html body .btn_black,
+	html body .btn_black > span,
+	html body .btnv6_grey_black,
+	html body .btnv6_grey_black > span,
+	html body .btnv6_blue_hoverfade,
+	html body .btnv6_blue_hoverfade > span,
+	html body .btnv6_green_white_innerfade,
+	html body .btnv6_green_white_innerfade > span,
+	html body .btnv6_blue_blue_innerfade,
+	html body .btnv6_blue_blue_innerfade > span,
+	html body .btn_blue_white_innerfade,
+	html body .btn_blue_white_innerfade > span,
+	html body .btn_darkblue_white_innerfade,
+	html body .btn_darkblue_white_innerfade > span,
+	html body .btn_green_white_innerfade,
+	html body .btn_green_white_innerfade > span,
+	html body .btn_grey_white_innerfade,
+	html body .btn_grey_white_innerfade > span,
+	html body .btn_grey_grey_outer_bevel,
+	html body .btn_grey_grey_outer_bevel > span,
+	html body .btn_medium,
+	html body .btn_medium > span,
+	html body .modal_buttons .auth_button,
+	html body #ScreenshotUploadLink,
+	html body #VideoUploadLink,
+	html body .pullup_item,
+	html body .general_btn,
+	html body #ScreenshotManagementToggle,
+	html body .modalFullItemLink,
+	html body .ScreenshotManagementButton,
+	html body .BroadcastButton,
+	html body .hover_details_block,
+	html body .hover_details_block_full,
+	/* all inputs */
+	
+	html body input[type="text"],
+	html body input[type="password"],
+	html body select,
+	html body textarea,
+	html body .dselect_container a.trigger,
+	html body .dselect_container a.activetrigger,
+	html body #term,
+	html body input.gray_bevel,
+	html body textarea.gray_bevel,
+	html body .gray_bevel,
+	html body .commentthread_comment_edit_textarea_ctn,
+	html body .blotter_status_entry .commentthread_entry_quotebox,
+	html body .blotter_comment_thread .commentthread_entry_quotebox,
+	html body .profileFriendSearchBox,
+	html body div#headerSearch.friend_activity_header_search,
+	html body div.filterselect,
+	/* popups */
+	
+	html body .newmodal_header_border,
+	html body .newmodal_header,
+	html body #modalContent.modal_frame,
+	/* other elements */
+	
+	html body .app_tag,
+	html body .slider,
+	html body .slider_ctn .slider_left,
+	html body .slider_ctn .slider_right,
+	html body .slider .handle,
+	html body .pagebtn,
+	html body a.pagebtn {
+	    border-radius: 0 !important;
+	}
+	/* fix square box background (without bg image) */
+	
+	html body .searchbox {}
+	html body .alertbox_header {
+	    background: #5c7e10;
+	}
+	html body .apphub_BackToTopButton.leftcap,
+	html body .apphub_BackToTopButton.rightcap {
+	    display: none;
+	}
+	html body .alertbox_header .leftcap,
+	html body .alertbox_header .rightcap {
+	    display: none;
+	}
+	html body .item_market_action_button_left,
+	html body .item_market_action_button_right {
+	    display: none;
+	}
+	html body .profile_customization {
+	    background: #2D3C51;
+	    box-shadow: inset -400px 20px 100px rgba(0, 0, 0, 0.5);
+	}
 }
