@@ -50,10 +50,6 @@
 	    right: 150px;   
 	}
 	
-	html body div.responsive_page_content {
-	    padding-top: 35px;
-	}
-	
 	html body div#global_header div.logo img {
 	    width: auto;
 	    height: 34px;
