@@ -98,17 +98,17 @@ html body div#global_header {
 			margin: 1px; /* revert to default */
 			border: none;
 			}
-		html body .popup_block_new {
+		html body div#global_action_menu .popup_block_new {
 			box-shadow: none;
 			}
-			html body .popup_block_new .popup_body {
+			html body div#global_action_menu .popup_block_new .popup_body {
 				border: none;
 				background: rgba(23, 26, 33, 0.9);
 				}
-				html body .popup_menu .hr {
+				html body div#global_action_menu .popup_menu .hr {
 					display: none;
 					}
-				html body .popup_menu .popup_menu_item {
+				html body div#global_action_menu .popup_menu .popup_menu_item {
 					color: #8F98A0;
 					font-size: 12px;
 					font-weight: normal;
@@ -117,27 +117,27 @@ html body div#global_header {
 					text-align: center;
 					text-transform: uppercase;
 					}
-				html body .popup_menu .popup_menu_item:hover {
+				html body div#global_action_menu .popup_menu .popup_menu_item:hover {
 					color: #000;
 					background: #ccc;
 					}
-				html body .popup_menu .popup_menu_item:not(:last-child) {
+				html body div#global_action_menu .popup_menu .popup_menu_item:not(:last-child) {
 					border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 					}
-				html body .popup_menu .popup_menu_item[href="javascript:Logout();"] {
+				html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"] {
 					color: #b03500;
 					font-weight: bold;
 					}
-				html body .popup_menu .popup_menu_item[href="javascript:Logout();"]:hover {
+				html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"]:hover {
 					color: #fff;
 					background: #b03500;
 					}
 				/* remove asian lang's */
-				html body .popup_menu .popup_menu_item[href="?l=japanese"],
-				html body .popup_menu .popup_menu_item[href="?l=koreana"],
-				html body .popup_menu .popup_menu_item[href="?l=schinese"],
-				html body .popup_menu .popup_menu_item[href="?l=tchinese"],
-				html body .popup_menu .popup_menu_item[href="?l=thai"] {
+				html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=japanese"],
+				html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=koreana"],
+				html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=schinese"],
+				html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=tchinese"],
+				html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=thai"] {
 					display: none;
 					}
 
