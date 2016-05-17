@@ -1,8 +1,16 @@
 # Change Log
 
+## v1.5
+* **global**
+- Enhanced Steam support (http://enhancedsteam.com)
+- more squared
+* **user dropdown menu**
+- redesign
+- remove asian languages (uncomment if you needed)
+* **progress bars**
+- styling for achievements progress
+
 ## v1.4
-* **search**
-- fix boxes
 * **squared**
 - add new elements
 
