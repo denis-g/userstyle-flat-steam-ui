@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.5.1
+* **global**
+- fix styles in Safari
+
 ## v1.5
 * **global**
 - Enhanced Steam support (http://enhancedsteam.com)
