@@ -1,7 +1,7 @@
 # Simply Steam UI
 
-Clean and simply store and community redesign. More square and geometry-focused
-design.  
+Clean and simply Steam store and community redesign. More square
+and geometry-focused design.  
 *With [Enhanced Steam](http://enhancedsteam.com) support.*
 
 ![](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/header.jpg)
@@ -12,5 +12,6 @@ design.
 from userstyles.org site and enjoy!
 
 Or install the Stylish extension for your browser (Chrome, Firefox, Opera,
-Safari, etc), then add css file as a new Style. Make sure it applies to
-the domain `store.steampowered.com` and `steamcommunity.com`.
+Safari, etc), then add css file (from `---BEGIN---` to `---END---`) as
+a new Style. Make sure it applies to the domain **`store.steampowered.com`**
+and **`steamcommunity.com`**.

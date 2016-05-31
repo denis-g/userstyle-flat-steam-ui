@@ -1,5 +1,15 @@
 # Change Log
 
+## v1.6
+* **global**
+- change logo
+- sorting style
+- enhanced steam fixes
+- squared... again
+* **user dropdown menu**
+- notification popup
+- languages popup
+
 ## v1.5.1
 * **global**
 - fix styles in Safari

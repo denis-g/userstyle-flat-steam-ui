@@ -1,7 +1,7 @@
 /**
  * Simply Steam UI
  * Created by Denis G.
- * Last update: 2016-27-05
+ * Last update: 2016-31-05
  *
  * Use Github for submit your request or issues.
  * https://github.com/denis-g/userstyle-simply-steam-ui
@@ -9,6 +9,7 @@
 
 @namespace url('http://www.w3.org/1999/xhtml');
 @-moz-document domain('store.steampowered.com'), domain('steamcommunity.com') {
+/* ---BEGIN--- */
 
 /*************
     HEADER
@@ -33,61 +34,75 @@ html body div#global_header {
 		background: none;
 		}
 		html body div#global_header div.logo {
-			padding-top: 8px;
+			padding: 0;
+			margin: 0;
 			width: auto;
 			height: auto;
 			}
+			html body div#global_header div.logo a {
+				display: block;
+				width: 140px;
+				height: 48px;
+				background: url(//store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png) no-repeat 0 50%;
+				background-size: auto 34px;
+				opacity: 0.8;
+				}
+			html body div#global_header div.logo a:hover {
+				opacity: 1;
+				}
 			html body div#global_header div.logo img {
-				width: auto;
-				height: 34px;
+				display: none;
 				}
-		html body div#global_header .menuitem {
-			width: 180px;
-			text-align: center;
-			padding: 0;
-			line-height: 48px;
-			border-right: 1px solid rgba(255, 255, 255, 0.1);
+		html body div#global_header .supernav_container{
+			left: 190px;
 			}
-		html body div#global_header .menuitem:first-child {
-			border-left: 1px solid rgba(255, 255, 255, 0.1);
-			}
-		html body div#global_header .menuitem:hover {
-			color: #000;
-			background: #ccc;
-			}
-			html body div#global_header .submenuitem {
-				color: #8F98A0;
-				font-size: 12px;
-				font-weight: normal;;
-				line-height: 1.1;
-				padding: 10px 14px;
+			html body div#global_header .menuitem {
+				width: 180px;
 				text-align: center;
+				padding: 0;
+				line-height: 48px;
+				border-right: 1px solid rgba(255, 255, 255, 0.1);
 				}
-			html body div#global_header .submenuitem:not(:last-child) {
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			html body div#global_header .menuitem:first-child {
+				border-left: 1px solid rgba(255, 255, 255, 0.1);
 				}
-			html body div#global_header .submenuitem:hover {
+			html body div#global_header .menuitem:hover {
 				color: #000;
 				background: #ccc;
 				}
-			html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"] {
-				color: #00b043;
-				font-weight: bold;
+				html body div#global_header .submenuitem {
+					color: #8F98A0;
+					font-size: 12px;
+					font-weight: normal;;
+					line-height: 1.1;
+					padding: 10px 14px;
+					text-align: center;
+					}
+				html body div#global_header .submenuitem:not(:last-child) {
+					border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+					}
+				html body div#global_header .submenuitem:hover {
+					color: #000;
+					background: #ccc;
+					}
+				html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"] {
+					color: #00b043;
+					font-weight: bold;
+					}
+				html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"]:hover {
+					color: #fff;
+					background: #00b043;
+					}
+			html body div#global_header .supernav_content {
+				padding: 0;
+				width: 182px;
+				max-width: none;
+				margin: 3px 0 0 0;
 				}
-			html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"]:hover {
-				color: #fff;
-				background: #00b043;
+			html body div#global_header div[data-submenuid] {
+				width: 100%;
+				max-width: none;
 				}
-		html body div#global_header .supernav_content {
-			padding: 0;
-			width: 182px;
-			max-width: none;
-			margin: 3px 0 0 0;
-			}
-		html body div#global_header div[data-submenuid] {
-			width: 100%;
-			max-width: none;
-			}
 		/* fix price in userbar */
 		html body div#global_actions a.global_action_link {
 			white-space: nowrap;
@@ -104,8 +119,10 @@ html body div#global_header {
 			html body div#global_action_menu .popup_block_new .popup_body {
 				border: none;
 				background: rgba(23, 26, 33, 0.9);
+				padding: 0;
 				}
-				html body div#global_action_menu .popup_menu .hr {
+				html body div#global_action_menu .popup_menu .hr,
+				html body div#global_action_menu .popup_menu .header_notification_dropdown_seperator {
 					display: none;
 					}
 				html body div#global_action_menu .popup_menu .popup_menu_item {
@@ -132,6 +149,26 @@ html body div#global_header {
 					color: #fff;
 					background: #b03500;
 					}
+			/* specially for notifications */
+			html body div#global_action_menu .popup_block_new#header_notification_dropdown {
+				}
+				html body div#global_action_menu .popup_block_new#header_notification_dropdown .notification_icon {
+					float: left;
+					}
+				html body div#global_action_menu .popup_block_new#header_notification_dropdown .notification_count {
+					font-weight: bold;
+					}
+				html body div#global_action_menu .popup_block_new#header_notification_dropdown .popup_menu_item {
+					text-align: left;
+					}
+			/* fixed height */
+			html body div#global_action_menu .popup_block_new#language_dropdown {
+				}
+				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body {
+					max-height: 260px;
+					overflow-y: auto;
+					-webkit-overflow-scrolling: touch;
+					}
 
 
 /***************
@@ -144,28 +181,16 @@ html body .store_nav .tab {
 html body div#store_search {
 	border-left: 1px solid rgba(0, 0, 0, 0.3);
 	}
+html body a.home_smallcap,
+html body .curated_app_item,
+html body .game_description_column .block .block_content a {
+	border-color: rgba(0,0,0,0.5);
+	}
 
 
 /***************
     WISHLIST
 ****************/
-/* sort options stylish */
-html body #wishlist_sort_options.sort_options a,
-html body #wishlist_sort_options.sort_options .selected_sort {
-	font-size: 11px;
-	display: inline-block;
-	vertical-align: middle;
-	padding: 6px 8px;
-	color: #407898;
-	text-decoration: none;
-	}
-html body #wishlist_sort_options.sort_options a:hover {
-	color: #fff;
-	}
-html body #wishlist_sort_options.sort_options .selected_sort {
-	color: #67c1f5;
-	background: #18222e;
-	}
 /* usability fix */
 html body #wishlist_items input.wishlist_rank {
 	font-size: 11px;
@@ -179,17 +204,53 @@ html body #wishlist_items .price {
 	}
 
 
-/*************
-    BADGES
-**************/
-html body .profile_xp_block_remaining_bar_progress {
-	background: #ccc;
+/***************
+    IMAGES
+****************/
+/* usability fix */
+html body .sharedfiles_usercontrols_label {
+	vertical-align: middle;
+	}
+
+
+/***************
+    SORTING
+****************/
+html body .sort_options a,
+html body .sort_options .selected_sort,
+html body #friends_sort_options span {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 6px 8px;
+	margin: 0;
+	font-size: 11px;
+	line-height: 1.2;
+	color: #407898;
+	text-decoration: none;
+	}
+html body #friends_sort_options span {
+	margin-left: 0.75em;
+	}
+html body .sort_options a:hover,
+html body #friends_sort_options span:hover {
+	color: #fff;
+	}
+html body .sort_options .selected_sort,
+html body #friends_sort_options span:not(.es_friends_sort_link) {
+	color: #67c1f5;
+	background: #18222e;
+	text-decoration: none;
 	}
 
 
 /*************
-    PROFILE
+    BADGES
 **************/
+/* in badges page */
+html body .profile_xp_block_remaining_bar_progress {
+	background: #ccc;
+	}
+/* in profile page */
 html body .achievement_progress_bar_ctn {
 	border: none;
 	box-shadow: none;
@@ -214,13 +275,7 @@ html body .header_installsteam_btn,
 html body div#global_header .menuitem[href^="https://help.steampowered.com/"],
 html body div#global_header .menuitem[href="http://store.steampowered.com/about/"],
 html body div#global_header .submenuitem[href="http://store.steampowered.com/"],
-html body div#global_header .submenuitem[href="http://steamcommunity.com/"],
-/* asian languages */
-html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=japanese"],
-html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=koreana"],
-html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=schinese"],
-html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=tchinese"],
-html body div#global_action_menu .popup_menu .popup_menu_item[href="?l=thai"] {
+html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
 	display: none;
 	}
 
@@ -289,6 +344,7 @@ html body .achievement_progress_bar_ctn,
 html body .achievement_progress_bar_ctn .progress_bar,
 html body .profile_xp_block_remaining_bar,
 html body .profile_xp_block_remaining_bar_progress,
+html body .apphub_ProgressBarBG,
 /* all buttons */
 html body div.store_header_btn,
 html body .home_btn,
@@ -346,6 +402,7 @@ html body .blotter_comment_thread .commentthread_entry_quotebox,
 html body .profileFriendSearchBox,
 html body div#headerSearch.friend_activity_header_search,
 html body div.filterselect,
+html body .review_controls .controlblock .dselect_container,
 /* popups */
 html body .newmodal_header_border,
 html body .newmodal_header,
@@ -369,7 +426,7 @@ html body .profile_customization {
 	background: #2D3C51;
 	box-shadow: inset -400px 20px 100px rgba(0, 0, 0, 0.5);
 	}
-/* remove buttons backgrounds */
+/* remove buttons background */
 html body .apphub_BackToTopButton.leftcap,
 html body .apphub_BackToTopButton.rightcap,
 html body .alertbox_header .leftcap,
@@ -379,7 +436,10 @@ html body .item_market_action_button_right {
 	display: none;
 	}
 
-/* enhancedsteam support */
+
+/*************
+ ENHANCEDSTEAM
+**************/
 html body .blotter_author_block .es_highlight_owned,
 html body .blotter_author_block .es_highlight_wishlist,
 html body .blotter_author_block .es_highlight_coupon,
@@ -425,5 +485,10 @@ html body #es_progress.error::-webkit-progress-value {
 	border-radius: 0;
 	box-shadow: none;
 	}
+html body .es_highlight_wishlist .col.search_released {
+	/* readibily */
+	color: rgba(255,255,255,0.3);
+	}
 
+/* ---END--- */
 }
