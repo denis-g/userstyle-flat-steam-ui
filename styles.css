@@ -1,7 +1,7 @@
 /**
  * Simply Steam UI
  * Created by Denis G.
- * Last update: 2016-31-05
+ * Last update: 2016-06-13
  *
  * Use Github for submit your request or issues.
  * https://github.com/denis-g/userstyle-simply-steam-ui
@@ -30,7 +30,7 @@ html body div#global_header {
 	}
 	/* redesign main menu */
 	html body div#global_header .content {
-		height: 48px;
+		height: 48px; /* menu height */
 		background: none;
 		}
 		html body div#global_header div.logo {
@@ -43,9 +43,9 @@ html body div#global_header {
 				display: block;
 				width: 140px;
 				height: 48px;
-				background: url(//store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png) no-repeat 0 50%;
+				background: url(http://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png) no-repeat 0 50%;
 				background-size: auto 34px;
-				opacity: 0.8;
+				opacity: 0.7;
 				}
 			html body div#global_header div.logo a:hover {
 				opacity: 1;
@@ -250,7 +250,15 @@ html body #friends_sort_options span:not(.es_friends_sort_link) {
 html body .profile_xp_block_remaining_bar_progress {
 	background: #ccc;
 	}
-/* in profile page */
+
+
+/*************
+    PROFILE
+**************/
+html body .game_info_achievement.plus_more,
+html body .showcase_achievement.plus_more {
+	box-shadow: none;
+	}
 html body .achievement_progress_bar_ctn {
 	border: none;
 	box-shadow: none;
@@ -265,6 +273,86 @@ html body .achievement_progress_bar_ctn .progress_bar {
 	filter: none;
 	}
 
+
+/*************
+ BUTTON DESIGN
+**************/
+html body .btn_profile_action,
+html body .btn_green_white_innerfade,
+html body .btn_blue_white_innerfade,
+html body .btn_darkblue_white_innerfade,
+html body .btn_grey_white_innerfade,
+html body .btn_grey_grey_outer_bevel,
+html body .btn_grey_black {
+	background: none;
+	padding: 0;
+	border: none;
+	}
+
+html body .btnv6_green_white_innerfade {
+	background: #799905;
+	}
+html body .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	background: #A4D007;
+	}
+html body .btn_grey_white_innerfade {
+	background: #acb5bd;
+	}
+html body .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	background: #acb5bd;
+	}
+html body .btn_profile_action > span {
+	background: #33425a;
+	}
+html body .btn_profile_action:hover > span,
+html body .btn_profile_action.focus > span {
+	background: #526d95;
+	}
+html body .btn_green_white_innerfade {
+	color: #fff !important;
+	}
+html body .btn_green_white_innerfade > span {
+	background: #799905;
+	}
+html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+	background: #A4D007;
+	}
+html body .btn_blue_white_innerfade > span {
+	background: #82a6d7;
+	}
+html body .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+	background: #9ab7de;
+	}
+html body .btn_darkblue_white_innerfade > span {
+	background: rgba(33, 101, 138, 1);
+	}
+html body .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+	background: #989b9e;
+	}
+html body .btn_grey_white_innerfade > span {
+	background: #778088;
+	}
+html body .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+	background: #99a2aa;
+	}
+html body .btn_grey_grey_outer_bevel > span {
+	background: #2B2B2B;
+	}
+html body .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+	background: #445b7c;
+	}
+html body .item_market_action_button_green > .item_market_action_button_contents {
+	background: #799905;
+	}
+html body .item_market_action_button_green:hover > .item_market_action_button_contents {
+	background: #A4D007;
+	}
+html body .btnv6_lightblue_blue {
+	background: rgba(193, 228, 249, 1);
+	}
+html body .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	background: rgba(102, 192, 244, 1);
+	}
 
 /*************
     REMOVE
@@ -285,6 +373,7 @@ html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
 ***************/
 /* all box */
 html body .home_page_gutter_block,
+html body .profile_header_badge,
 html body .profile_xp_block,
 html body .badge_row,
 html body .badge_row_inner,
@@ -320,6 +409,10 @@ html body .community_home_search_players,
 html body a.linkbar_active,
 html body .community_tooltip,
 html body #BG_top > .user_info,
+html body .store_tooltip,
+html body .apphub_CardContentDiscussionText,
+html body .profile_background_select_option,
+html body .group_list_option,
 /* all tabs */
 html body .home_tab,
 html body .home_tab .tab_content,
@@ -346,32 +439,36 @@ html body .profile_xp_block_remaining_bar,
 html body .profile_xp_block_remaining_bar_progress,
 html body .apphub_ProgressBarBG,
 /* all buttons */
+html body .btn_border_2px,
+html body .btnv6_border_2px,
 html body div.store_header_btn,
 html body .home_btn,
 html body .btn_grey_grey,
 html body .btn_grey_grey > span,
 html body .btn_grey_black,
 html body .btn_grey_black > span,
-html body .btn_black,
-html body .btn_black > span,
-html body .btnv6_grey_black,
-html body .btnv6_grey_black > span,
-html body .btnv6_blue_hoverfade,
-html body .btnv6_blue_hoverfade > span,
-html body .btnv6_green_white_innerfade,
-html body .btnv6_green_white_innerfade > span,
-html body .btnv6_blue_blue_innerfade,
-html body .btnv6_blue_blue_innerfade > span,
-html body .btn_blue_white_innerfade,
-html body .btn_blue_white_innerfade > span,
-html body .btn_darkblue_white_innerfade,
-html body .btn_darkblue_white_innerfade > span,
-html body .btn_green_white_innerfade,
-html body .btn_green_white_innerfade > span,
 html body .btn_grey_white_innerfade,
 html body .btn_grey_white_innerfade > span,
 html body .btn_grey_grey_outer_bevel,
 html body .btn_grey_grey_outer_bevel > span,
+html body .btn_black,
+html body .btn_black > span,
+html body .btnv6_grey_black,
+html body .btnv6_grey_black > span,
+html body .btn_blue_white_innerfade,
+html body .btn_blue_white_innerfade > span,
+html body .btnv6_blue_hoverfade,
+html body .btnv6_blue_hoverfade > span,
+html body .btnv6_blue_blue_innerfade,
+html body .btnv6_blue_blue_innerfade > span,
+html body .btn_darkblue_white_innerfade,
+html body .btn_darkblue_white_innerfade > span,
+html body .btn_green_white_innerfade,
+html body .btn_green_white_innerfade > span,
+html body .btnv6_green_white_innerfade,
+html body .btnv6_green_white_innerfade > span,
+html body .btnv6_lightblue_blue,
+html body .btnv6_lightblue_blue > span,
 html body .btn_medium,
 html body .btn_medium > span,
 html body .modal_buttons .auth_button,
@@ -385,6 +482,7 @@ html body .ScreenshotManagementButton,
 html body .BroadcastButton,
 html body .hover_details_block,
 html body .hover_details_block_full,
+html body a.forum_comment_action,
 /* all inputs */
 html body input[type="text"],
 html body input[type="password"],

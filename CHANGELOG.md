@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.7
+* **global**
+- logo url updated
+- update button design to flat
+
 ## v1.6
 * **global**
 - change logo
