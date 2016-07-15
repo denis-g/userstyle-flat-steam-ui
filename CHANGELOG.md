@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.8
+* **global**
+- minor design fixes
+- more buttons, inputs, tabs, tooltip to flat design
+
 ## v1.7
 * **global**
 - logo url updated

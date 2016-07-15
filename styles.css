@@ -1,13 +1,13 @@
+@namespace url('http://www.w3.org/1999/xhtml');
 /**
  * Simply Steam UI
  * Created by Denis G.
- * Last update: 2016-06-13
+ * Last update: 2016-07-15
  *
  * Use Github for submit your request or issues.
  * https://github.com/denis-g/userstyle-simply-steam-ui
  */
 
-@namespace url('http://www.w3.org/1999/xhtml');
 @-moz-document domain('store.steampowered.com'), domain('steamcommunity.com') {
 /* ---BEGIN--- */
 
@@ -86,12 +86,12 @@ html body div#global_header {
 					background: #ccc;
 					}
 				html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"] {
-					color: #00b043;
+					color: #a4d007;
 					font-weight: bold;
 					}
 				html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"]:hover {
 					color: #fff;
-					background: #00b043;
+					background: #a4d007;
 					}
 			html body div#global_header .supernav_content {
 				padding: 0;
@@ -189,9 +189,21 @@ html body .game_description_column .block .block_content a {
 
 
 /***************
+  GAME IN STORE
+****************/
+html body .game_area_already_owned_btn {
+	float: none;
+	margin-right: 0;
+	}
+	html body .game_area_already_owned_btn a[href="http://store.steampowered.com/about/"] {
+		/* remove install steam link */
+		display: none;
+		}
+
+
+/***************
     WISHLIST
 ****************/
-/* usability fix */
 html body #wishlist_items input.wishlist_rank {
 	font-size: 11px;
 	}
@@ -202,53 +214,28 @@ html body #wishlist_items .discount_block_inline {
 html body #wishlist_items .price {
 	color: #eee;
 	}
-
-
-/***************
-    IMAGES
-****************/
-/* usability fix */
-html body .sharedfiles_usercontrols_label {
-	vertical-align: middle;
-	}
-
-
-/***************
-    SORTING
-****************/
-html body .sort_options a,
-html body .sort_options .selected_sort,
-html body #friends_sort_options span {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 6px 8px;
-	margin: 0;
-	font-size: 11px;
-	line-height: 1.2;
-	color: #407898;
-	text-decoration: none;
-	}
-html body #friends_sort_options span {
-	margin-left: 0.75em;
-	}
-html body .sort_options a:hover,
-html body #friends_sort_options span:hover {
-	color: #fff;
-	}
-html body .sort_options .selected_sort,
-html body #friends_sort_options span:not(.es_friends_sort_link) {
-	color: #67c1f5;
-	background: #18222e;
-	text-decoration: none;
+html body input.wishlist_rank {
+	background: rgba(0,0,0,0.6);
 	}
 
 
 /*************
     BADGES
 **************/
-/* in badges page */
+html body .profile_xp_block {
+	border-color: #1a1819;
+	}
 html body .profile_xp_block_remaining_bar_progress {
 	background: #ccc;
+	}
+html body .badge_row.is_link:hover,
+html body .badge_row.depressed {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	}
+html body .badge_row.depressed {
+	border-color: rgba(84, 145, 207, 0.4);
 	}
 
 
@@ -257,6 +244,8 @@ html body .profile_xp_block_remaining_bar_progress {
 **************/
 html body .game_info_achievement.plus_more,
 html body .showcase_achievement.plus_more {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
 	box-shadow: none;
 	}
 html body .achievement_progress_bar_ctn {
@@ -272,13 +261,135 @@ html body .achievement_progress_bar_ctn .progress_bar {
 	background: #ccc;
 	filter: none;
 	}
+html body .profile_header_badge {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #333;
+	}
+html body .recent_game .game_info_stats,
+html body .favoritegame_showcase .game_info_stats {
+	border-top: none;
+	}
+
+
+/*************
+   COMMUNITY
+**************/
+html body .commentthread_comment_edit_textarea_ctn,
+html body .community_home_search_apps,
+html body .community_home_search_players,
+html body #review_create .input_box {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	}
+html body .sharedfiles_usercontrols_label {
+	/* ui fix */
+	vertical-align: middle;
+	}
+html body blockquote.bb_blockquote {
+	background: rgba(0,0,0,0.15);
+	}
+
+
+/***************
+   SORT DESIGN
+****************/
+html body .sort_options a,
+html body .sort_options .selected_sort,
+html body #friends_sort_options span,
+html body .badge_sort_option.whiteLink,
+html body #achievement_sort_options span {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 6px 8px;
+	margin: 0;
+	font-size: 11px;
+	line-height: 1.2;
+	color: #407898;
+	text-decoration: none;
+	text-transform: lowercase;
+	}
+html body #friends_sort_options span,
+html body #achievement_sort_options span {
+	margin-left: 0.75em;
+	}
+html body .sort_options a:hover,
+html body #friends_sort_options span:hover,
+html body .badge_sort_option.whiteLink:hover,
+html body #achievement_sort_options span:hover {
+	color: #fff;
+	}
+html body .sort_options .selected_sort,
+html body #friends_sort_options span:not(.es_friends_sort_link),
+html body .badge_sort_option.whiteLink.active,
+html body #achievement_sort_options span:not(.es_achievement_sort_link) {
+	color: #67c1f5;
+	background: #18222e;
+	text-decoration: none;
+	}
+
+
+/*************
+TOOLTIP DESIGN
+**************/
+html body .popup_block2 .popup_body2,
+html body .pagecontent .popup_block_new .popup_body,
+html body div.statsselect_options {
+	border: none;
+	background: rgba(66, 66, 66, 0.98);
+	padding: 0;
+	}
+	html body .popup_menu2 a.popup_menu_item2,
+	html body .pagecontent .popup_block_new .popup_body .popup_menu_item,
+	html body div.statsselect div.option,
+	html body div.statsselect_options div.option {
+		padding: 10px 14px;
+		text-align: center;
+		text-transform: uppercase;
+		}
+		html body .popup_menu2 a.popup_menu_item2 h5,
+		html body .pagecontent .popup_block_new .popup_body .popup_menu_item,
+		html body div.statsselect div.option,
+		html body div.statsselect_options div.option {
+			font-size: 11px;
+			font-weight: normal;
+			line-height: 1.1;
+			color: #8F98A0;
+			}
+		html body .popup_menu2 a.popup_menu_item2 h5 {
+			padding: 0;
+			}
+		html body div.statsselect div.option,
+		html body div.statsselect_options div.option {
+			height: auto;
+			padding: 10px 14px;
+			}
+	html body .popup_menu2 a.popup_menu_item2:hover,
+	html body .pagecontent .popup_block_new .popup_body .popup_menu_item:hover,
+	html body div.statsselect div.option:hover,
+	html body div.statsselect_options div.option:hover {
+		background: #ccc;
+		}
+		html body .popup_menu2 a.popup_menu_item2:hover h5,
+		html body .pagecontent .popup_block_new .popup_body .popup_menu_item:hover,
+		html body div.statsselect div.option:hover,
+		html body div.statsselect_options div.option:hover {
+			color: #000;
+			}
+	html body .popup_menu2 a.popup_menu_item2:not(:last-child),
+	html body .pagecontent .popup_block_new .popup_body .popup_menu_item:not(:last-child),
+	html body div.statsselect div.option:not(:last-child),
+	html body div.statsselect_options div.option:not(:last-child) {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
 
 
 /*************
  BUTTON DESIGN
 **************/
 html body .btn_profile_action,
-html body .btn_green_white_innerfade,
 html body .btn_blue_white_innerfade,
 html body .btn_darkblue_white_innerfade,
 html body .btn_grey_white_innerfade,
@@ -288,12 +399,8 @@ html body .btn_grey_black {
 	padding: 0;
 	border: none;
 	}
-
-html body .btnv6_green_white_innerfade {
-	background: #799905;
-	}
-html body .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-	background: #A4D007;
+html body .btn_green_white_innerfade:not([type="submit"]) {
+	padding: 0;
 	}
 html body .btn_grey_white_innerfade {
 	background: #acb5bd;
@@ -311,10 +418,12 @@ html body .btn_profile_action.focus > span {
 html body .btn_green_white_innerfade {
 	color: #fff !important;
 	}
-html body .btn_green_white_innerfade > span {
+html body .btn_green_white_innerfade > span,
+html body .btn_green_white_innerfade[type="submit"] {
 	background: #799905;
 	}
-html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span,
+html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active)[type="submit"]:hover {
 	background: #A4D007;
 	}
 html body .btn_blue_white_innerfade > span {
@@ -347,24 +456,81 @@ html body .item_market_action_button_green > .item_market_action_button_contents
 html body .item_market_action_button_green:hover > .item_market_action_button_contents {
 	background: #A4D007;
 	}
+html body .btnv6_green_white_innerfade {
+	background: #799905;
+	}
+html body .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	background: #A4D007;
+	}
 html body .btnv6_lightblue_blue {
 	background: rgba(193, 228, 249, 1);
 	}
 html body .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	background: rgba(102, 192, 244, 1);
 	}
+html body .btnv6_blue_blue_innerfade {
+	background: rgba(47, 137, 188, 1);
+	}
+html body .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	background: rgba(102, 192, 244, 1);
+	}
+
 
 /*************
-    REMOVE
+  TABS DESIGN
 **************/
-/* "Install Steam" button */
-html body .header_installsteam_btn,
-/* duplicate links from main menu */
-html body div#global_header .menuitem[href^="https://help.steampowered.com/"],
-html body div#global_header .menuitem[href="http://store.steampowered.com/about/"],
-html body div#global_header .submenuitem[href="http://store.steampowered.com/"],
-html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
-	display: none;
+html body .sectionTab.active,
+html body .tabOn,
+html body .group_tab.active {
+	background: #417B9C;
+	}
+	html body .sectionTab.active > span,
+	html body .group_tab.active > span {
+		background: none;
+		}
+html body .games_list_tab.active {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	}
+html body .apphub_sectionTab:hover {
+	background: #67c1f5;
+	}
+
+
+/*************
+ INPUT DESIGN
+**************/
+html body .gray_bevel.for_text_input {
+	/* fix height after remove box-shadow */
+	padding-top: 2px;
+	padding-bottom: 2px;
+	}
+html body input[type=text],
+html body input[type=password],
+html body select,
+html body .text_input,
+html body .checkout_content_box input[type=text],
+html body .checkout_content_box input[type=password],
+html body .checkout_content_box select,
+html body .checkout_content_box textarea,
+html body .checkout_main .dselect_container a.trigger,
+html body .authcode_entry_box,
+html body .twofactorauthcode_entry_box,
+html body .gray_bevel,
+html body input.gray_bevel,
+html body textarea.gray_bevel,
+html body div#headerSearch.friend_activity_header_search,
+html body .profileFriendSearchBox,
+html body .descField,
+html body .commentthread_entry_quotebox,
+html body .profile_comment_area .commentthread_entry_quotebox,
+html body .blotter_status_entry .commentthread_entry_quotebox,
+html body .blotter_comment_thread .commentthread_entry_quotebox {
+	border-color: rgba(84, 145, 207, 0.4);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 	}
 
 
@@ -375,6 +541,7 @@ html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
 html body .home_page_gutter_block,
 html body .profile_header_badge,
 html body .profile_xp_block,
+html body .badge_empty,
 html body .badge_row,
 html body .badge_row_inner,
 html body .gamecard_details .badge_info,
@@ -413,6 +580,7 @@ html body .store_tooltip,
 html body .apphub_CardContentDiscussionText,
 html body .profile_background_select_option,
 html body .group_list_option,
+html body .notice_box_content,
 /* all tabs */
 html body .home_tab,
 html body .home_tab .tab_content,
@@ -426,6 +594,8 @@ html body .games_list_tab.fourth_tab,
 html body a.games_list_tab.fourth_tab,
 html body .sectionTab,
 html body a.sectionTab,
+html body .sectionTab.active > span,
+html body a.sectionTab.active > span,
 html body .tabarea .tab,
 html body .tabarea .tab .tab_content,
 html body .group_tab,
@@ -515,7 +685,6 @@ html body .pagebtn,
 html body a.pagebtn {
 	border-radius: 0 !important;
 	}
-
 /* fix square box with background image */
 html body .alertbox_header {
 	background: #5c7e10;
@@ -532,6 +701,20 @@ html body .alertbox_header .rightcap,
 html body .item_market_action_button_left,
 html body .item_market_action_button_right {
 	display: none;
+	}
+
+
+/*************
+    REMOVE
+**************/
+/* "Install Steam" button */
+html body .header_installsteam_btn,
+/* duplicate links from main menu */
+html body div#global_header .menuitem[href^="https://help.steampowered.com/"],
+html body div#global_header .menuitem[href="http://store.steampowered.com/about/"],
+html body div#global_header .submenuitem[href="http://store.steampowered.com/"],
+html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
+	display: none !important;
 	}
 
 
@@ -566,10 +749,12 @@ html body #es_progress {
 	right: 0;
 	bottom: 2px;
 	height: 2px;
+	border-radius: 0;
 	}
 html body #es_progress.error,
 html body #es_progress.complete {
 	width: 36px; /* avatar width */
+	animation: none;
 	}
 html body #es_progress::-webkit-progress-bar {
 	border-radius: 0;
