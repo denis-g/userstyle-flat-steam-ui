@@ -1,15 +1,16 @@
 @namespace url('http://www.w3.org/1999/xhtml');
-/**
+@-moz-document domain('store.steampowered.com'), domain('steamcommunity.com') {
+/* ---BEGIN--- */
+
+/*
  * Simply Steam UI
- * Created by Denis G.
- * Last update: 2016-07-15
+ * Created by Denis G. <http://github.com/denis-g/>
+ * Last update: 2016-08-13
  *
  * Use Github for submit your request or issues.
  * https://github.com/denis-g/userstyle-simply-steam-ui
  */
 
-@-moz-document domain('store.steampowered.com'), domain('steamcommunity.com') {
-/* ---BEGIN--- */
 
 /*************
     HEADER
@@ -18,18 +19,21 @@
 html body {
 	padding-top: 48px; /* menu height */
 	}
-html body div#global_header {
+html body div#global_header,
+html body.v6 div#global_header {
 	border: none;
 	position: fixed !important;
 	left: 0;
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	background: rgba(23, 26, 33, 0.9);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+	background: rgba(23, 26, 33, 0.9);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	}
 	/* redesign main menu */
-	html body div#global_header .content {
+	html body div#global_header .content,
+	html body.v6 div#global_header .content {
 		height: 48px; /* menu height */
 		background: none;
 		}
@@ -98,6 +102,8 @@ html body div#global_header {
 				width: 182px;
 				max-width: none;
 				margin: 3px 0 0 0;
+				background: rgba(23, 26, 33, 0.9);
+				-webkit-backdrop-filter: saturate(180%) blur(20px);
 				}
 			html body div#global_header div[data-submenuid] {
 				width: 100%;
@@ -114,41 +120,15 @@ html body div#global_header {
 			border: none;
 			}
 		html body div#global_action_menu .popup_block_new {
-			box-shadow: none;
 			}
-			html body div#global_action_menu .popup_block_new .popup_body {
-				border: none;
-				background: rgba(23, 26, 33, 0.9);
-				padding: 0;
+			html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"] {
+				color: #b03500;
+				font-weight: bold;
 				}
-				html body div#global_action_menu .popup_menu .hr,
-				html body div#global_action_menu .popup_menu .header_notification_dropdown_seperator {
-					display: none;
-					}
-				html body div#global_action_menu .popup_menu .popup_menu_item {
-					color: #8F98A0;
-					font-size: 12px;
-					font-weight: normal;
-					line-height: 1.1;
-					padding: 10px 14px;
-					text-align: center;
-					text-transform: uppercase;
-					}
-				html body div#global_action_menu .popup_menu .popup_menu_item:hover {
-					color: #000;
-					background: #ccc;
-					}
-				html body div#global_action_menu .popup_menu .popup_menu_item:not(:last-child) {
-					border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-					}
-				html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"] {
-					color: #b03500;
-					font-weight: bold;
-					}
-				html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"]:hover {
-					color: #fff;
-					background: #b03500;
-					}
+			html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"]:hover {
+				color: #fff;
+				background: #b03500;
+				}
 			/* specially for notifications */
 			html body div#global_action_menu .popup_block_new#header_notification_dropdown {
 				}
@@ -178,9 +158,6 @@ html body div#global_header {
 html body .store_nav .tab {
 	border-right: 1px solid rgba(0, 0, 0, 0.3);
 	}
-html body div#store_search {
-	border-left: 1px solid rgba(0, 0, 0, 0.3);
-	}
 html body a.home_smallcap,
 html body .curated_app_item,
 html body .game_description_column .block .block_content a {
@@ -204,6 +181,9 @@ html body .game_area_already_owned_btn {
 /***************
     WISHLIST
 ****************/
+html body .wishlistRowItem {
+	overflow: inherit;
+	}
 html body #wishlist_items input.wishlist_rank {
 	font-size: 11px;
 	}
@@ -234,9 +214,14 @@ html body .badge_row.depressed {
 	-moz-box-shadow: none;
 	box-shadow: none;
 	}
-html body .badge_row.depressed {
-	border-color: rgba(84, 145, 207, 0.4);
+html body .badge_row {
+	border: 1px solid #000;
+	padding: 0;
+	background: none;
 	}
+	html body .badge_row_inner {
+		background: #141414;
+		}
 
 
 /*************
@@ -261,6 +246,11 @@ html body .achievement_progress_bar_ctn .progress_bar {
 	background: #ccc;
 	filter: none;
 	}
+html body .achievement_progress_bar_ctn .progress_bar[style="width:100%;"],
+html body .achievement_progress_bar_ctn .progress_bar[style="width: 100%;"] {
+	background: #5c7e10;
+	}
+html body .game_info_badge_border,
 html body .profile_header_badge {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
@@ -270,6 +260,63 @@ html body .profile_header_badge {
 html body .recent_game .game_info_stats,
 html body .favoritegame_showcase .game_info_stats {
 	border-top: none;
+	}
+html body .blotter_block {
+	box-shadow: none;
+	}
+html body .profile_header_actions .popup_menu a.popup_menu_item {
+	text-align: left;
+	}
+
+
+/*************
+   INVENTORY
+**************/
+html body #tabcontent_inventory {
+	padding-top: 20px;
+	}
+html body .view_inventory_logo {
+	display: none;
+	}
+html body #contextselect .context_name,
+html body #contextselect_options .context_name {
+	font-size: 16px;
+	}
+
+
+/*************
+    SEARCH
+**************/
+html body div#store_search {
+	}
+	html body .searchbox {
+		height: 26px;
+		background: #2a3f5a;
+		border: 1px solid #000;
+		opacity: 0.6;
+		}
+	html body .searchbox:hover {
+		background-image: none;
+		}
+		html body .searchbox input {
+			color: #fff;
+			margin-top: 0;
+			}
+		html body .searchbox input.default {
+			color: #909090;
+			}
+	html body a#store_search_link {
+		right: 0;
+		font: 0/0 a;
+		background: url('http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/searchbox_workshop_submit.gif') no-repeat 50%;
+		}
+		html body a#store_search_link img {
+			height: 26px;
+			}
+html body #term {
+	vertical-align: middle;
+	padding: 6px 10px;
+	box-shadow: none;
 	}
 
 
@@ -290,6 +337,13 @@ html body .sharedfiles_usercontrols_label {
 	}
 html body blockquote.bb_blockquote {
 	background: rgba(0,0,0,0.15);
+	}
+html body .commentthread_comment {
+	margin-top: 19px;
+	border-bottom: 1px solid rgba(84, 145, 207, 0.3);
+	}
+html body .commentthread_comment:last-child {
+	border-bottom: none;
 	}
 
 
@@ -334,28 +388,37 @@ html body #achievement_sort_options span:not(.es_achievement_sort_link) {
 /*************
 TOOLTIP DESIGN
 **************/
+html body .popup_block,
+html body .popup_block2,
+html body .popup_block_new {
+	box-shadow: none;
+	}
+html body .popup_block .popup_body,
 html body .popup_block2 .popup_body2,
-html body .pagecontent .popup_block_new .popup_body,
+html body .popup_block_new .popup_body,
 html body div.statsselect_options {
 	border: none;
-	background: rgba(66, 66, 66, 0.98);
 	padding: 0;
+	background: rgba(66, 66, 66, 0.98);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	}
+	html body .popup_menu a.popup_menu_item,
 	html body .popup_menu2 a.popup_menu_item2,
-	html body .pagecontent .popup_block_new .popup_body .popup_menu_item,
+	html body .popup_block_new .popup_body .popup_menu_item,
 	html body div.statsselect div.option,
 	html body div.statsselect_options div.option {
-		padding: 10px 14px;
+		padding: 10px 14px !important;
 		text-align: center;
 		text-transform: uppercase;
 		}
+		html body .popup_menu a.popup_menu_item,
 		html body .popup_menu2 a.popup_menu_item2 h5,
-		html body .pagecontent .popup_block_new .popup_body .popup_menu_item,
+		html body .popup_block_new .popup_body .popup_menu_item,
 		html body div.statsselect div.option,
 		html body div.statsselect_options div.option {
 			font-size: 11px;
 			font-weight: normal;
-			line-height: 1.1;
+			line-height: 1.1 !important;
 			color: #8F98A0;
 			}
 		html body .popup_menu2 a.popup_menu_item2 h5 {
@@ -366,24 +429,41 @@ html body div.statsselect_options {
 			height: auto;
 			padding: 10px 14px;
 			}
+	html body .popup_menu a.popup_menu_item:hover,
 	html body .popup_menu2 a.popup_menu_item2:hover,
-	html body .pagecontent .popup_block_new .popup_body .popup_menu_item:hover,
+	html body .popup_block_new .popup_body .popup_menu_item:hover,
 	html body div.statsselect div.option:hover,
 	html body div.statsselect_options div.option:hover {
 		background: #ccc;
 		}
+		html body .popup_menu a.popup_menu_item:hover,
 		html body .popup_menu2 a.popup_menu_item2:hover h5,
-		html body .pagecontent .popup_block_new .popup_body .popup_menu_item:hover,
+		html body  .popup_block_new .popup_body .popup_menu_item:hover,
 		html body div.statsselect div.option:hover,
 		html body div.statsselect_options div.option:hover {
 			color: #000;
 			}
+	html body .popup_menu a.popup_menu_item:not(:last-child),
 	html body .popup_menu2 a.popup_menu_item2:not(:last-child),
-	html body .pagecontent .popup_block_new .popup_body .popup_menu_item:not(:last-child),
+	html body .popup_block_new .popup_body .popup_menu_item:not(:last-child),
 	html body div.statsselect div.option:not(:last-child),
 	html body div.statsselect_options div.option:not(:last-child) {
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		}
+	html body .popup_menu .hr,
+	html body .popup_menu .header_notification_dropdown_seperator {
+		display: none;
+		}
+
+html body #store_nav_area .store_nav_bg {
+	}
+	html body #store_nav_area .store_nav_bg .popup_block_new .popup_body {
+		background: #60aed9;
+		box-shadow: 0 8px 8px rgba(0,0,0,0.5);
+		}
+		html body #store_nav_area .store_nav_bg .popup_block_new .popup_menu_item {
+			color: #fff;
+			}
 
 
 /*************
@@ -456,10 +536,15 @@ html body .item_market_action_button_green > .item_market_action_button_contents
 html body .item_market_action_button_green:hover > .item_market_action_button_contents {
 	background: #A4D007;
 	}
-html body .btnv6_green_white_innerfade {
+html body .btnv6_green_white_innerfade,
+html body .btn_addtocart {
 	background: #799905;
 	}
-html body .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+html body .btn_addtocart .btn_addtocart_content {
+	background: none;
+	}
+html body .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+html body .btn_addtocart:hover {
 	background: #A4D007;
 	}
 html body .btnv6_lightblue_blue {
@@ -581,6 +666,7 @@ html body .apphub_CardContentDiscussionText,
 html body .profile_background_select_option,
 html body .group_list_option,
 html body .notice_box_content,
+html body .searchedForTerm,
 /* all tabs */
 html body .home_tab,
 html body .home_tab .tab_content,
@@ -683,6 +769,8 @@ html body .slider_ctn .slider_right,
 html body .slider .handle,
 html body .pagebtn,
 html body a.pagebtn {
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
 	border-radius: 0 !important;
 	}
 /* fix square box with background image */
@@ -699,7 +787,9 @@ html body .apphub_BackToTopButton.rightcap,
 html body .alertbox_header .leftcap,
 html body .alertbox_header .rightcap,
 html body .item_market_action_button_left,
-html body .item_market_action_button_right {
+html body .item_market_action_button_right,
+html body .btn_addtocart .btn_addtocart_left,
+html body .btn_addtocart .btn_addtocart_right {
 	display: none;
 	}
 

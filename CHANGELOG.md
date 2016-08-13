@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.9
+* **global**
+- huge design fixes
+
 ## v1.8
 * **global**
 - minor design fixes
