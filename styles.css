@@ -5,18 +5,19 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2016-08-16
+ * Last update: 2016-08-18
  *
- * Use Github or Steam Group for submit your request or issues.
+ * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui
  * http://steamcommunity.com/groups/flat-steam-ui
  */
 
 
-/*************
-    HEADER
-**************/
-/* fixed position */
+/*
+ * Header
+ * ----------------------------------------------
+ */
+
 html body {
 	padding-top: 48px; /* menu height */
 	}
@@ -27,7 +28,7 @@ html body.v6 div#global_header {
 	left: 0;
 	top: 0;
 	width: 100%;
-	z-index: 1000;
+	z-index: 900;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
 	background: rgba(23, 26, 33, 0.9);
 	-webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -47,7 +48,7 @@ html body.v6 div#global_header {
 			html body div#global_header div.logo a {
 				display: block;
 				width: 140px;
-				height: 48px;
+				height: 48px; /* menu height */
 				background: url(http://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png) no-repeat 0 50%;
 				background-size: auto 34px;
 				opacity: 0.7;
@@ -62,10 +63,10 @@ html body.v6 div#global_header {
 			left: 190px;
 			}
 			html body div#global_header .menuitem {
-				width: 180px;
+				width: 170px;
 				text-align: center;
-				padding: 0;
-				line-height: 48px;
+				padding: 0 10px;
+				line-height: 48px; /* menu height */
 				border-right: 1px solid rgba(255, 255, 255, 0.1);
 				}
 			html body div#global_header .menuitem:first-child {
@@ -152,9 +153,11 @@ html body.v6 div#global_header {
 					}
 
 
-/***************
-    HOMEPAGE
-****************/
+/*
+ * Homepage
+ * ----------------------------------------------
+ */
+
 /* store menu design fix */
 html body .store_nav .tab {
 	border-right: 1px solid rgba(0, 0, 0, 0.3);
@@ -166,9 +169,11 @@ html body .game_description_column .block .block_content a {
 	}
 
 
-/***************
-  GAME IN STORE
-****************/
+/*
+ * Game in Store
+ * ----------------------------------------------
+ */
+
 html body .game_area_already_owned_btn {
 	float: none;
 	margin-right: 0;
@@ -177,11 +182,16 @@ html body .game_area_already_owned_btn {
 		/* remove install steam link */
 		display: none;
 		}
+html body .dynamiclink_box {
+	margin-right: 0;
+	}
 
 
-/***************
-    WISHLIST
-****************/
+/*
+ * Wishlist
+ * ----------------------------------------------
+ */
+
 html body .wishlistRowItem {
 	overflow: inherit;
 	}
@@ -200,9 +210,11 @@ html body input.wishlist_rank {
 	}
 
 
-/*************
-    BADGES
-**************/
+/*
+ * Badges
+ * ----------------------------------------------
+ */
+
 html body .profile_xp_block {
 	border-color: #1a1819;
 	}
@@ -225,9 +237,37 @@ html body .badge_row {
 		}
 
 
-/*************
-    PROFILE
-**************/
+/*
+ * Profile
+ * ----------------------------------------------
+ */
+
+html body .profile_small_header_bg,
+html body .profile_header_bg {
+	background: none;
+	}
+html body .profile_header_bg {
+	padding-bottom: 14px;
+	}
+html body .profile_small_header_texture,
+html body .profile_header_bg_texture {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: none;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+	}
+html body .profile_small_header_texture {
+	background: rgba(41, 53, 72, 0.8);
+	}
+html body .profile_header_bg_texture {
+	background: rgba(41, 48, 62, 0.8);
+	-webkit-backdrop-filter: saturate(150%) blur(5px);
+	}
+html body .profile_background_overlay_content {
+	-webkit-backdrop-filter: saturate(150%) blur(5px);
+	}
+html body .profile_customization {
+	background: rgba(34, 45, 62, 0.8);
+	}
 html body .game_info_achievement.plus_more,
 html body .showcase_achievement.plus_more {
 	-webkit-box-shadow: none;
@@ -270,9 +310,11 @@ html body .profile_header_actions .popup_menu a.popup_menu_item {
 	}
 
 
-/*************
-   INVENTORY
-**************/
+/*
+ * Inventory
+ * ----------------------------------------------
+ */
+
 html body #tabcontent_inventory {
 	padding-top: 20px;
 	}
@@ -285,9 +327,11 @@ html body #contextselect_options .context_name {
 	}
 
 
-/*************
-    SEARCH
-**************/
+/*
+ * Search
+ * ----------------------------------------------
+ */
+
 html body div#store_search {
 	}
 	html body .searchbox {
@@ -321,9 +365,11 @@ html body #term {
 	}
 
 
-/*************
-   COMMUNITY
-**************/
+/*
+ * Community
+ * ----------------------------------------------
+ */
+
 html body .commentthread_comment_edit_textarea_ctn,
 html body .community_home_search_apps,
 html body .community_home_search_players,
@@ -348,9 +394,11 @@ html body .commentthread_comment:last-child {
 	}
 
 
-/***************
-   SORT DESIGN
-****************/
+/*
+ * Sort options
+ * ----------------------------------------------
+ */
+
 html body .sort_options a,
 html body .sort_options .selected_sort,
 html body #friends_sort_options span,
@@ -386,9 +434,36 @@ html body #achievement_sort_options span:not(.es_achievement_sort_link) {
 	}
 
 
-/*************
-TOOLTIP DESIGN
-**************/
+/*
+ * Modals
+ * ----------------------------------------------
+ */
+
+html body .newmodal_header_border,
+html body .newmodal_content_border {
+	border: 1px solid #4c4c4c;
+	background: none;
+	padding: 0;
+	}
+html body .newmodal_header_border {
+	border-bottom: none;
+	}
+html body .newmodal_header {
+	background: #393937;
+	}
+html body .newmodal_content {
+	background: #1d1d1d;
+	}
+html body .newmodal_background {
+	background: #111;
+	}
+
+
+/*
+ * Tooltips
+ * ----------------------------------------------
+ */
+
 html body .popup_block,
 html body .popup_block2,
 html body .popup_block_new {
@@ -467,9 +542,11 @@ html body #store_nav_area .store_nav_bg {
 			}
 
 
-/*************
- BUTTON DESIGN
-**************/
+/*
+ * Buttons
+ * ----------------------------------------------
+ */
+
 html body .btn_profile_action,
 html body .btn_blue_white_innerfade,
 html body .btn_darkblue_white_innerfade,
@@ -562,9 +639,11 @@ html body .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_
 	}
 
 
-/*************
-  TABS DESIGN
-**************/
+/*
+ * Tabs
+ * ----------------------------------------------
+ */
+
 html body .sectionTab.active,
 html body .tabOn,
 html body .group_tab.active {
@@ -584,9 +663,11 @@ html body .apphub_sectionTab:hover {
 	}
 
 
-/*************
- INPUT DESIGN
-**************/
+/*
+ * Inputs
+ * ----------------------------------------------
+ */
+
 html body .gray_bevel.for_text_input {
 	/* fix height after remove box-shadow */
 	padding-top: 2px;
@@ -620,9 +701,11 @@ html body .blotter_comment_thread .commentthread_entry_quotebox {
 	}
 
 
-/**************
-    SQUARED
-***************/
+/*
+ * Squared
+ * ----------------------------------------------
+ */
+
 /* all box */
 html body .home_page_gutter_block,
 html body .profile_header_badge,
@@ -668,6 +751,7 @@ html body .profile_background_select_option,
 html body .group_list_option,
 html body .notice_box_content,
 html body .searchedForTerm,
+html body .showcase_stat.favoritegroup_inchat,
 /* all tabs */
 html body .home_tab,
 html body .home_tab .tab_content,
@@ -778,10 +862,6 @@ html body a.pagebtn {
 html body .alertbox_header {
 	background: #5c7e10;
 	}
-html body .profile_customization {
-	background: #2D3C51;
-	box-shadow: inset -400px 20px 100px rgba(0, 0, 0, 0.5);
-	}
 /* remove buttons background */
 html body .apphub_BackToTopButton.leftcap,
 html body .apphub_BackToTopButton.rightcap,
@@ -795,9 +875,11 @@ html body .btn_addtocart .btn_addtocart_right {
 	}
 
 
-/*************
-    REMOVE
-**************/
+/*
+ * Remove elements
+ * ----------------------------------------------
+ */
+
 /* "Install Steam" button */
 html body .header_installsteam_btn,
 /* duplicate links from main menu */
@@ -809,9 +891,11 @@ html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
 	}
 
 
-/*************
- ENHANCEDSTEAM
-**************/
+/*
+ * EnhancedSteam support
+ * ----------------------------------------------
+ */
+
 html body .blotter_author_block .es_highlight_owned,
 html body .blotter_author_block .es_highlight_wishlist,
 html body .blotter_author_block .es_highlight_coupon,
