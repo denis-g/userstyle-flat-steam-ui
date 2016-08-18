@@ -263,6 +263,8 @@ html body .profile_header_bg_texture {
 	-webkit-backdrop-filter: saturate(150%) blur(5px);
 	}
 html body .profile_background_overlay_content {
+	opacity: 1;
+	background: rgba(23, 23, 23, 0.85);
 	-webkit-backdrop-filter: saturate(150%) blur(5px);
 	}
 html body .profile_customization {
