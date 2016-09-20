@@ -8,7 +8,7 @@ Make your Steam better!
 
 * [Styles Example](#styles-example)
 * [How Setup It?](#how-setup-it)
-* [Donation](#donation-via-paypal)
+* [Donation](#-donation-via-paypal)
 
 ## Styles Example
 ###### Fixed and redesigned header, new popups
