@@ -6,7 +6,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2016-09-20
+ * Last update: 2016-10-21
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui
@@ -22,8 +22,7 @@
 html body {
 	padding-top: 48px; /* menu height */
 	}
-html body div#global_header,
-html body.v6 div#global_header {
+html body div#global_header {
 	border: none;
 	position: fixed !important;
 	left: 0;
@@ -33,10 +32,10 @@ html body.v6 div#global_header {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
 	background: rgba(23, 26, 33, 0.9);
 	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	box-sizing: border-box;
 	}
 	/* redesign main menu */
-	html body div#global_header .content,
-	html body.v6 div#global_header .content {
+	html body div#global_header .content {
 		height: 48px; /* menu height */
 		background: none;
 		}
@@ -61,12 +60,13 @@ html body.v6 div#global_header {
 				display: none;
 				}
 		html body div#global_header .supernav_container{
-			left: 190px;
+			left: 170px;
 			}
 			html body div#global_header .menuitem {
-				width: 170px;
+				width: 160px;
 				text-align: center;
 				padding: 0 10px;
+				font-size: 13px;
 				line-height: 48px; /* menu height */
 				border-right: 1px solid rgba(255, 255, 255, 0.1);
 				}
@@ -102,9 +102,9 @@ html body.v6 div#global_header {
 					}
 			html body div#global_header .supernav_content {
 				padding: 0;
-				width: 192px;
+				width: 181px;
 				max-width: none;
-				margin: 3px 0 0 0;
+				margin: 3px 0 0 -1px;
 				background: rgba(23, 26, 33, 0.9);
 				-webkit-backdrop-filter: saturate(180%) blur(20px);
 				}
@@ -155,11 +155,23 @@ html body.v6 div#global_header {
 				}
 				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body {
 					max-height: 260px;
-					overflow-y: hidden;
-					-webkit-overflow-scrolling: touch;
-					}
-				html body div#global_action_menu .popup_block_new#language_dropdown:hover .popup_body {
 					overflow-y: auto;
+					-webkit-overflow-scrolling: touch;
+					position: relative;
+					}
+				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar {
+					background: transparent;
+					width: 6px;
+					position: absolute;
+					}
+				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar-track {
+					background: transparent;
+					position: absolute;
+					z-index: -2;
+					}
+				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar-thumb {
+					border-radius: 4px;
+					background: #888;
 					}
 
 
@@ -183,20 +195,19 @@ html body #home_recommended_more {
 	background: none;
 	padding: 6px 0 0;
 	}
-html body .steam_curator {
-	border-color: rgba(0, 0, 0, 0.2);
-	margin-bottom: 3px;
+html body .apps_recommended_by_curators_ctn {
+	margin-bottom: 20px;
 	}
-html body .steam_curators_bottom_bar {
+html body .apps_recommended_by_curators_bottom_bar {
 	background: none;
 	padding: 6px 0 0;
 	margin: 0;
 	}
-html body .steam_curators_bottom_bar .home_btn {
-	margin-left: 0;
+html body #apps_recommended_by_curators::-webkit-scrollbar {
+	display: none;
 	}
-html body a.steam_curator_row {
-	border-color: rgba(255, 255, 255, 0.1);
+html body .curated_app_item {
+	vertical-align: top;
 	}
 html body .home_specials_grid .special {
 	border-color: rgba( 255, 255, 255, 0.1);
@@ -236,19 +247,58 @@ html body .review_box {
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	}
 
+html body .game_area_play_stats {
+	padding-top: 20px;
+	}
+html body .already_owned_actions {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 0;
+	}
 html body .game_area_already_owned_btn {
 	float: none;
 	margin-right: 0;
+	display: inline-block;
+	vertical-align: top;
 	}
 	html body .game_area_already_owned_btn a[href="http://store.steampowered.com/about/"] {
 		/* remove 'Install Steam' link */
 		display: none;
 		}
+html body .already_owned_actions + .game_area_already_owned_btn {
+	margin-left: 12px;
+	}
 html body .dynamiclink_box {
 	margin-right: 0;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	}
+
+html body .user_reviews_header {
+	background: none;
+	}
+html body .user_reviews_summary_bar {
+	padding: 10px 10px 0;
+	background: #2a475e;
+	border: 1px solid rgba(255,255,255,0.1);
+	border-bottom: none;
+	}
+html body .user_reviews_summary_bar.new {
+	margin-bottom: 0;
+	}
+html body .user_reviews_summary_bar .game_review_summary {
+	text-shadow: none;
+	}
+html body .user_reviews_filter_options {
+	border: 1px solid rgba(255,255,255,0.1);
+	border-top: none;
+	}
+
+html body .app_tag:hover,
+html body .app_tag.add_your_own:hover,
+html body .app_tag.previous_tag:hover {
+	background: #67c1f5 !important;
 	}
 
 
@@ -289,8 +339,13 @@ html body input.wishlist_rank {
 html body .profile_xp_block {
 	border-color: #1a1819;
 	}
+html body .profile_xp_block_remaining_bar {
+	height: 10px;
+	border: 1px solid #666;
+	}
 html body .profile_xp_block_remaining_bar_progress {
-	background: #ccc;
+	height: 10px;
+	background: #999;
 	}
 html body .badge_row.is_link:hover,
 html body .badge_row.depressed {
@@ -341,6 +396,7 @@ html body .profile_subpage_column .profile_small_header_bg {
 	}
 html body .profile_header_bg {
 	padding-bottom: 14px;
+	z-index: 2;
 	}
 html body .profile_subpage_column .profile_small_header_bg {
 	height: 104px;
@@ -352,10 +408,10 @@ html body .profile_header_bg_texture {
 	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
 	}
 html body .profile_small_header_texture {
-	background: rgba(41, 53, 72, 0.8);
+	background: rgba(41, 53, 72, 0.85);
 	}
 html body .profile_header_bg_texture {
-	background: rgba(41, 48, 62, 0.8);
+	background: rgba(41, 48, 62, 0.85);
 	-webkit-backdrop-filter: saturate(150%) blur(5px);
 	}
 html body .profile_background_overlay_content {
@@ -364,12 +420,19 @@ html body .profile_background_overlay_content {
 	-webkit-backdrop-filter: saturate(150%) blur(5px);
 	}
 html body .profile_customization {
-	background: rgba(34, 45, 62, 0.8);
+	background: rgba(34, 45, 62, 0.85);
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	}
 
+html body .profile_header_actions {
+	text-align: right;
+	}
+html body .profile_header_actions .popup_menu a.popup_menu_item {
+	text-align: left;
+	}
 html body .btn_profile_action {
-	display: block;
+	display: inline-block;
+	vertical-align: top;
 	text-align: center;
 	color: rgba(255, 255, 255, 0.4) !important;
 	border: 1px solid rgba(0, 0, 0, 0.3);
@@ -387,7 +450,12 @@ html body .btn_profile_action > span {
 	line-height: 1;
 	text-transform: uppercase;
 	letter-spacing: 0.10em;
-	padding: 8px;
+	padding: 8px 10px 6px;
+	}
+html body .btn_profile_action img {
+	vertical-align: middle;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 	}
 html body .btn_profile_action > span,
 html body .btn_profile_action:hover > span,
@@ -401,22 +469,49 @@ html body .showcase_achievement.plus_more {
 	-moz-box-shadow: none;
 	box-shadow: none;
 	}
+html body .achieveBar,
+html body .achievementProgressBar,
 html body .achievement_progress_bar_ctn {
 	border: none;
 	box-shadow: none;
-	height: 10px;
 	padding: 0;
-	background: #58595e;
 	margin-right: 4px;
+	border: 1px solid #666;
+	background: #58595e;
+	}
+html body .achieveBar,
+html body .achievementProgressBar {
+	height: 10px;
+	line-height: 10px;
+	}
+html body .achievement_progress_bar_ctn {
+	height: 6px;
+	line-height: 6px;
+	}
+html body .achieveBarProgress,
+html body .achievementProgressBar .progress,
+html body .achievement_progress_bar_ctn .progress_bar {
+	background: #999;
+	filter: none;
+	vertical-align: top;
+	}
+html body .achieveBarProgress,
+html body .achievementProgressBar .progress {
+	height: 10px;
 	}
 html body .achievement_progress_bar_ctn .progress_bar {
-	height: 10px;
-	background: #ccc;
-	filter: none;
+	height: 6px;
 	}
+html body .achieveBarProgress[style="width:100%;"],
+html body .achieveBarProgress[style="width: 100%;"],
 html body .achievement_progress_bar_ctn .progress_bar[style="width:100%;"],
 html body .achievement_progress_bar_ctn .progress_bar[style="width: 100%;"] {
 	background: #5c7e10;
+	}
+html body .achievementProgressBar .progress,
+html body .achievementProgressBar .progressText.nextToBar {
+	font-size: 8px;
+	line-height: 11px;
 	}
 
 html body .game_info_badge_border,
@@ -438,10 +533,6 @@ html body .blotter_status_entry .commentthread_entry {
 html body .blotter_block {
 	box-shadow: none;
 	border: 1px solid rgba(255, 255, 255, 0.01);
-	}
-
-html body .profile_header_actions .popup_menu a.popup_menu_item {
-	text-align: left;
 	}
 
 html body .customization_controls .btn_grey_black {
@@ -486,14 +577,25 @@ html body a.games_list_tab.active {
 html body .games_list_tab_separator {
 	display: none;
 	}
+
+html body .view_inventory_page {
+	width: auto;
+	padding: 10px;
+	margin: 0;
+	}
 html body .view_inventory_page .inventory_page_right {
+	width: 366px;
 	margin-top: 0;
 	}
 html body .inventory_iteminfo {
+	width: auto !important;
 	border-width: 1px;
 	}
 html body .inventory_iteminfo .item_desc_content {
 	background: rgba(0, 0, 0, 0.3);
+	}
+html body .inventory_iteminfo .item_desc_icon_center {
+	width: 350px;
 	}
 html body #tabcontent_inventory {
 	padding-top: 20px;
@@ -504,6 +606,31 @@ html body .view_inventory_logo {
 html body #contextselect .context_name,
 html body #contextselect_options .context_name {
 	font-size: 16px;
+	}
+
+html body .item_actions .btn_small,
+html body .item_owner_actions .btn_small,
+html body .item_scrap_actions .btn_small,
+html body .item_market_actions .btn_small,
+html body .item_market_actions .item_market_action_button,
+html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
+	display: block;
+	text-align: center;
+	margin-right: 0;
+	margin-bottom: 8px;
+	}
+html body .item_actions .btn_small > span,
+html body .item_owner_actions .btn_small > span,
+html body .item_scrap_actions .btn_small > span,
+html body .item_market_actions .btn_small > span,
+html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 14px;
+	}
+html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
+	padding-left: 0;
+	padding-right: 0;
 	}
 
 
@@ -576,14 +703,21 @@ html body #term {
  */
 
 html body .checkout_content_box,
+html body .block_header,
 html body .block_content_inner {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	}
-html body .loginbox_sep {
+html body .block_header {
+	border-bottom: none;
+	}
+html body .loginbox_sep,
+html body .mainLoginPanelDivider {
 	width: 1px;
 	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	background: none;
 	}
 html body .modal_buttons .auth_button {
+	text-align: left;
 	background: rgba(102, 192, 244, 0.2);
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	}
@@ -631,6 +765,30 @@ html body .guideTop .workshopItemControls {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	}
+
+html body .membercount.members {
+	width: 105px;
+	}
+
+
+/*
+ *  Checkout
+ *  ---------------------------------------------
+ */
+
+html body.v6.checkout {
+	padding-top: 0;
+	}
+html body.v6.checkout .page_header_ctn {
+	margin-bottom: 0;
+	}
+html body .checkout_tab.checkout_content {
+	margin-top: 0;
+	}
+html body .checkout_content_box h2 {
+	padding: 10px 15px 0;
+	background: rgba(0, 0, 0, 0.2);
 	}
 
 
@@ -803,7 +961,6 @@ html body #store_nav_area .store_nav_bg {
  *  ---------------------------------------------
  */
 
-html body .btn_profile_action,
 html body .btn_blue_white_innerfade,
 html body .btn_darkblue_white_innerfade,
 html body .btn_grey_white_innerfade,
@@ -817,74 +974,80 @@ html body .btn_green_white_innerfade:not([type="submit"]) {
 	padding: 0;
 	}
 html body .btn_grey_white_innerfade {
-	background: #acb5bd;
+	background: #acb5bd !important;
 	}
 html body .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-	background: #acb5bd;
+	background: #acb5bd !important;
 	}
 html body .btn_green_white_innerfade {
 	color: #fff !important;
 	}
 html body .btn_green_white_innerfade > span,
 html body .btn_green_white_innerfade[type="submit"] {
-	background: #799905;
+	background: #799905 !important;
 	}
 html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span,
 html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active)[type="submit"]:hover {
-	background: #A4D007;
+	background: #A4D007 !important;
 	}
 html body .btn_blue_white_innerfade > span {
-	background: #82a6d7;
+	background: #82a6d7 !important;
 	}
 html body .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #9ab7de;
+	background: #9ab7de !important;
 	}
 html body .btn_darkblue_white_innerfade > span {
-	background: rgba(33, 101, 138, 1);
+	background: rgba(33, 101, 138, 1) !important;
 	}
 html body .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #989b9e;
+	background: #989b9e !important;
 	}
 html body .btn_grey_white_innerfade > span {
-	background: #778088;
+	background: #778088 !important;
 	}
 html body .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #99a2aa;
+	background: #99a2aa !important;
 	}
 html body .btn_grey_grey_outer_bevel > span {
-	background: #2B2B2B;
+	background: #2B2B2B !important;
 	}
 html body .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #445b7c;
+	background: #445b7c !important;
 	}
 html body .item_market_action_button_green > .item_market_action_button_contents {
-	background: #799905;
+	background: #799905 !important;
 	}
 html body .item_market_action_button_green:hover > .item_market_action_button_contents {
-	background: #A4D007;
+	background: #A4D007 !important;
 	}
 html body .btnv6_green_white_innerfade,
 html body .btn_addtocart {
-	background: #799905;
+	background: #799905 !important;
 	}
 html body .btn_addtocart .btn_addtocart_content {
-	background: none;
+	background: none !important;
 	}
 html body .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
 html body .btn_addtocart:hover {
-	background: #A4D007;
+	background: #A4D007 !important;
 	}
 html body .btnv6_lightblue_blue {
-	background: rgba(193, 228, 249, 1);
+	background: rgba(193, 228, 249, 1) !important;
 	}
 html body .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-	background: rgba(102, 192, 244, 1);
+	background: rgba(102, 192, 244, 1) !important;
 	}
 html body .btnv6_blue_blue_innerfade {
-	background: rgba(47, 137, 188, 1);
+	background: rgba(47, 137, 188, 1) !important;
 	}
 html body .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-	background: rgba(102, 192, 244, 1);
+	background: rgba(102, 192, 244, 1) !important;
+	}
+html body .btnv6_blue_hoverfade {
+	background: rgba( 103, 193, 245, 0.2 ) !important;
+	}
+html body .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	background: #417a9b !important;
 	}
 
 
@@ -1034,6 +1197,7 @@ html body #topSummaryBoxContent,
 html body .manage_actions_ctn,
 html body .forum_paging,
 html body .block_content,
+html body .jsTooltip,
 /* all tabs */
 html body .home_tab,
 html body .home_tab .tab_content,
@@ -1176,7 +1340,7 @@ html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
 
 
 /*
- *  EnhancedSteam support
+ *  Extension support: EnhancedSteam
  *  ---------------------------------------------
  */
 
@@ -1199,7 +1363,21 @@ html body .es-group-leave-button {
 	border-radius: 0 !important;
 	}
 html body #enhanced_pulldown {
-	display: none;
+	font: 0/0 a;
+	margin: 0;
+	height: 25px;
+	}
+html body #enhanced_pulldown.focus {
+	border: none;
+	}
+	html body #enhanced_pulldown:after {
+		content: 'ES';
+		font: 12px/25px Arial;
+		display: inline-block;
+		vertical-align: middle;
+		}
+html body .es_progress_wrap {
+	position: static;
 	}
 html body #es_progress {
 	margin-top: 0;
@@ -1231,6 +1409,59 @@ html body .es_highlight_wishlist .col.search_released {
 	/* readibily */
 	color: rgba(255,255,255,0.3);
 	}
+html body #es_permalink_div {
+	display: table;
+	width: 100%;
+	}
+html body #es_permalink_text,
+html body #es_permalink {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0;
+	height: 30px;
+	}
+html body #es_permalink_text {
+	white-space: nowrap;
+	width: 1%;
+	padding-right: 10px;
+	}
+html body #es_permalink {
+	width: 99%;
+	padding: 4px 6px;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+	}
+html body .es_game_purchase_action {
+	width: 80px;
+	text-align: center;
+	}
+
+
+/*
+ *  Extension support: Steam Database
+ *  ---------------------------------------------
+ */
+html body .steamdb_self_profile {
+	margin: -8px -10px -6px;
+	width: auto;
+	height: 14px;
+	}
+html body .item_actions[style^="height:"] {
+	height: auto !important;
+	}
+html body .item_actions[style^="height:"]:after {
+	content: ' ';
+	display: table;
+	clear: both;
+	}
+html body .item_actions[style^="height:"] .btn_small {
+	float: left;
+	width: calc(100% - 90px);
+	}
+html body .item_market_actions .es-btn-spacer {
+	display: none;
+	}
+
 
 /* --- END --- */
 }

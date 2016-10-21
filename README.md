@@ -8,17 +8,21 @@ Make your Steam better!
 
 * [Styles Example](#styles-example)
 * [How Setup It?](#how-setup-it)
+* [Support](#support)
 * [Donation](#-donation-via-paypal)
 
 ## Styles Example
 ###### Fixed and redesigned header, new popups
 ![Header](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/header.jpg)
+
 ###### Normalized all tabs, sort options
 ![Wishlist](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/wishlist.jpg)
+
 ###### Redesign badges page, flated all progress bars
 ![Badges](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/badges.jpg)
+
 ###### Flated all buttons
-![Store](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/product.jpg)
+![Store](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/product.jpg)  
 ... and more!
 
 ## How Setup It?
@@ -34,6 +38,9 @@ Install the Stylish Extension for your browser (
 etc.), then add css file (from `--- BEGIN ---` to `--- END ---` comment) as a *New Style*.
 Make sure it applies to the domain **`store.steampowered.com`**,
 **`steamcommunity.com`**, and **`help.steampowered.com`**. Enjoy!
+
+## Support
+If you need any support, please [create an issue](https://github.com/denis-g/userstyle-flat-steam-ui/issues) on GitHub or [create new discussion](http://steamcommunity.com/groups/flat-steam-ui/discussions) on Steam Group.
 
 ## 🍺 Donation via PayPal
 You can support my work with a donation. Your donation will help me continue
