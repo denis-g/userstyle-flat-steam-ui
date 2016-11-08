@@ -6,7 +6,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2016-10-21
+ * Last update: 2016-11-08
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui
@@ -141,14 +141,15 @@ html body div#global_header {
 			/* specially for notifications */
 			html body div#global_action_menu .popup_block_new#header_notification_dropdown {
 				}
-				html body div#global_action_menu .popup_block_new#header_notification_dropdown .notification_icon {
-					float: left;
-					}
 				html body div#global_action_menu .popup_block_new#header_notification_dropdown .notification_count {
 					font-weight: bold;
 					}
 				html body div#global_action_menu .popup_block_new#header_notification_dropdown .popup_menu_item {
+					color: #8f98a0;
 					text-align: left;
+					}
+				html body div#global_action_menu .popup_block_new#header_notification_dropdown .popup_menu_item:hover {
+					color: #000;
 					}
 			/* fixed height */
 			html body div#global_action_menu .popup_block_new#language_dropdown {
@@ -206,7 +207,7 @@ html body .apps_recommended_by_curators_bottom_bar {
 html body #apps_recommended_by_curators::-webkit-scrollbar {
 	display: none;
 	}
-html body .curated_app_item {
+html body .steam_curator {
 	vertical-align: top;
 	}
 html body .home_specials_grid .special {
@@ -245,6 +246,10 @@ html body .rightcol.game_meta_data .block_content_inner {
 
 html body .review_box {
 	border: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+html body .game_description_column .block_header {
+	border: none;
 	}
 
 html body .game_area_play_stats {
@@ -361,6 +366,14 @@ html body .badge_row {
 	html body .badge_row_inner {
 		background: #141414;
 		}
+
+html body #market_buy_commodity_input_price,
+html body #market_buy_commodity_input_quantity {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.8);
+	padding: 5px 6px;
+	text-align: center;
+	}
 
 
 /*
@@ -615,6 +628,7 @@ html body .item_market_actions .btn_small,
 html body .item_market_actions .item_market_action_button,
 html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
 	display: block;
+	height: auto;
 	text-align: center;
 	margin-right: 0;
 	margin-bottom: 8px;
@@ -624,6 +638,9 @@ html body .item_owner_actions .btn_small > span,
 html body .item_scrap_actions .btn_small > span,
 html body .item_market_actions .btn_small > span,
 html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
+	float: none;
+	height: auto;
+	line-height: inherit;
 	padding-top: 8px;
 	padding-bottom: 8px;
 	font-size: 14px;
@@ -632,6 +649,14 @@ html body .item_market_actions .item_market_action_button .item_market_action_bu
 	padding-left: 0;
 	padding-right: 0;
 	}
+
+html body #market_sell_dialog_accept {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	}
+	html body #market_sell_dialog_accept > span {
+		font-size: 14px;
+		}
 
 
 /*
@@ -683,12 +708,14 @@ html body .searchbox:hover {
 		right: 6px;
 		}
 	html body a#store_search_link {
+		width: 28px;
+		height: 26px;
 		right: 0;
 		font: 0/0 a;
 		background: url('http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/searchbox_workshop_submit.gif') no-repeat 50%;
 		}
 		html body a#store_search_link img {
-			height: 26px;
+			display: none;
 			}
 html body #term {
 	vertical-align: middle;
@@ -934,11 +961,15 @@ html body #store_nav_area .store_nav_bg {
 	html body #store_nav_area .tab {
 		border-right: 1px solid rgba(0, 0, 0, 0.3);
 		}
+	html body #store_nav_area .tab > span {
+		text-shadow: none;
+		}
 	html body #store_nav_area .tab:hover > span,
 	html body #store_nav_area .tab:hover,
 	html body #store_nav_area .tab.focus > span,
 	html body #store_nav_area .tab.focus {
 		background: #60aed9;
+		text-shadow: none;
 		}
 	html body #store_nav_area .store_nav_bg .popup_block_new .popup_body {
 		background: #60aed9;
@@ -982,10 +1013,12 @@ html body .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_a
 html body .btn_green_white_innerfade {
 	color: #fff !important;
 	}
+html body .btn_green_white_innerfade,
 html body .btn_green_white_innerfade > span,
 html body .btn_green_white_innerfade[type="submit"] {
 	background: #799905 !important;
 	}
+html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
 html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span,
 html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active)[type="submit"]:hover {
 	background: #A4D007 !important;
@@ -1080,6 +1113,9 @@ html body .tab_see_more {
 	background: none;
 	padding: 1px 0 0;
 	}
+html body .tab_filter {
+	background: #8aaf05;
+	}
 
 
 /*
@@ -1107,6 +1143,7 @@ html body .gray_bevel,
 html body input.gray_bevel,
 html body textarea.gray_bevel,
 html body div#headerSearch.friend_activity_header_search,
+html body .searchbox,
 html body .profileFriendSearchBox,
 html body .descField,
 html body .commentthread_entry_quotebox,
@@ -1148,6 +1185,15 @@ html body select.gray_bevel {
  */
 
 /* all box */
+html body .callout,
+html body .ds_options > div,
+html body .ds_options_tooltip,
+html body .ds_options_tooltip > .option,
+html body .carousel_container .carousel_thumbs > div,
+html body .carousel_container.maincap .reason .avatar > img,
+html body .store_main_capsule .reason .additional > div,
+html body .store_main_capsule .reason .main .tags > span,
+html body .tab_preview .tags > span,
 html body .home_page_gutter_block,
 html body .profile_header_badge,
 html body .profile_xp_block,
@@ -1170,6 +1216,7 @@ html body .completed_badge_ctn,
 html body .completed_badge_inner,
 html body .badge_reward_ctn,
 html body .badge_reward,
+html body .badge_craft_button,
 html body .alertbox_content,
 html body .warningPanel,
 html body .warningSign,
@@ -1219,6 +1266,7 @@ html body .group_tab,
 html body .tabCount,
 html body .tabOff,
 html body .tabOn,
+html body .tab_filter,
 /* all progress bars */
 html body .achievement_progress_bar_ctn,
 html body .achievement_progress_bar_ctn .progress_bar,
@@ -1256,6 +1304,9 @@ html body .btnv6_green_white_innerfade,
 html body .btnv6_green_white_innerfade > span,
 html body .btnv6_lightblue_blue,
 html body .btnv6_lightblue_blue > span,
+html body .btnv6_white_transparent,
+html body .btnv6_white_transparent > span,
+html body .big_button,
 html body .btn_medium,
 html body .btn_medium > span,
 html body .modal_buttons .auth_button,
