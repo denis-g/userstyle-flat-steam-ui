@@ -5,7 +5,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2016-11-11
+ * Last update: 2016-12-26
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui
@@ -231,7 +231,7 @@ html body .home_content.single_buttonbar {
 
 
 /*
- *  Game in Store
+ *  Games
  *  ---------------------------------------------
  */
 
@@ -303,6 +303,19 @@ html body .app_tag:hover,
 html body .app_tag.add_your_own:hover,
 html body .app_tag.previous_tag:hover {
 	background: #67c1f5 !important;
+	}
+
+html body .block.responsive_apppage_details_left .btn_medium > span {
+	font-size: 12px;
+	}
+
+html body .game_hover_box {
+	background: rgba(227, 234, 239, 0.95);
+	-webkit-backdrop-filter: saturate(150%) blur(5px);
+	}
+html body .game_hover .hover_arrow_left,
+html body .game_hover .hover_arrow_right {
+	display: none !important;
 	}
 
 
@@ -436,6 +449,16 @@ html body .profile_customization {
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	}
 
+html body #NamePopup.popup_block_new .popup_menu {
+	background: rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	}
+html body #NamePopup.popup_block_new .popup_menu > div:first-child:not(#NamePopupAliases) {
+	padding: 4px 12px 0;
+	font-size: 11px;
+	opacity: 0.5;
+	}
+
 html body .profile_header_actions {
 	text-align: right;
 	}
@@ -480,6 +503,12 @@ html body .showcase_achievement.plus_more {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	}
+html body .achievement_progress_bar_ctn {
+	width: 130px;
+	}
+html body .game_info_achievement_summary .ellipsis {
+	margin-left: 10px;
 	}
 html body .achieveBar,
 html body .achievementProgressBar,
@@ -563,6 +592,10 @@ html body #friendactivity_right_column .box {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
+html body .blotter_appselect {
+	background: #7095ca;
+	}
+
 
 /*
  *  Inventory
@@ -604,7 +637,8 @@ html body .inventory_iteminfo {
 	border-width: 1px;
 	}
 html body .inventory_iteminfo .item_desc_content {
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(66, 66, 66, 0.75);
+	-webkit-backdrop-filter: saturate(150%) blur(5px);
 	}
 html body .inventory_iteminfo .item_desc_icon_center {
 	width: 350px;
@@ -801,6 +835,11 @@ html body .modal_buttons .auth_button:hover .auth_button_h5 {
 	color: #fff;
 	}
 
+html body .commentthread_area .commentthread_header {
+	background: none;
+	padding: 10px 0 8px;
+	}
+
 html body .commentthread_comment_edit_textarea_ctn,
 html body .community_home_search_apps,
 html body .community_home_search_players,
@@ -862,6 +901,34 @@ html body .checkout_tab.checkout_content {
 html body .checkout_content_box h2 {
 	padding: 10px 15px 0;
 	background: rgba(0, 0, 0, 0.2);
+	}
+
+html body .checkout_gotsteam_area a.btn_blue {
+	float: none;
+	width: auto;
+	display: block;
+	text-align: center;
+	}
+html body .checkout_gotsteam_area a.btn_blue.leftbtn {
+	margin-right: 0;
+	margin-bottom: 10px;
+	}
+
+html body .card_drop_info_progress_bar_ctn {
+	border: 1px solid rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	}
+html body .card_drop_info_progress_bar {
+	border: none;
+	height: 10px;
+	background: #848080;
+	}
+html body .salespend_card_drop_info .card_drop_info_progress_bar {
+	background: #799905;
+	}
+html body .card_drop_info_progress_bar.new_progress {
+	background: #539bc5;
 	}
 
 
@@ -955,15 +1022,13 @@ html body div.statsselect_options {
 	html body div.statsselect div.option,
 	html body div.statsselect_options div.option {
 		padding: 10px 14px !important;
-		text-align: center;
-		text-transform: uppercase;
 		}
 		html body .popup_menu a.popup_menu_item,
 		html body .popup_menu2 a.popup_menu_item2 h5,
 		html body .popup_block_new .popup_body .popup_menu_item,
 		html body div.statsselect div.option,
 		html body div.statsselect_options div.option {
-			font-size: 11px;
+			font-size: 12px;
 			font-weight: normal;
 			line-height: 1.1 !important;
 			color: #8F98A0;
@@ -1031,6 +1096,57 @@ html body #store_nav_area .store_nav_bg {
 		html body #store_nav_area .store_nav_bg .popup_block_new .popup_menu_item:hover {
 			background: #417a9b;
 			}
+
+
+/*
+ *  Popup
+ *  ---------------------------------------------
+ */
+
+/* user */
+html body .miniprofile_hover .shadow_ul,
+html body .miniprofile_hover .shadow_ur,
+html body .miniprofile_hover .shadow_bl,
+html body .miniprofile_hover .shadow_br,
+html body .miniprofile_hover .shadow_top,
+html body .miniprofile_hover .shadow_bottom,
+html body .miniprofile_hover .shadow_left,
+html body .miniprofile_hover .shadow_right,
+html body .miniprofile_arrow {
+	display: none !important;
+	}
+html body .miniprofile_hover_inner.shadow_content {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	}
+html body .miniprofile_top,
+html body .miniprofile_ingame {
+	-webkit-backdrop-filter: saturate(150%) blur(5px);
+	}
+html body .miniprofile_top {
+	background: rgba(51, 66, 91, 0.95);
+	}
+html body .miniprofile_ingame {
+	background: rgba(71, 71, 71, 0.95);
+	border-left: none;
+	border-right: none;
+	}
+
+/* emoji */
+html body .emoticon_hover_content {
+	background: rgba(40, 40, 40, 0.95);
+	border-color: rgba(255, 255, 255, 0.1);
+	-webkit-backdrop-filter: saturate(150%) blur(5px);
+	}
+html body .emoticon_hover_arrow {
+	display: none !important;
+	}
+
+/* badge */
+html body .community_tooltip {
+	background: rgba(240, 240, 240, 0.9);
+	border-color: rgba(0, 0, 0, 0.3);
+	-webkit-backdrop-filter: saturate(150%) blur(5px);
+	}
 
 
 /*
@@ -1163,6 +1279,13 @@ html body .tab_filter {
 	background: #8aaf05;
 	}
 
+html body .grouppage_header {
+	border-bottom-width: 2px;
+	}
+html body .responsive_tab_baseline {
+	height: 2px;
+	}
+
 
 /*
  *  Inputs
@@ -1183,6 +1306,7 @@ html body .checkout_content_box input[type=password],
 html body .checkout_content_box select,
 html body .checkout_content_box textarea,
 html body .checkout_main .dselect_container a.trigger,
+html body .checkout_gotsteam_area a.btn_blue,
 html body .authcode_entry_box,
 html body .twofactorauthcode_entry_box,
 html body .gray_bevel,
@@ -1267,6 +1391,7 @@ html body .alertbox_content,
 html body .warningPanel,
 html body .warningSign,
 html body #rightContents .box,
+html body #rightContents .panel,
 html body .miniReviewBlock,
 html body blockquote.bb_blockquote,
 html body .bb_wysiwyg blockquote,
@@ -1276,6 +1401,7 @@ html body .miniprofile_content,
 html body .miniprofile_favorite_badge,
 html body .community_home_search_apps,
 html body .community_home_search_players,
+html body .market_searchedForTerm,
 html body a.linkbar_active,
 html body .community_tooltip,
 html body #BG_top > .user_info,
@@ -1313,12 +1439,15 @@ html body .tabCount,
 html body .tabOff,
 html body .tabOn,
 html body .tab_filter,
+html body .tabarea .tab,
 /* all progress bars */
 html body .achievement_progress_bar_ctn,
 html body .achievement_progress_bar_ctn .progress_bar,
 html body .profile_xp_block_remaining_bar,
 html body .profile_xp_block_remaining_bar_progress,
 html body .apphub_ProgressBarBG,
+html body .card_drop_info_progress_bar,
+html body .card_drop_info_progress_bar_ctn,
 /* all buttons */
 html body .btn_border_2px,
 html body .btnv6_border_2px,
@@ -1368,6 +1497,7 @@ html body .hover_details_block,
 html body .hover_details_block_full,
 html body a.forum_comment_action,
 html body .new_on_steam_button > div,
+html body a.votenow_btn,
 /* all inputs */
 html body input[type="text"],
 html body input[type="password"],
@@ -1382,6 +1512,7 @@ html body .gray_bevel,
 html body .commentthread_comment_edit_textarea_ctn,
 html body .blotter_status_entry .commentthread_entry_quotebox,
 html body .blotter_comment_thread .commentthread_entry_quotebox,
+html body .searchbox,
 html body .profileFriendSearchBox,
 html body div#headerSearch.friend_activity_header_search,
 html body div.filterselect,
@@ -1391,6 +1522,7 @@ html body .curators_searchbox,
 html body .newmodal_header_border,
 html body .newmodal_header,
 html body #modalContent.modal_frame,
+html body .screenshot_popup_modal_content,
 /* other elements */
 html body .app_tag,
 html body .slider,
