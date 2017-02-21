@@ -19,21 +19,29 @@ Make your Steam better!
 
 ## Styles Example
 
-###### Fixed and redesigned header, new popups
+###### Homepage: redesign header, new popups
 
-![Header](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/header.jpg)
+![Homepage with Flat Steam UI](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/homepage.jpg)
 
-###### Normalized all tabs, sort options
+###### Game in Store: flat all buttons and boxes
 
-![Wishlist](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/wishlist.jpg)
+![Game Store with Flat Steam UI](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/game_buttons.jpg)
 
-###### Redesign badges page, flated all progress bars
+###### Game in Store: redesign review box
 
-![Badges](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/badges.jpg)
+![Game Reviews with Flat Steam UI](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/game_review.jpg)
 
-###### Flated all buttons
+###### User Profile: redesign boxes
 
-![Store](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/product.jpg)
+![User Profile with Flat Steam UI](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/user_profile.jpg)
+
+###### User Badges: flat progress bars
+
+![User Badges with Flat Steam UI](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/user_badges.jpg)
+
+###### User Wishlist: normalize toolbars
+
+![User Wishlist with Flat Steam UI](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/user_wishlist.jpg)
 
 ... and more!
 

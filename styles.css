@@ -5,7 +5,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2016-12-26
+ * Last update: 2017-02-21
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui
@@ -235,6 +235,10 @@ html body .home_content.single_buttonbar {
  *  ---------------------------------------------
  */
 
+ html body #agegate_box select {
+ 	padding-right: 30px;
+ 	}
+
 html body .rightcol.game_meta_data .block,
 html body .explore_rightcol_box {
 	border: 1px solid rgba(255, 255, 255, 0.1);
@@ -450,7 +454,7 @@ html body .profile_customization {
 	}
 
 html body #NamePopup.popup_block_new .popup_menu {
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.75);
 	border: 1px solid rgba(0, 0, 0, 0.4);
 	}
 html body #NamePopup.popup_block_new .popup_menu > div:first-child:not(#NamePopupAliases) {
@@ -471,13 +475,13 @@ html body .btn_profile_action {
 	text-align: center;
 	color: rgba(255, 255, 255, 0.4) !important;
 	border: 1px solid rgba(0, 0, 0, 0.3);
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.2) !important;
 	}
 html body .btn_profile_action:hover,
 html body .btn_profile_action.focus {
 	color: rgba(255, 255, 255, 0.8) !important;
 	border-color: rgba(0, 0, 0, 0.6);
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.3) !important;
 	}
 html body .btn_profile_action > span {
 	font-size: 8px;
@@ -486,6 +490,7 @@ html body .btn_profile_action > span {
 	text-transform: uppercase;
 	letter-spacing: 0.10em;
 	padding: 8px 10px 6px;
+	background: none !important;
 	}
 html body .btn_profile_action img {
 	vertical-align: middle;
@@ -883,6 +888,11 @@ html body .membercount.members {
 	width: 105px;
 	}
 
+html body #widget {
+	/* iframe padding fix */
+	margin-top: -48px;  /* menu height */
+	}
+
 
 /*
  *  Checkout
@@ -895,10 +905,10 @@ html body.v6.checkout {
 html body.v6.checkout .page_header_ctn {
 	margin-bottom: 0;
 	}
-html body .checkout_tab.checkout_content {
+html body.v6.checkout .checkout_tab.checkout_content {
 	margin-top: 0;
 	}
-html body .checkout_content_box h2 {
+html body.v6.checkout .checkout_content_box h2 {
 	padding: 10px 15px 0;
 	background: rgba(0, 0, 0, 0.2);
 	}
@@ -1591,15 +1601,15 @@ html body .performance-graph,
 html body .es-group-leave-button {
 	border-radius: 0 !important;
 	}
-html body #enhanced_pulldown {
+html body #es_pulldown {
 	font: 0/0 a;
 	margin: 0;
 	height: 25px;
 	}
-html body #enhanced_pulldown.focus {
+html body #es_pulldown.focus {
 	border: none;
 	}
-	html body #enhanced_pulldown:after {
+	html body #es_pulldown:after {
 		content: 'ES';
 		font: 12px/25px Arial;
 		display: inline-block;
@@ -1634,22 +1644,31 @@ html body #es_progress.error::-webkit-progress-value {
 	border-radius: 0;
 	box-shadow: none;
 	}
-html body .es_highlight_wishlist .col.search_released {
-	/* readibily */
-	color: rgba(255,255,255,0.3);
+html body #wishlist_sort_options {
 	}
+	html body #wishlist_sort_options .popup_menu_item:hover {
+		background-color: rgba(0, 0, 0, 0.1);
+		}
+	html body #wishlist_sort_options .popup_menu_item.active {
+		background-color: rgba(0, 0, 0, 0.2);
+		}
+html body #es_sort_flyout {
+	}
+	html body #es_sort_flyout .popup_menu_item {
+		margin: 0;
+		}
 html body #es_permalink_div {
 	display: table;
 	width: 100%;
 	}
-html body #es_permalink_text,
+html body #es_permalink_div .count_link_label,
 html body #es_permalink {
 	display: table-cell;
 	vertical-align: middle;
 	margin: 0;
 	height: 30px;
 	}
-html body #es_permalink_text {
+html body #es_permalink_div .count_link_label {
 	white-space: nowrap;
 	width: 1%;
 	padding-right: 10px;
@@ -1659,6 +1678,10 @@ html body #es_permalink {
 	padding: 4px 6px;
 	text-overflow: ellipsis;
 	box-sizing: border-box;
+	}
+html body .search_area .popup_body .match.es_highlighted,
+html body .search_area .popup_body .match.es_highlighted .match_name {
+	color: #fff;
 	}
 html body .es_game_purchase_action {
 	width: 80px;
