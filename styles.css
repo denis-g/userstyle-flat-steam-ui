@@ -34,9 +34,11 @@ html body div#global_header {
 	box-sizing: border-box;
 	}
 	/* redesign main menu */
-	html body div#global_header .content {
+	html body div#global_header .content,
+	html body:not(.es_homepage_sidebar_hidden) div#global_header .content {
 		height: 48px; /* menu height */
 		background: none;
+		right: auto !important;
 		}
 		html body div#global_header div.logo {
 			padding: 0;
@@ -250,6 +252,21 @@ html body .rightcol.game_meta_data .block_content_inner {
 html body .review_box {
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	}
+	html body .review_box .leftcol {
+		float: none;
+		width: auto;
+		padding: 20px;
+		}
+	html body .review_box .rightcol {
+		float: none;
+		width: auto;
+		padding: 0 20px;
+		margin: 0;
+		}
+	html body .review_box a.vote_header {
+		float: right;
+		margin-top: -62px;
+		}
 
 html body .game_description_column .block_header {
 	border: none;
@@ -288,8 +305,8 @@ html body .user_reviews_header {
 	}
 html body .user_reviews_summary_bar {
 	padding: 10px 10px 0;
-	background: #2a475e;
-	border: 1px solid rgba(255,255,255,0.1);
+	background: rgba(42, 71, 94, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-bottom: none;
 	}
 html body .user_reviews_summary_bar.new {
@@ -299,9 +316,13 @@ html body .user_reviews_summary_bar .game_review_summary {
 	text-shadow: none;
 	}
 html body .user_reviews_filter_options {
-	border: 1px solid rgba(255,255,255,0.1);
+	background: rgba(42, 71, 94, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-top: none;
 	}
+	html body .user_reviews_filter_score {
+		border-top-color: rgba(255, 255, 255, 0.1);
+		}
 
 html body .app_tag:hover,
 html body .app_tag.add_your_own:hover,
@@ -348,7 +369,7 @@ html body #wishlist_items .price {
 	color: #eee;
 	}
 html body input.wishlist_rank {
-	background: rgba(0,0,0,0.6);
+	background: rgba(0, 0, 0, 0.6);
 	}
 
 
@@ -597,9 +618,36 @@ html body #friendactivity_right_column .box {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
+html body .manage_actions_ctn {
+	background: rgba(255, 255, 255, 0.05);
+	}
+
 html body .blotter_appselect {
 	background: #7095ca;
 	}
+
+html body .private_profile {
+	}
+	html body .private_profile .profile_content {
+		display: none;
+		}
+	html body .private_profile .profile_private_info {
+		color: #fff;
+		background: #a94847;
+		padding: 10px;
+		}
+
+html body .profile_ban_status {
+	color: #fff;
+	background: #a94847;
+	padding: 10px;
+	}
+	html body .profile_ban .profile_ban_info {
+		color: inherit;
+		}
+		html body .profile_ban .profile_ban_info a {
+			font-weight: bold;
+		}
 
 
 /*
@@ -858,7 +906,7 @@ html body .sharedfiles_usercontrols_label {
 	vertical-align: middle;
 	}
 html body blockquote.bb_blockquote {
-	background: rgba(0,0,0,0.15);
+	background: rgba(0, 0, 0, 0.15);
 	}
 html body .commentthread_comment {
 	margin-top: 19px;
@@ -943,9 +991,22 @@ html body .card_drop_info_progress_bar.new_progress {
 
 
 /*
- *  Sort options
+ *  Warning page
  *  ---------------------------------------------
  */
+
+html body .warningSign {
+	background: #820200;
+	}
+html body .friendlyInterstital .warningSign {
+	background: #E3BA14;
+	}
+
+
+ /*
+  *  Sort options
+  *  ---------------------------------------------
+  */
 
 html body .sort_options a,
 html body .sort_options .selected_sort,
@@ -1093,8 +1154,9 @@ html body #store_nav_area .store_nav_bg {
 		text-shadow: none;
 		}
 	html body #store_nav_area .store_nav_bg .popup_block_new .popup_body {
+		padding: 0;
 		background: #60aed9;
-		box-shadow: 0 8px 8px rgba(0,0,0,0.5);
+		box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
 		}
 		html body #store_nav_area .store_nav_bg .popup_menu_subheader {
 			color: rgba(255, 255, 255, 0.75);
@@ -1249,7 +1311,7 @@ html body .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_
 	background: rgba(102, 192, 244, 1) !important;
 	}
 html body .btnv6_blue_hoverfade {
-	background: rgba( 103, 193, 245, 0.2 ) !important;
+	background: rgba(103, 193, 245, 0.2) !important;
 	}
 html body .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	background: #417a9b !important;
@@ -1278,6 +1340,9 @@ html body .games_list_tab.active {
 html body .apphub_sectionTab:hover {
 	background: #67c1f5;
 	}
+html body .apphub_sectionTabsHR {
+	height: 2px;
+	}
 html body .tab_item {
 	border: 1px solid rgba(255, 255, 255, 0.075);
 	}
@@ -1294,6 +1359,16 @@ html body .grouppage_header {
 	}
 html body .responsive_tab_baseline {
 	height: 2px;
+	}
+
+html body #subtabs {
+	height: 40px;
+	background-repeat: repeat-x;
+	background-position: 0 -2px;
+	}
+
+html body .discussions_header {
+	border-bottom-width: 2px;
 	}
 
 
@@ -1345,11 +1420,12 @@ html body textarea:active {
 	}
 html body select,
 html body select.gray_bevel {
+	line-height: normal;
 	color: #C6D4DF;
-	background: rgba( 0, 0, 0, 0.2 ) no-repeat;
+	background: rgba(0, 0, 0, 0.2) no-repeat;
 	background-image: url('data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==');
 	background-position: calc(100% - 6px) 50%;
-	padding: 0 30px 0 8px;
+	padding: 4px 30px 4px 8px;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
