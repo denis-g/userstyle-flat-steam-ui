@@ -5,7 +5,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2017-02-27
+ * Last update: 2017-03-01
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui
@@ -34,11 +34,17 @@ html body div#global_header {
 	box-sizing: border-box;
 	}
 	/* redesign main menu */
-	html body div#global_header .content,
-	html body:not(.es_homepage_sidebar_hidden) div#global_header .content {
+	html body div#global_header .content {
 		height: 48px; /* menu height */
 		background: none;
-		right: auto !important;
+		right: auto;
+		}
+	@media (min-width: 1208px) and (max-width: 1440px) {
+		/* home page with sidebar */
+		html body.v6.infinite_scrolling div#global_header .content {
+				/* header offset */
+				right: -108px !important;
+			}
 		}
 		html body div#global_header div.logo {
 			padding: 0;
@@ -1674,9 +1680,21 @@ html body .es-prev,
 html body .es-next,
 html body .es_game_purchase_action_bg,
 html body .performance-graph,
-html body .es-group-leave-button {
+html body .es-group-leave-button,
+html body .es_wishlist_total .game_purchase_action_bg,
+html body .es_games_filter input.gray_bevel,
+html body #es_progress,
+html body .es_input_number,
+html body .es_input_text {
 	border-radius: 0 !important;
 	}
+
+@media (min-width: 1208px) and (max-width: 1440px) {
+	html body:not(.es_homepage_sidebar_hidden) div#global_header .content {
+		right: 0 !important;
+		}
+	}
+
 html body #es_pulldown {
 	font: 0/0 a;
 	margin: 0;
@@ -1691,6 +1709,7 @@ html body #es_pulldown.focus {
 		display: inline-block;
 		vertical-align: middle;
 		}
+
 html body .es_progress_wrap {
 	position: static;
 	}
@@ -1701,25 +1720,25 @@ html body #es_progress {
 	right: 0;
 	bottom: 2px;
 	height: 2px;
-	border-radius: 0;
 	}
-html body #es_progress.error,
-html body #es_progress.complete {
-	width: 36px; /* avatar width */
-	animation: none;
-	}
-html body #es_progress::-webkit-progress-bar {
-	border-radius: 0;
-	box-shadow: none;
-	}
-html body #es_progress::-webkit-progress-value {
-	border-radius: 0;
-	box-shadow: none;
-	}
-html body #es_progress.error::-webkit-progress-value {
-	border-radius: 0;
-	box-shadow: none;
-	}
+	html body #es_progress.error,
+	html body #es_progress.complete {
+		width: 36px; /* avatar width */
+		animation: none;
+		}
+	html body #es_progress::-webkit-progress-bar {
+		border-radius: 0;
+		box-shadow: none;
+		}
+	html body #es_progress::-webkit-progress-value {
+		border-radius: 0;
+		box-shadow: none;
+		}
+	html body #es_progress.error::-webkit-progress-value {
+		border-radius: 0;
+		box-shadow: none;
+		}
+
 html body #wishlist_sort_options {
 	}
 	html body #wishlist_sort_options .popup_menu_item:hover {
@@ -1728,37 +1747,41 @@ html body #wishlist_sort_options {
 	html body #wishlist_sort_options .popup_menu_item.active {
 		background-color: rgba(0, 0, 0, 0.2);
 		}
+
 html body #es_sort_flyout {
 	}
 	html body #es_sort_flyout .popup_menu_item {
 		margin: 0;
 		}
+
 html body #es_permalink_div {
 	display: table;
 	width: 100%;
 	}
-html body #es_permalink_div .count_link_label,
-html body #es_permalink {
-	display: table-cell;
-	vertical-align: middle;
-	margin: 0;
-	height: 30px;
-	}
-html body #es_permalink_div .count_link_label {
-	white-space: nowrap;
-	width: 1%;
-	padding-right: 10px;
-	}
-html body #es_permalink {
-	width: 99%;
-	padding: 4px 6px;
-	text-overflow: ellipsis;
-	box-sizing: border-box;
-	}
+	html body #es_permalink_div .count_link_label,
+	html body #es_permalink {
+		display: table-cell;
+		vertical-align: middle;
+		margin: 0;
+		height: 30px;
+		}
+	html body #es_permalink_div .count_link_label {
+		white-space: nowrap;
+		width: 1%;
+		padding-right: 10px;
+		}
+	html body #es_permalink {
+		width: 99%;
+		padding: 4px 6px;
+		text-overflow: ellipsis;
+		box-sizing: border-box;
+		}
+
 html body .search_area .popup_body .match.es_highlighted,
 html body .search_area .popup_body .match.es_highlighted .match_name {
 	color: #fff;
 	}
+
 html body .es_game_purchase_action {
 	width: 80px;
 	text-align: center;
