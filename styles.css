@@ -5,7 +5,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2017-03-01
+ * Last update: 2017-04-11
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui
@@ -255,7 +255,8 @@ html body .rightcol.game_meta_data .block_content_inner {
 	border: none;
 	}
 
-html body .review_box {
+html body .review_box,
+html body .review_developer_response_container {
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	}
 	html body .review_box .leftcol {
@@ -272,6 +273,21 @@ html body .review_box {
 	html body .review_box a.vote_header {
 		float: right;
 		margin-top: -62px;
+		}
+html body .review_developer_response_container.multiple_listing {
+	margin-top: -27px;
+	}
+	html body .review_developer_response_container .leftcol,
+	html body .review_developer_response_container .rightcol {
+		float: none;
+		width: auto;
+		}
+	html body .review_developer_response_container .leftcol {
+		padding-left: 20px;
+		padding-right: 20px;
+		}
+	html body .review_developer_response_container .rightcol {
+		margin-left: 20px;
 		}
 
 html body .game_description_column .block_header {
@@ -347,6 +363,10 @@ html body .game_hover_box {
 html body .game_hover .hover_arrow_left,
 html body .game_hover .hover_arrow_right {
 	display: none !important;
+	}
+
+html body .achieveRow:not(.unlocked) .compareImg {
+	opacity: 0.5;
 	}
 
 
