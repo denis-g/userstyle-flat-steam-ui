@@ -1,5 +1,5 @@
 # Flat Steam UI
-Flat, clean and simply Steam Store and Community redesign. More squared and geometry-focused flat design, global UI and style fixes, and new modern vision.  
+Flat, clean and simply Steam Store and Community redesign. More squared and geometry-focused flat design, global UI and style fixes, and new modern vision.
 Make your Steam better!
 
 
@@ -53,10 +53,10 @@ Make your Steam better!
 or
 
 Install the Stylish Extension for your browser (
-[Google Chrome]  (https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe),
-[Firefox]        (https://addons.mozilla.org/ru/firefox/addon/stylish/),
-[Opera]          (https://addons.opera.com/ru/extensions/details/stylish/),
-[Safari]         (http://sobolev.us/stylish/)
+[Google Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe),
+[Firefox](https://addons.mozilla.org/ru/firefox/addon/stylish/),
+[Opera](https://addons.opera.com/ru/extensions/details/stylish/),
+[Safari](http://sobolev.us/stylish/)
 , etc.), then add css file (from `--- BEGIN ---` to `--- END ---` comment) as a *New Style*.
 
 Make sure it applies to the domain **`store.steampowered.com`**,
@@ -65,10 +65,16 @@ Make sure it applies to the domain **`store.steampowered.com`**,
 
 ## Support
 
-If you need any support, please [create an issue](https://github.com/denis-g/userstyle-flat-steam-ui/issues) on GitHub or [create new discussion](http://steamcommunity.com/groups/flat-steam-ui/discussions) on Steam Group.
+If you need any support, please
+[create an issue](https://github.com/denis-g/userstyle-flat-steam-ui/issues)
+on GitHub or
+[create new discussion](http://steamcommunity.com/groups/flat-steam-ui/discussions/0/133259227524504224/)
+on Steam Group.
 
 
 ## 🍺 Donation via PayPal
 
 You can support my work with a donation. Your donation will help me continue
-and improve this project. At least, you can [buy me a beer](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y3K5QBE7N9LZY) :)
+and improve this project. At least, you can
+[buy me a beer](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y3K5QBE7N9LZY)
+:)
