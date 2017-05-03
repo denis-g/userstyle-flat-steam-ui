@@ -5,7 +5,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2017-04-13
+ * Last update: 2017-05-03
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui/issues
@@ -661,7 +661,7 @@ html body .blotter_appselect {
 html body .private_profile {
 	}
 	html body .private_profile .profile_content {
-		display: none;
+		background: none;
 		}
 	html body .private_profile .profile_private_info {
 		color: #fff;
@@ -678,8 +678,10 @@ html body .profile_ban_status {
 		color: inherit;
 		}
 		html body .profile_ban .profile_ban_info a {
+			color: #fff;
 			font-weight: bold;
-		}
+			text-decoration: underline;
+			}
 
 
 /*
@@ -991,6 +993,12 @@ html body.v6.checkout .checkout_tab.checkout_content {
 html body.v6.checkout .checkout_content_box h2 {
 	padding: 10px 15px 0;
 	background: rgba(0, 0, 0, 0.2);
+	}
+html body .checkout_content_box h3.tab_header {
+	padding: 0 15px;
+	}
+html body .checkout_content .rule {
+	margin: 0;
 	}
 
 html body .checkout_gotsteam_area a.btn_blue {
@@ -1619,6 +1627,7 @@ html body .hover_details_block_full,
 html body a.forum_comment_action,
 html body .new_on_steam_button > div,
 html body a.votenow_btn,
+html body .checkout_gotsteam_area a.btn_blue,
 /* all inputs */
 html body input[type="text"],
 html body input[type="password"],
