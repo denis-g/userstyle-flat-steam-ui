@@ -1,17 +1,15 @@
 @-moz-document domain('store.steampowered.com'), domain('steamcommunity.com'), domain('help.steampowered.com') {
-
 /* --- BEGIN --- */
 
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2017-05-03
+ * Last update: 2017-10-03
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui/issues
  * http://steamcommunity.com/groups/flat-steam-ui/discussions/0/133259227524504224/
  */
-
 
 /*
  *  Header
@@ -19,174 +17,166 @@
  */
 
 html body {
-	padding-top: 48px; /* menu height */
-	}
+    padding-top: 48px; /* menu height */
+    }
 html body div#global_header,
 html body.v6 div#global_header {
-	background: rgba(23, 26, 33, 0.9);
-	}
+    background: rgba(23, 26, 33, 0.95);
+    }
 html body div#global_header {
-	border: none;
-	position: fixed !important;
-	left: 0;
-	top: 0;
-	width: 100%;
-	z-index: 900;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	box-sizing: border-box;
-	}
-	/* redesign main menu */
-	html body div#global_header .content,
-	html body.v6 div#global_header .content {
-		background: none;
-		}
-	html body div#global_header .content {
-		height: 48px; /* menu height */
-		right: auto;
-		}
-	@media (min-width: 1208px) and (max-width: 1440px) {
-		/* home page with sidebar */
-		html body.v6.infinite_scrolling div#global_header .content {
-			/* header offset */
-			right: -108px !important;
-			}
-		}
-		html body div#global_header div.logo {
-			padding: 0;
-			margin: 0;
-			width: auto;
-			height: auto;
-			}
-			html body div#global_header div.logo a {
-				display: block;
-				width: 140px;
-				height: 48px; /* menu height */
-				background: url(http://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png) no-repeat 0 50%;
-				background-size: auto 34px;
-				opacity: 0.7;
-				}
-			html body div#global_header div.logo a:hover {
-				opacity: 1;
-				}
-			html body div#global_header div.logo img {
-				display: none;
-				}
-		html body div#global_header .supernav_container {
-			left: 170px;
-			}
-			html body div#global_header .menuitem {
-				width: 160px;
-				text-align: center;
-				padding: 0 10px;
-				font-size: 13px;
-				line-height: 48px; /* menu height */
-				border-right: 1px solid rgba(255, 255, 255, 0.1);
-				}
-			html body div#global_header .menuitem:first-child {
-				border-left: 1px solid rgba(255, 255, 255, 0.1);
-				}
-			html body div#global_header .menuitem:hover {
-				color: #000;
-				background: #ccc;
-				}
-				html body div#global_header .submenuitem {
-					color: #8F98A0;
-					font-size: 12px;
-					font-weight: normal;;
-					line-height: 1.1;
-					padding: 10px 14px;
-					text-align: center;
-					}
-				html body div#global_header .submenuitem:not(:last-child) {
-					border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-					}
-				html body div#global_header .submenuitem:hover {
-					color: #000;
-					background: #ccc;
-					}
-				html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"] {
-					color: #a4d007;
-					font-weight: bold;
-					}
-				html body div#global_header .submenuitem[href="http://steamcommunity.com/greenlight/"]:hover {
-					color: #fff;
-					background: #a4d007;
-					}
-			html body div#global_header .supernav_content {
-				padding: 0;
-				width: 181px;
-				max-width: none;
-				margin: 3px 0 0 -1px;
-				background: rgba(23, 26, 33, 0.9);
-				-webkit-backdrop-filter: saturate(180%) blur(20px);
-				}
-			html body div#global_header div[data-submenuid] {
-				width: 100%;
-				max-width: none;
-				}
-		/* fix price in userbar */
-		html body div#global_actions a.global_action_link {
-			white-space: nowrap;
-			}
-		/* user menu */
-		html body #account_pulldown {
-			max-width: 66px;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			}
-		html body #language_pulldown.focus,
-		html body #account_pulldown.focus {
-			margin: 1px; /* revert to default */
-			border: none;
-			}
-		html body div#global_action_menu .popup_block_new {
-			}
-			html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"] {
-				color: #b03500;
-				font-weight: bold;
-				}
-			html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"]:hover {
-				color: #fff;
-				background: #b03500;
-				}
-			/* specially for notifications */
-			html body div#global_action_menu .popup_block_new#header_notification_dropdown {
-				}
-				html body div#global_action_menu .popup_block_new#header_notification_dropdown .notification_count {
-					font-weight: bold;
-					}
-				html body div#global_action_menu .popup_block_new#header_notification_dropdown .popup_menu_item {
-					color: #8f98a0;
-					text-align: left;
-					}
-				html body div#global_action_menu .popup_block_new#header_notification_dropdown .popup_menu_item:hover {
-					color: #000;
-					}
-			/* fixed height */
-			html body div#global_action_menu .popup_block_new#language_dropdown {
-				}
-				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body {
-					max-height: 260px;
-					overflow-y: auto;
-					-webkit-overflow-scrolling: touch;
-					position: relative;
-					}
-				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar {
-					background: transparent;
-					width: 6px;
-					position: absolute;
-					}
-				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar-track {
-					background: transparent;
-					position: absolute;
-					z-index: -2;
-					}
-				html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar-thumb {
-					border-radius: 4px;
-					background: #888;
-					}
+    border: none;
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 900;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-sizing: border-box;
+    }
+    /* redesign main menu */
+    html body div#global_header .content,
+    html body.v6 div#global_header .content {
+        background: none;
+        }
+    html body div#global_header .content {
+        height: 48px; /* menu height */
+        right: auto;
+        }
+    @media (min-width: 1208px) and (max-width: 1440px) {
+        /* home page with sidebar */
+        html body.v6.infinite_scrolling div#global_header .content {
+            /* header offset */
+            right: -108px !important;
+            }
+        }
+        html body div#global_header div.logo {
+            padding: 0;
+            margin: 0;
+            width: auto;
+            height: auto;
+            }
+            html body div#global_header div.logo a {
+                display: block;
+                width: 140px;
+                height: 48px; /* menu height */
+                background: url(http://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png) no-repeat 0 50%;
+                background-size: auto 34px;
+                opacity: 0.7;
+                }
+            html body div#global_header div.logo a:hover {
+                opacity: 1;
+                }
+            html body div#global_header div.logo img {
+                display: none;
+                }
+        html body div#global_header .supernav_container {
+            left: 170px;
+            }
+            html body div#global_header .menuitem {
+                width: 160px;
+                text-align: center;
+                padding: 0 10px;
+                font-size: 13px;
+                line-height: 48px; /* menu height */
+                border-right: 1px solid rgba(255, 255, 255, 0.1);
+                }
+            html body div#global_header .menuitem:first-child {
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
+                }
+            html body div#global_header .menuitem:hover {
+                color: #000;
+                background: #ccc;
+                }
+                html body div#global_header .submenuitem {
+                    color: #8F98A0;
+                    font-size: 12px;
+                    font-weight: normal;;
+                    line-height: 1.1;
+                    padding: 10px 14px;
+                    text-align: center;
+                    }
+                html body div#global_header .submenuitem:not(:last-child) {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+                html body div#global_header .submenuitem:hover {
+                    color: #000;
+                    background: #ccc;
+                    }
+            html body div#global_header .supernav_content {
+                padding: 0;
+                width: 181px;
+                max-width: none;
+                margin: 3px 0 0 -1px;
+                background: rgba(23, 26, 33, 0.95);
+                -webkit-backdrop-filter: saturate(180%) blur(20px);
+                }
+            html body div#global_header div[data-submenuid] {
+                width: 100%;
+                max-width: none;
+                }
+        /* fix price in userbar */
+        html body div#global_actions a.global_action_link {
+            white-space: nowrap;
+            }
+        /* user menu */
+        html body #account_pulldown {
+            max-width: 66px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
+        html body #language_pulldown.focus,
+        html body #account_pulldown.focus {
+            margin: 1px; /* revert to default */
+            border: none;
+            }
+        html body div#global_action_menu .popup_block_new {
+            }
+            html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"] {
+                color: #b03500;
+                font-weight: bold;
+                }
+            html body div#global_action_menu .popup_menu .popup_menu_item[href="javascript:Logout();"]:hover {
+                color: #fff;
+                background: #b03500;
+                }
+            /* specially for notifications */
+            html body div#global_action_menu .popup_block_new#header_notification_dropdown {
+                }
+                html body div#global_action_menu .popup_block_new#header_notification_dropdown .notification_count {
+                    font-weight: bold;
+                    }
+                html body div#global_action_menu .popup_block_new#header_notification_dropdown .popup_menu_item {
+                    color: #8f98a0;
+                    text-align: left;
+                    }
+                html body div#global_action_menu .popup_block_new#header_notification_dropdown .popup_menu_item:hover {
+                    color: #000;
+                    }
+            /* fixed height */
+            html body div#global_action_menu .popup_block_new#language_dropdown {
+                }
+                html body div#global_action_menu .popup_block_new#language_dropdown .popup_body {
+                    max-height: 260px;
+                    overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
+                    position: relative;
+                    }
+                html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar {
+                    background: transparent;
+                    width: 6px;
+                    position: absolute;
+                    }
+                html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar-track {
+                    background: transparent;
+                    position: absolute;
+                    z-index: -2;
+                    }
+                html body div#global_action_menu .popup_block_new#language_dropdown .popup_body::-webkit-scrollbar-thumb {
+                    border-radius: 4px;
+                    background: #888;
+                    }
 
 
 /*
@@ -199,49 +189,49 @@ html body a.home_smallcap,
 html body .curated_app_item,
 html body .discovery_queue_overlay,
 html body .game_description_column .block .block_content a {
-	border-color: rgba(255, 255, 255, 0.1);
-	}
+    border-color: rgba(255, 255, 255, 0.1);
+    }
 html body .home_recommended_spotlight {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	margin-bottom: 0;
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
+    }
 html body #home_recommended_more {
-	background: none;
-	padding: 6px 0 0;
-	}
+    background: none;
+    padding: 6px 0 0;
+    }
 html body .apps_recommended_by_curators_ctn {
-	margin-bottom: 20px;
-	}
+    margin-bottom: 20px;
+    }
 html body .apps_recommended_by_curators_bottom_bar {
-	background: none;
-	padding: 6px 0 0;
-	margin: 0;
-	}
+    background: none;
+    padding: 6px 0 0;
+    margin: 0;
+    }
 html body #apps_recommended_by_curators::-webkit-scrollbar {
-	display: none;
-	}
+    display: none;
+    }
 html body .steam_curator {
-	vertical-align: top;
-	}
+    vertical-align: top;
+    }
 html body .home_specials_grid .special {
-	border-color: rgba( 255, 255, 255, 0.1);
-	}
+    border-color: rgba( 255, 255, 255, 0.1);
+    }
 html body .home_block_footer {
-	background: none;
-	padding: 2px 0 0;
-	}
+    background: none;
+    padding: 2px 0 0;
+    }
 html body .home_content.single {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-bottom: none;
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    }
 html body .home_content.single a.screenshot {
-	width: 212px;
-	}
+    width: 212px;
+    }
 html body .home_content.single_buttonbar {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-top: none;
-	margin-top: 0;
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    margin-top: 0;
+    }
 
 
 /*
@@ -250,130 +240,130 @@ html body .home_content.single_buttonbar {
  */
 
  html body #agegate_box select {
- 	padding-right: 30px;
- 	}
+     padding-right: 30px;
+     }
 
 html body .rightcol.game_meta_data .block,
 html body .explore_rightcol_box {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 html body .rightcol.game_meta_data .block_content_inner {
-	border: none;
-	}
+    border: none;
+    }
 
 html body .review_box,
 html body .review_developer_response_container {
-	border: 1px solid rgba(255, 255, 255, 0.05);
-	}
-	html body .review_box .leftcol {
-		float: none;
-		width: auto;
-		padding: 20px;
-		}
-	html body .review_box .rightcol {
-		float: none;
-		width: auto;
-		padding: 0 20px;
-		margin: 0;
-		}
-	html body .review_box a.vote_header {
-		float: right;
-		margin-top: -62px;
-		}
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    html body .review_box .leftcol {
+        float: none;
+        width: auto;
+        padding: 20px;
+        }
+    html body .review_box .rightcol {
+        float: none;
+        width: auto;
+        padding: 0 20px;
+        margin: 0;
+        }
+    html body .review_box a.vote_header {
+        float: right;
+        margin-top: -62px;
+        }
 html body .review_developer_response_container.multiple_listing {
-	margin-top: -27px;
-	}
-	html body .review_developer_response_container .leftcol,
-	html body .review_developer_response_container .rightcol {
-		float: none;
-		width: auto;
-		}
-	html body .review_developer_response_container .leftcol {
-		padding-left: 20px;
-		padding-right: 20px;
-		}
-	html body .review_developer_response_container .rightcol {
-		margin-left: 20px;
-		}
+    margin-top: -27px;
+    }
+    html body .review_developer_response_container .leftcol,
+    html body .review_developer_response_container .rightcol {
+        float: none;
+        width: auto;
+        }
+    html body .review_developer_response_container .leftcol {
+        padding-left: 20px;
+        padding-right: 20px;
+        }
+    html body .review_developer_response_container .rightcol {
+        margin-left: 20px;
+        }
 
 html body .game_description_column .block_header {
-	border: none;
-	}
+    border: none;
+    }
 
 html body .game_area_play_stats {
-	padding-top: 20px;
-	}
+    padding-top: 20px;
+    }
 html body .already_owned_actions {
-	display: inline-block;
-	vertical-align: top;
-	padding-top: 0;
-	}
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 0;
+    }
 html body .game_area_already_owned_btn {
-	float: none;
-	margin-right: 0;
-	display: inline-block;
-	vertical-align: top;
-	}
-	html body .game_area_already_owned_btn a[href="http://store.steampowered.com/about/"] {
-		/* remove 'Install Steam' link */
-		display: none;
-		}
+    float: none;
+    margin-right: 0;
+    display: inline-block;
+    vertical-align: top;
+    }
+    html body .game_area_already_owned_btn a[href="http://store.steampowered.com/about/"] {
+        /* remove 'Install Steam' link */
+        display: none;
+        }
 html body .already_owned_actions + .game_area_already_owned_btn {
-	margin-left: 12px;
-	}
+    margin-left: 12px;
+    }
 html body .dynamiclink_box {
-	margin-right: 0;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}
+    margin-right: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    }
 
 html body .user_reviews_header {
-	background: none;
-	}
+    background: none;
+    }
 html body .user_reviews_summary_bar {
-	padding: 10px 10px 0;
-	background: rgba(42, 71, 94, 0.3);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-bottom: none;
-	}
+    padding: 10px 10px 0;
+    background: rgba(42, 71, 94, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    }
 html body .user_reviews_summary_bar.new {
-	margin-bottom: 0;
-	}
+    margin-bottom: 0;
+    }
 html body .user_reviews_summary_bar .game_review_summary {
-	text-shadow: none;
-	}
+    text-shadow: none;
+    }
 html body .user_reviews_filter_options {
-	background: rgba(42, 71, 94, 0.3);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-top: none;
-	}
-	html body .user_reviews_filter_score {
-		border-top-color: rgba(255, 255, 255, 0.1);
-		}
+    background: rgba(42, 71, 94, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    }
+    html body .user_reviews_filter_score {
+        border-top-color: rgba(255, 255, 255, 0.1);
+        }
 
 html body .app_tag:hover,
 html body .app_tag.add_your_own:hover,
 html body .app_tag.previous_tag:hover {
-	background: #67c1f5 !important;
-	}
+    background: #67c1f5 !important;
+    }
 
 html body .block.responsive_apppage_details_left .btn_medium > span {
-	font-size: 12px;
-	}
+    font-size: 12px;
+    }
 
 html body .game_hover_box {
-	background: rgba(227, 234, 239, 0.95);
-	-webkit-backdrop-filter: saturate(150%) blur(5px);
-	}
+    background: rgba(227, 234, 239, 0.95);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
 html body .game_hover .hover_arrow_left,
 html body .game_hover .hover_arrow_right {
-	display: none !important;
-	}
+    display: none !important;
+    }
 
 html body .achieveRow:not(.unlocked) .compareImg {
-	opacity: 0.5;
-	}
+    opacity: 0.5;
+    }
 
 
 /*
@@ -382,27 +372,27 @@ html body .achieveRow:not(.unlocked) .compareImg {
  */
 
 html body .gameListRow {
-	border: 1px solid rgba(255, 255, 255, 0.075);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    }
 html body .wishlistRow {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 html body .wishlistRowItem {
-	overflow: inherit;
-	}
+    overflow: inherit;
+    }
 html body #wishlist_items input.wishlist_rank {
-	font-size: 11px;
-	}
+    font-size: 11px;
+    }
 html body #wishlist_items .price,
 html body #wishlist_items .discount_block_inline {
-	font-size: 16px;
-	}
+    font-size: 16px;
+    }
 html body #wishlist_items .price {
-	color: #eee;
-	}
+    color: #eee;
+    }
 html body input.wishlist_rank {
-	background: rgba(0, 0, 0, 0.6);
-	}
+    background: rgba(0, 0, 0, 0.6);
+    }
 
 
 /*
@@ -411,38 +401,38 @@ html body input.wishlist_rank {
  */
 
 html body .profile_xp_block {
-	border-color: #1a1819;
-	}
+    border-color: #1a1819;
+    }
 html body .profile_xp_block_remaining_bar {
-	height: 10px;
-	border: 1px solid #666;
-	}
+    height: 10px;
+    border: 1px solid #666;
+    }
 html body .profile_xp_block_remaining_bar_progress {
-	height: 10px;
-	background: #999;
-	}
+    height: 10px;
+    background: #999;
+    }
 html body .badge_row.is_link:hover,
 html body .badge_row.depressed {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    }
 html body .badge_row {
-	border: 1px solid #000;
-	padding: 0;
-	background: none;
-	}
-	html body .badge_row_inner {
-		background: #141414;
-		}
+    border: 1px solid #000;
+    padding: 0;
+    background: none;
+    }
+    html body .badge_row_inner {
+        background: #141414;
+        }
 
 html body #market_buy_commodity_input_price,
 html body #market_buy_commodity_input_quantity {
-	font-size: 14px;
-	color: rgba(255, 255, 255, 0.8);
-	padding: 5px 6px;
-	text-align: center;
-	}
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 5px 6px;
+    text-align: center;
+    }
 
 
 /*
@@ -451,19 +441,19 @@ html body #market_buy_commodity_input_quantity {
  */
 
 html body .mainLoginPanel {
-	box-shadow: none;
-	border-radius: 0;
-	background: rgba( 64, 128, 183, 0.4);
-	}
+    box-shadow: none;
+    border-radius: 0;
+    background: rgba( 64, 128, 183, 0.4);
+    }
 html body .help_section_content,
 html body .account_recovery_box {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 html body .help_wizard_button,
 html body .help_wizard_button:not(.disabled):not(.nohover):hover,
 html body .help_wizard_button.opened {
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
 
 /*
@@ -474,214 +464,214 @@ html body .help_wizard_button.opened {
 html body .profile_small_header_bg,
 html body .profile_header_bg,
 html body .profile_subpage_column .profile_small_header_bg {
-	background: none;
-	}
+    background: none;
+    }
 html body .profile_header_bg {
-	padding-bottom: 14px;
-	z-index: 2;
-	}
+    padding-bottom: 14px;
+    z-index: 2;
+    }
 html body .profile_subpage_column .profile_small_header_bg {
-	height: 104px;
-	}
+    height: 104px;
+    }
 html body .profile_small_header_texture,
 html body .profile_header_bg_texture {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-top: none;
-	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    }
 html body .profile_small_header_texture {
-	background: rgba(41, 53, 72, 0.85);
-	}
+    background: rgba(41, 53, 72, 0.85);
+    }
 html body .profile_header_bg_texture {
-	background: rgba(41, 48, 62, 0.85);
-	-webkit-backdrop-filter: saturate(150%) blur(5px);
-	}
+    background: rgba(41, 48, 62, 0.85);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
 html body .profile_background_overlay_content {
-	opacity: 1;
-	background: rgba(23, 23, 23, 0.85);
-	-webkit-backdrop-filter: saturate(150%) blur(5px);
-	}
+    opacity: 1;
+    background: rgba(23, 23, 23, 0.85);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
 html body .profile_customization {
-	background: rgba(34, 45, 62, 0.85);
-	border: 1px solid rgba(255, 255, 255, 0.05);
-	}
+    background: rgba(34, 45, 62, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    }
 
 html body #NamePopup.popup_block_new .popup_menu {
-	background: rgba(0, 0, 0, 0.75);
-	border: 1px solid rgba(0, 0, 0, 0.4);
-	}
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    }
 html body #NamePopup.popup_block_new .popup_menu > div:first-child:not(#NamePopupAliases) {
-	padding: 4px 12px 0;
-	font-size: 11px;
-	opacity: 0.5;
-	}
+    padding: 4px 12px 0;
+    font-size: 11px;
+    opacity: 0.5;
+    }
 
 html body .profile_header_actions {
-	text-align: right;
-	}
+    text-align: right;
+    }
 html body .profile_header_actions .popup_menu a.popup_menu_item {
-	text-align: left;
-	}
+    text-align: left;
+    }
 html body .btn_profile_action {
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-	color: rgba(255, 255, 255, 0.4) !important;
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	background: rgba(0, 0, 0, 0.2) !important;
-	}
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2) !important;
+    }
 html body .btn_profile_action:hover,
 html body .btn_profile_action.focus {
-	color: rgba(255, 255, 255, 0.8) !important;
-	border-color: rgba(0, 0, 0, 0.6);
-	background: rgba(0, 0, 0, 0.3) !important;
-	}
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3) !important;
+    }
 html body .btn_profile_action > span {
-	font-size: 8px;
-	font-weight: bold;
-	line-height: 1;
-	text-transform: uppercase;
-	letter-spacing: 0.10em;
-	padding: 8px 10px 6px;
-	background: none !important;
-	}
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    padding: 8px 10px 6px;
+    background: none !important;
+    }
 html body .btn_profile_action img {
-	vertical-align: middle;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	}
+    vertical-align: middle;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    }
 html body .btn_profile_action > span,
 html body .btn_profile_action:hover > span,
 html body .btn_profile_action.focus > span {
-	background: none;
-	}
+    background: none;
+    }
 
 html body .game_info_achievement.plus_more,
 html body .showcase_achievement.plus_more {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    }
 html body .achievement_progress_bar_ctn {
-	width: 130px;
-	}
+    width: 130px;
+    }
 html body .game_info_achievement_summary .ellipsis {
-	margin-left: 10px;
-	}
+    margin-left: 10px;
+    }
 html body .achieveBar,
 html body .achievementProgressBar,
 html body .achievement_progress_bar_ctn {
-	border: none;
-	box-shadow: none;
-	padding: 0;
-	margin-right: 4px;
-	border: 1px solid #666;
-	background: #58595e;
-	}
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-right: 4px;
+    border: 1px solid #666;
+    background: #58595e;
+    }
 html body .achieveBar,
 html body .achievementProgressBar {
-	height: 10px;
-	line-height: 10px;
-	}
+    height: 10px;
+    line-height: 10px;
+    }
 html body .achievement_progress_bar_ctn {
-	height: 6px;
-	line-height: 6px;
-	}
+    height: 6px;
+    line-height: 6px;
+    }
 html body .achieveBarProgress,
 html body .achievementProgressBar .progress,
 html body .achievement_progress_bar_ctn .progress_bar {
-	background: #999;
-	filter: none;
-	vertical-align: top;
-	}
+    background: #999;
+    filter: none;
+    vertical-align: top;
+    }
 html body .achieveBarProgress,
 html body .achievementProgressBar .progress {
-	height: 10px;
-	}
+    height: 10px;
+    }
 html body .achievement_progress_bar_ctn .progress_bar {
-	height: 6px;
-	}
+    height: 6px;
+    }
 html body .achieveBarProgress[style="width:100%;"],
 html body .achieveBarProgress[style="width: 100%;"],
 html body .achievement_progress_bar_ctn .progress_bar[style="width:100%;"],
 html body .achievement_progress_bar_ctn .progress_bar[style="width: 100%;"] {
-	background: #5c7e10;
-	}
+    background: #5c7e10;
+    }
 html body .achievementProgressBar .progress,
 html body .achievementProgressBar .progressText.nextToBar {
-	font-size: 8px;
-	line-height: 11px;
-	}
+    font-size: 8px;
+    line-height: 11px;
+    }
 
 html body .game_info_badge_border,
 html body .profile_header_badge {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	border-color: #333;
-	}
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-color: #333;
+    }
 html body .recent_game .game_info_stats,
 html body .favoritegame_showcase .game_info_stats {
-	border-top: none;
-	border: 1px solid rgba(255, 255, 255, 0.05);
-	}
+    border-top: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    }
 
 html body .blotter_status_entry .commentthread_entry {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 html body .blotter_block {
-	box-shadow: none;
-	border: 1px solid rgba(255, 255, 255, 0.01);
-	}
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    }
 
 html body .customization_controls .btn_grey_black {
-	color: #fff !important;
-	background: #778088;
-	}
+    color: #fff !important;
+    background: #778088;
+    }
 html body .customization_controls .btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #99a2aa;
-	}
+    background: #99a2aa;
+    }
 html body .customization_controls select.gray_bevel {
-	top: 2px !important;
-	margin-bottom: 0;
-	}
+    top: 2px !important;
+    margin-bottom: 0;
+    }
 
 html body #friendactivity_right_column .box {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
 html body .manage_actions_ctn {
-	background: rgba(255, 255, 255, 0.05);
-	}
+    background: rgba(255, 255, 255, 0.05);
+    }
 
 html body .blotter_appselect {
-	background: #7095ca;
-	}
+    background: #7095ca;
+    }
 
 html body .private_profile {
-	}
-	html body .private_profile .profile_content {
-		background: none;
-		}
-	html body .private_profile .profile_private_info {
-		color: #fff;
-		background: #a94847;
-		padding: 10px;
-		}
+    }
+    html body .private_profile .profile_content {
+        background: none;
+        }
+    html body .private_profile .profile_private_info {
+        color: #fff;
+        background: #a94847;
+        padding: 10px;
+        }
 
 html body .profile_ban_status {
-	color: #fff;
-	background: #a94847;
-	padding: 10px;
-	}
-	html body .profile_ban .profile_ban_info {
-		color: inherit;
-		}
-		html body .profile_ban .profile_ban_info a {
-			color: #fff;
-			font-weight: bold;
-			text-decoration: underline;
-			}
+    color: #fff;
+    background: #a94847;
+    padding: 10px;
+    }
+    html body .profile_ban .profile_ban_info {
+        color: inherit;
+        }
+        html body .profile_ban .profile_ban_info a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: underline;
+            }
 
 
 /*
@@ -690,56 +680,56 @@ html body .profile_ban_status {
  */
 
 html body .games_list_tabs {
-	border: none;
-	background: none;
-	margin-bottom: -1px;
-	}
+    border: none;
+    background: none;
+    margin-bottom: -1px;
+    }
 html body .games_list_tab,
 html body a.games_list_tab {
-	background: rgba(0, 0, 0, 0.5);
-	border: 1px solid rgba(0, 0, 0, 0.5);
-	border-bottom-color: #303030;
-	margin-right: -1px;
-	}
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom-color: #303030;
+    margin-right: -1px;
+    }
 html body .games_list_tab.active,
 html body a.games_list_tab.active {
-	border-color: #303030;
-	border-bottom-color: transparent;
-	}
+    border-color: #303030;
+    border-bottom-color: transparent;
+    }
 html body .games_list_tab_separator {
-	display: none;
-	}
+    display: none;
+    }
 
 html body .view_inventory_page {
-	width: auto;
-	padding: 10px;
-	margin: 0;
-	}
+    width: auto;
+    padding: 10px;
+    margin: 0;
+    }
 html body .view_inventory_page .inventory_page_right {
-	width: 366px;
-	margin-top: 0;
-	}
+    width: 366px;
+    margin-top: 0;
+    }
 html body .inventory_iteminfo {
-	width: auto !important;
-	border-width: 1px;
-	}
+    width: auto !important;
+    border-width: 1px;
+    }
 html body .inventory_iteminfo .item_desc_content {
-	background: rgba(66, 66, 66, 0.75);
-	-webkit-backdrop-filter: saturate(150%) blur(5px);
-	}
+    background: rgba(66, 66, 66, 0.75);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
 html body .inventory_iteminfo .item_desc_icon_center {
-	width: 350px;
-	}
+    width: 350px;
+    }
 html body #tabcontent_inventory {
-	padding-top: 20px;
-	}
+    padding-top: 20px;
+    }
 html body .view_inventory_logo {
-	display: none;
-	}
+    display: none;
+    }
 html body #contextselect .context_name,
 html body #contextselect_options .context_name {
-	font-size: 16px;
-	}
+    font-size: 16px;
+    }
 
 html body .item_actions .btn_small,
 html body .item_owner_actions .btn_small,
@@ -747,42 +737,42 @@ html body .item_scrap_actions .btn_small,
 html body .item_market_actions .btn_small,
 html body .item_market_actions .item_market_action_button,
 html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
-	display: block;
-	height: auto;
-	text-align: center;
-	margin-right: 0;
-	margin-bottom: 8px;
-	}
+    display: block;
+    height: auto;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 8px;
+    }
 html body .item_actions .btn_small > span,
 html body .item_owner_actions .btn_small > span,
 html body .item_scrap_actions .btn_small > span,
 html body .item_market_actions .btn_small > span,
 html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
-	float: none;
-	height: auto;
-	line-height: inherit;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	font-size: 14px;
-	}
+    float: none;
+    height: auto;
+    line-height: inherit;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    }
 html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
-	padding-left: 0;
-	padding-right: 0;
-	}
+    padding-left: 0;
+    padding-right: 0;
+    }
 
 html body #market_sell_dialog_accept {
-	padding-top: 8px;
-	padding-bottom: 8px;
-	}
-	html body #market_sell_dialog_accept > span {
-		font-size: 14px;
-		}
+    padding-top: 8px;
+    padding-bottom: 8px;
+    }
+    html body #market_sell_dialog_accept > span {
+        font-size: 14px;
+        }
 
 html body #market_sell_currency_input,
 html body #market_sell_buyercurrency_input {
-	padding: 8px 10px;
-	font-size: 14px;
-	}
+    padding: 8px 10px;
+    font-size: 14px;
+    }
 
 
 /*
@@ -791,39 +781,39 @@ html body #market_sell_buyercurrency_input {
  */
 
 html body .market_header_logo {
-	background: none;
-	}
+    background: none;
+    }
 html body #BG_top > .user_info {
-	background: rgba(0, 0, 0, 0.5);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	}
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    }
 
 html body .market_tab_well_tabs {
-	border: none;
-	}
+    border: none;
+    }
 html body .market_tab_well_tab_active > span {
-	background: rgba(108, 149, 65, 1);
-	}
+    background: rgba(108, 149, 65, 1);
+    }
 html body .market_tab_well_tab_inactive:hover > span {
-	background: rgba(75, 103, 45, 1);
-	}
+    background: rgba(75, 103, 45, 1);
+    }
 html body .my_market_header_count {
-	font-size: 10px;
-	line-height: 1;
-	}
+    font-size: 10px;
+    line-height: 1;
+    }
 
 html body .market_listing_table_header,
 html body .market_listing_table_message,
 html body .market_listing_table_header .market_listing_right_cell {
-	border-color: rgba(255, 255, 255, 0.1);
-	}
+    border-color: rgba(255, 255, 255, 0.1);
+    }
 
 html body .market_listing_row {
-	border-color: rgba(255, 255, 255, 0.1);
-	}
+    border-color: rgba(255, 255, 255, 0.1);
+    }
 html body .market_listing_row:hover {
-	border-color: #324965;
-	}
+    border-color: #324965;
+    }
 
 
 /*
@@ -835,60 +825,60 @@ html body .searchbox,
 html body .searchTextContainer,
 html body .discussionSearchTextContainer,
 html body .curators_searchbox {
-	height: 26px;
-	background: #2a3f5a;
-	border: 1px solid #000;
-	opacity: 0.6;
-	}
+    height: 26px;
+    background: #2a3f5a;
+    border: 1px solid #000;
+    opacity: 0.6;
+    }
 html body .searchTextContainer {
-	width: auto;
-	}
+    width: auto;
+    }
 html body .searchbox:hover {
-	background-image: none;
-	}
-	html body .searchbox input {
-		font-size: 12px;
-		margin-top: 0;
-		}
-	html body input.searchText,
-	html body input.discussionSearchText {
-		font-size: 12px;
-		top: 3px;
-		}
-	html body .searchbox input.default,
-	html body .searchText.defaultText,
-	html body input.discussionSearchText,
-	html body .curators_search_keywords.defaultText {
-		color: #909090;
-		}
-	html body .searchbox input,
-	html body input.searchText:not(.defaultText),
-	html body input.discussionSearchText:focus,
-	html body input.discussionSearchText:active,
-	html body .curators_search_keywords {
-		color: #fff;
-		}
-	html body .searchTextSubmitImg,
-	html body .discussionSearchTextSubmitImg {
-		top: 4px;
-		left: auto;
-		right: 6px;
-		}
-	html body a#store_search_link {
-		width: 28px;
-		height: 26px;
-		right: 0;
-		font: 0/0 a;
-		background: url('http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/searchbox_workshop_submit.gif') no-repeat 50%;
-		}
-		html body a#store_search_link img {
-			display: none;
-			}
+    background-image: none;
+    }
+    html body .searchbox input {
+        font-size: 12px;
+        margin-top: 0;
+        }
+    html body input.searchText,
+    html body input.discussionSearchText {
+        font-size: 12px;
+        top: 3px;
+        }
+    html body .searchbox input.default,
+    html body .searchText.defaultText,
+    html body input.discussionSearchText,
+    html body .curators_search_keywords.defaultText {
+        color: #909090;
+        }
+    html body .searchbox input,
+    html body input.searchText:not(.defaultText),
+    html body input.discussionSearchText:focus,
+    html body input.discussionSearchText:active,
+    html body .curators_search_keywords {
+        color: #fff;
+        }
+    html body .searchTextSubmitImg,
+    html body .discussionSearchTextSubmitImg {
+        top: 4px;
+        left: auto;
+        right: 6px;
+        }
+    html body a#store_search_link {
+        width: 28px;
+        height: 26px;
+        right: 0;
+        font: 0/0 a;
+        background: url('http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/searchbox_workshop_submit.gif') no-repeat 50%;
+        }
+        html body a#store_search_link img {
+            display: none;
+            }
 html body #term {
-	vertical-align: middle;
-	padding: 6px 10px;
-	box-shadow: none;
-	}
+    vertical-align: middle;
+    padding: 6px 10px;
+    box-shadow: none;
+    }
 
 
 /*
@@ -899,81 +889,81 @@ html body #term {
 html body .checkout_content_box,
 html body .block_header,
 html body .block_content_inner {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 html body .block_header {
-	border-bottom: none;
-	}
+    border-bottom: none;
+    }
 html body .loginbox_sep,
 html body .mainLoginPanelDivider {
-	width: 1px;
-	border-left: 1px solid rgba(255, 255, 255, 0.1);
-	background: none;
-	}
+    width: 1px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    background: none;
+    }
 html body .modal_buttons .auth_button {
-	text-align: left;
-	background: rgba(102, 192, 244, 0.2);
-	border: 1px solid rgba(255, 255, 255, 0.05);
-	}
+    text-align: left;
+    background: rgba(102, 192, 244, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    }
 html body .modal_buttons .auth_button:hover {
-	background: rgba(102, 192, 244, 1);
-	}
+    background: rgba(102, 192, 244, 1);
+    }
 html body .modal_buttons .auth_button:hover .auth_button_h5 {
-	color: #fff;
-	}
+    color: #fff;
+    }
 
 html body .commentthread_area .commentthread_header {
-	background: none;
-	padding: 10px 0 8px;
-	}
+    background: none;
+    padding: 10px 0 8px;
+    }
 
 html body .commentthread_comment_edit_textarea_ctn,
 html body .community_home_search_apps,
 html body .community_home_search_players,
 html body #review_create .input_box {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    }
 html body .sharedfiles_usercontrols_label {
-	/* ui fix */
-	vertical-align: middle;
-	}
+    /* ui fix */
+    vertical-align: middle;
+    }
 html body blockquote.bb_blockquote {
-	background: rgba(0, 0, 0, 0.15);
-	}
+    background: rgba(0, 0, 0, 0.15);
+    }
 html body .commentthread_comment {
-	margin-top: 19px;
-	border-bottom: 1px solid #303030;
-	}
+    margin-top: 19px;
+    border-bottom: 1px solid #303030;
+    }
 html body .commentthread_footer {
-	border-top: 1px solid #303030;
-	}
+    border-top: 1px solid #303030;
+    }
 html body .commentthread_comment:last-child {
-	border-bottom: none;
-	}
+    border-bottom: none;
+    }
 html body .rightbox,
 html body #ig_bottom .sidebar .panel,
 html body #ig_bottom .sidebar .detailPanel {
-	border: 1px solid rgba(0, 0, 0, 0.01);
-	}
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    }
 html body .guideTop {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 html body .guideTop .workshopItemControls {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    }
 
 html body .membercount.members {
-	width: 105px;
-	}
+    width: 105px;
+    }
 
 html body #widget {
-	/* iframe padding fix */
-	margin-top: -48px;  /* menu height */
-	}
+    /* iframe padding fix */
+    margin-top: -48px;  /* menu height */
+    }
 
 
 /*
@@ -982,52 +972,52 @@ html body #widget {
  */
 
 html body.v6.checkout {
-	padding-top: 0;
-	}
+    padding-top: 0;
+    }
 html body.v6.checkout .page_header_ctn {
-	margin-bottom: 0;
-	}
+    margin-bottom: 0;
+    }
 html body.v6.checkout .checkout_tab.checkout_content {
-	margin-top: 0;
-	}
+    margin-top: 0;
+    }
 html body.v6.checkout .checkout_content_box h2 {
-	padding: 10px 15px 0;
-	background: rgba(0, 0, 0, 0.2);
-	}
+    padding: 10px 15px 0;
+    background: rgba(0, 0, 0, 0.2);
+    }
 html body .checkout_content_box h3.tab_header {
-	padding: 0 15px;
-	}
+    padding: 0 15px;
+    }
 html body .checkout_content .rule {
-	margin: 0;
-	}
+    margin: 0;
+    }
 
 html body .checkout_gotsteam_area a.btn_blue {
-	float: none;
-	width: auto;
-	display: block;
-	text-align: center;
-	}
+    float: none;
+    width: auto;
+    display: block;
+    text-align: center;
+    }
 html body .checkout_gotsteam_area a.btn_blue.leftbtn {
-	margin-right: 0;
-	margin-bottom: 10px;
-	}
+    margin-right: 0;
+    margin-bottom: 10px;
+    }
 
 html body .card_drop_info_progress_bar_ctn {
-	border: 1px solid rgba(0, 0, 0, 0.7);
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	}
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    }
 html body .card_drop_info_progress_bar {
-	border: none;
-	height: 10px;
-	background: #848080;
-	}
+    border: none;
+    height: 10px;
+    background: #848080;
+    }
 html body .salespend_card_drop_info .card_drop_info_progress_bar {
-	background: #799905;
-	}
+    background: #799905;
+    }
 html body .card_drop_info_progress_bar.new_progress {
-	background: #539bc5;
-	}
+    background: #539bc5;
+    }
 
 
 /*
@@ -1036,11 +1026,11 @@ html body .card_drop_info_progress_bar.new_progress {
  */
 
 html body .warningSign {
-	background: #820200;
-	}
+    background: #820200;
+    }
 html body .friendlyInterstital .warningSign {
-	background: #E3BA14;
-	}
+    background: #E3BA14;
+    }
 
 
  /*
@@ -1053,34 +1043,34 @@ html body .sort_options .selected_sort,
 html body #friends_sort_options span,
 html body .badge_sort_option.whiteLink,
 html body #achievement_sort_options span {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 6px 8px;
-	margin: 0;
-	font-size: 11px;
-	line-height: 1.2;
-	color: #407898;
-	text-decoration: none;
-	text-transform: lowercase;
-	}
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 8px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.2;
+    color: #407898;
+    text-decoration: none;
+    text-transform: lowercase;
+    }
 html body #friends_sort_options span,
 html body #achievement_sort_options span {
-	margin-left: 0.75em;
-	}
+    margin-left: 0.75em;
+    }
 html body .sort_options a:hover,
 html body #friends_sort_options span:hover,
 html body .badge_sort_option.whiteLink:hover,
 html body #achievement_sort_options span:hover {
-	color: #fff;
-	}
+    color: #fff;
+    }
 html body .sort_options .selected_sort,
 html body #friends_sort_options span:not(.es_friends_sort_link),
 html body .badge_sort_option.whiteLink.active,
 html body #achievement_sort_options span:not(.es_achievement_sort_link) {
-	color: #67c1f5;
-	background: #18222e;
-	text-decoration: none;
-	}
+    color: #67c1f5;
+    background: #18222e;
+    text-decoration: none;
+    }
 
 
 /*
@@ -1090,22 +1080,22 @@ html body #achievement_sort_options span:not(.es_achievement_sort_link) {
 
 html body .newmodal_header_border,
 html body .newmodal_content_border {
-	border: 1px solid #4c4c4c;
-	background: none;
-	padding: 0;
-	}
+    border: 1px solid #4c4c4c;
+    background: none;
+    padding: 0;
+    }
 html body .newmodal_header_border {
-	border-bottom: none;
-	}
+    border-bottom: none;
+    }
 html body .newmodal_header {
-	background: #393937;
-	}
+    background: #393937;
+    }
 html body .newmodal_content {
-	background: #1d1d1d;
-	}
+    background: #1d1d1d;
+    }
 html body .newmodal_background {
-	background: #111;
-	}
+    background: #111;
+    }
 
 
 /*
@@ -1116,101 +1106,101 @@ html body .newmodal_background {
 html body .popup_block,
 html body .popup_block2,
 html body .popup_block_new {
-	box-shadow: none;
-	}
+    box-shadow: none;
+    }
 html body.v6 .popup_block_new .popup_body.popup_menu {
-	padding: 0;
-	}
+    padding: 0;
+    }
 html body .popup_block .popup_body,
 html body .popup_block2 .popup_body2,
 html body .popup_block_new .popup_body,
 html body div.statsselect_options {
-	border: none;
-	padding: 0;
-	background: rgba(66, 66, 66, 0.98);
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	}
-	html body .popup_menu a.popup_menu_item,
-	html body .popup_menu2 a.popup_menu_item2,
-	html body .popup_block_new .popup_body .popup_menu_item,
-	html body div.statsselect div.option,
-	html body div.statsselect_options div.option {
-		padding: 10px 14px !important;
-		}
-		html body .popup_menu a.popup_menu_item,
-		html body .popup_menu2 a.popup_menu_item2 h5,
-		html body .popup_block_new .popup_body .popup_menu_item,
-		html body div.statsselect div.option,
-		html body div.statsselect_options div.option {
-			font-size: 12px;
-			font-weight: normal;
-			line-height: 1.1 !important;
-			color: #8F98A0;
-			}
-		html body .popup_menu2 a.popup_menu_item2 h5 {
-			padding: 0;
-			}
-		html body div.statsselect div.option,
-		html body div.statsselect_options div.option {
-			height: auto;
-			padding: 10px 14px;
-			}
-	html body .popup_menu a.popup_menu_item:hover,
-	html body .popup_menu2 a.popup_menu_item2:hover,
-	html body .popup_block_new .popup_body .popup_menu_item:hover,
-	html body div.statsselect div.option:hover,
-	html body div.statsselect_options div.option:hover {
-		background: #ccc;
-		}
-		html body .popup_menu a.popup_menu_item:hover,
-		html body .popup_menu2 a.popup_menu_item2:hover h5,
-		html body  .popup_block_new .popup_body .popup_menu_item:hover,
-		html body div.statsselect div.option:hover,
-		html body div.statsselect_options div.option:hover {
-			color: #000;
-			}
-	html body .popup_menu a.popup_menu_item:not(:last-child),
-	html body .popup_menu2 a.popup_menu_item2:not(:last-child),
-	html body .popup_block_new .popup_body .popup_menu_item:not(:last-child),
-	html body div.statsselect div.option:not(:last-child),
-	html body div.statsselect_options div.option:not(:last-child) {
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-		}
-	html body .popup_menu .hr,
-	html body .popup_menu .header_notification_dropdown_seperator {
-		display: none;
-		}
+    border: none;
+    padding: 0;
+    background: rgba(66, 66, 66, 0.95);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    }
+    html body .popup_menu a.popup_menu_item,
+    html body .popup_menu2 a.popup_menu_item2,
+    html body .popup_block_new .popup_body .popup_menu_item,
+    html body div.statsselect div.option,
+    html body div.statsselect_options div.option {
+        padding: 10px 14px !important;
+        }
+        html body .popup_menu a.popup_menu_item,
+        html body .popup_menu2 a.popup_menu_item2 h5,
+        html body .popup_block_new .popup_body .popup_menu_item,
+        html body div.statsselect div.option,
+        html body div.statsselect_options div.option {
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1.1 !important;
+            color: #8F98A0;
+            }
+        html body .popup_menu2 a.popup_menu_item2 h5 {
+            padding: 0;
+            }
+        html body div.statsselect div.option,
+        html body div.statsselect_options div.option {
+            height: auto;
+            padding: 10px 14px;
+            }
+    html body .popup_menu a.popup_menu_item:hover,
+    html body .popup_menu2 a.popup_menu_item2:hover,
+    html body .popup_block_new .popup_body .popup_menu_item:hover,
+    html body div.statsselect div.option:hover,
+    html body div.statsselect_options div.option:hover {
+        background: #ccc;
+        }
+        html body .popup_menu a.popup_menu_item:hover,
+        html body .popup_menu2 a.popup_menu_item2:hover h5,
+        html body  .popup_block_new .popup_body .popup_menu_item:hover,
+        html body div.statsselect div.option:hover,
+        html body div.statsselect_options div.option:hover {
+            color: #000;
+            }
+    html body .popup_menu a.popup_menu_item:not(:last-child),
+    html body .popup_menu2 a.popup_menu_item2:not(:last-child),
+    html body .popup_block_new .popup_body .popup_menu_item:not(:last-child),
+    html body div.statsselect div.option:not(:last-child),
+    html body div.statsselect_options div.option:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    html body .popup_menu .hr,
+    html body .popup_menu .header_notification_dropdown_seperator {
+        display: none;
+        }
 
 html body #store_nav_area .store_nav_bg {
-	}
-	html body #store_nav_area .tab {
-		border-right: 1px solid rgba(0, 0, 0, 0.3);
-		}
-	html body #store_nav_area .tab > span {
-		text-shadow: none;
-		}
-	html body #store_nav_area .tab:hover > span,
-	html body #store_nav_area .tab:hover,
-	html body #store_nav_area .tab.focus > span,
-	html body #store_nav_area .tab.focus {
-		background: #60aed9;
-		text-shadow: none;
-		}
-	html body #store_nav_area .store_nav_bg .popup_block_new .popup_body {
-		padding: 0;
-		background: #60aed9;
-		box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
-		}
-		html body #store_nav_area .store_nav_bg .popup_menu_subheader {
-			color: rgba(255, 255, 255, 0.75);
-			}
-		html body #store_nav_area .store_nav_bg .popup_block_new .popup_menu_item {
-			color: #fff;
-			text-align: left;
-			}
-		html body #store_nav_area .store_nav_bg .popup_block_new .popup_menu_item:hover {
-			background: #417a9b;
-			}
+    }
+    html body #store_nav_area .tab {
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    html body #store_nav_area .tab > span {
+        text-shadow: none;
+        }
+    html body #store_nav_area .tab:hover > span,
+    html body #store_nav_area .tab:hover,
+    html body #store_nav_area .tab.focus > span,
+    html body #store_nav_area .tab.focus {
+        background: #60aed9;
+        text-shadow: none;
+        }
+    html body #store_nav_area .store_nav_bg .popup_block_new .popup_body {
+        padding: 0;
+        background: #60aed9;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+        }
+        html body #store_nav_area .store_nav_bg .popup_menu_subheader {
+            color: rgba(255, 255, 255, 0.75);
+            }
+        html body #store_nav_area .store_nav_bg .popup_block_new .popup_menu_item {
+            color: #fff;
+            text-align: left;
+            }
+        html body #store_nav_area .store_nav_bg .popup_block_new .popup_menu_item:hover {
+            background: #417a9b;
+            }
 
 
 /*
@@ -1228,40 +1218,40 @@ html body .miniprofile_hover .shadow_bottom,
 html body .miniprofile_hover .shadow_left,
 html body .miniprofile_hover .shadow_right,
 html body .miniprofile_arrow {
-	display: none !important;
-	}
+    display: none !important;
+    }
 html body .miniprofile_hover_inner.shadow_content {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 html body .miniprofile_top,
 html body .miniprofile_ingame {
-	-webkit-backdrop-filter: saturate(150%) blur(5px);
-	}
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
 html body .miniprofile_top {
-	background: rgba(51, 66, 91, 0.95);
-	}
+    background: rgba(51, 66, 91, 0.95);
+    }
 html body .miniprofile_ingame {
-	background: rgba(71, 71, 71, 0.95);
-	border-left: none;
-	border-right: none;
-	}
+    background: rgba(71, 71, 71, 0.95);
+    border-left: none;
+    border-right: none;
+    }
 
 /* emoji */
 html body .emoticon_hover_content {
-	background: rgba(40, 40, 40, 0.95);
-	border-color: rgba(255, 255, 255, 0.1);
-	-webkit-backdrop-filter: saturate(150%) blur(5px);
-	}
+    background: rgba(40, 40, 40, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
 html body .emoticon_hover_arrow {
-	display: none !important;
-	}
+    display: none !important;
+    }
 
 /* badge */
 html body .community_tooltip {
-	background: rgba(240, 240, 240, 0.9);
-	border-color: rgba(0, 0, 0, 0.3);
-	-webkit-backdrop-filter: saturate(150%) blur(5px);
-	}
+    background: rgba(240, 240, 240, 0.95);
+    border-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
 
 
 /*
@@ -1274,91 +1264,91 @@ html body .btn_darkblue_white_innerfade,
 html body .btn_grey_white_innerfade,
 html body .btn_grey_grey_outer_bevel,
 html body .btn_grey_black {
-	background: none;
-	padding: 0;
-	border: none;
-	}
+    background: none;
+    padding: 0;
+    border: none;
+    }
 html body .btn_green_white_innerfade:not([type="submit"]) {
-	padding: 0;
-	}
+    padding: 0;
+    }
 html body .btn_grey_white_innerfade {
-	background: #acb5bd !important;
-	}
+    background: #acb5bd !important;
+    }
 html body .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-	background: #acb5bd !important;
-	}
+    background: #acb5bd !important;
+    }
 html body .btn_green_white_innerfade {
-	color: #fff !important;
-	}
+    color: #fff !important;
+    }
 html body .btn_green_white_innerfade,
 html body .btn_green_white_innerfade > span,
 html body .btn_green_white_innerfade[type="submit"] {
-	background: #799905 !important;
-	}
+    background: #799905 !important;
+    }
 html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
 html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span,
 html body .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active)[type="submit"]:hover {
-	background: #A4D007 !important;
-	}
+    background: #A4D007 !important;
+    }
 html body .btn_blue_white_innerfade > span {
-	background: #82a6d7 !important;
-	}
+    background: #82a6d7 !important;
+    }
 html body .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #9ab7de !important;
-	}
+    background: #9ab7de !important;
+    }
 html body .btn_darkblue_white_innerfade > span {
-	background: rgba(33, 101, 138, 1) !important;
-	}
+    background: rgba(33, 101, 138, 1) !important;
+    }
 html body .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #989b9e !important;
-	}
+    background: #989b9e !important;
+    }
 html body .btn_grey_white_innerfade > span {
-	background: #778088 !important;
-	}
+    background: #778088 !important;
+    }
 html body .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #99a2aa !important;
-	}
+    background: #99a2aa !important;
+    }
 html body .btn_grey_grey_outer_bevel > span {
-	background: #2B2B2B !important;
-	}
+    background: #2B2B2B !important;
+    }
 html body .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-	background: #445b7c !important;
-	}
+    background: #445b7c !important;
+    }
 html body .item_market_action_button_green > .item_market_action_button_contents {
-	background: #799905 !important;
-	}
+    background: #799905 !important;
+    }
 html body .item_market_action_button_green:hover > .item_market_action_button_contents {
-	background: #A4D007 !important;
-	}
+    background: #A4D007 !important;
+    }
 html body .btnv6_green_white_innerfade,
 html body .btn_addtocart {
-	background: #799905 !important;
-	}
+    background: #799905 !important;
+    }
 html body .btn_addtocart .btn_addtocart_content {
-	background: none !important;
-	}
+    background: none !important;
+    }
 html body .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
 html body .btn_addtocart:hover {
-	background: #A4D007 !important;
-	}
+    background: #A4D007 !important;
+    }
 html body .btnv6_lightblue_blue {
-	background: rgba(193, 228, 249, 1) !important;
-	}
+    background: rgba(193, 228, 249, 1) !important;
+    }
 html body .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-	background: rgba(102, 192, 244, 1) !important;
-	}
+    background: rgba(102, 192, 244, 1) !important;
+    }
 html body .btnv6_blue_blue_innerfade {
-	background: rgba(47, 137, 188, 1) !important;
-	}
+    background: rgba(47, 137, 188, 1) !important;
+    }
 html body .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-	background: rgba(102, 192, 244, 1) !important;
-	}
+    background: rgba(102, 192, 244, 1) !important;
+    }
 html body .btnv6_blue_hoverfade {
-	background: rgba(103, 193, 245, 0.2) !important;
-	}
+    background: rgba(103, 193, 245, 0.2) !important;
+    }
 html body .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-	background: #417a9b !important;
-	}
+    background: #417a9b !important;
+    }
 
 
 /*
@@ -1369,50 +1359,50 @@ html body .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_activ
 html body .sectionTab.active,
 html body .tabOn,
 html body .group_tab.active {
-	background: #417B9C;
-	}
-	html body .sectionTab.active > span,
-	html body .group_tab.active > span {
-		background: none;
-		}
+    background: #417B9C;
+    }
+    html body .sectionTab.active > span,
+    html body .group_tab.active > span {
+        background: none;
+        }
 html body .games_list_tab.active {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    }
 html body .apphub_sectionTab:hover {
-	background: #67c1f5;
-	}
+    background: #67c1f5;
+    }
 html body .apphub_sectionTabsHR {
-	height: 2px;
-	}
+    height: 2px;
+    }
 html body .tab_item {
-	border: 1px solid rgba(255, 255, 255, 0.075);
-	}
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    }
 html body .tab_see_more {
-	background: none;
-	padding: 1px 0 0;
-	}
+    background: none;
+    padding: 1px 0 0;
+    }
 html body .tab_filter {
-	background: #8aaf05;
-	}
+    background: #8aaf05;
+    }
 
 html body .grouppage_header {
-	border-bottom-width: 2px;
-	}
+    border-bottom-width: 2px;
+    }
 html body .responsive_tab_baseline {
-	height: 2px;
-	}
+    height: 2px;
+    }
 
 html body #subtabs {
-	height: 40px;
-	background-repeat: repeat-x;
-	background-position: 0 -2px;
-	}
+    height: 40px;
+    background-repeat: repeat-x;
+    background-position: 0 -2px;
+    }
 
 html body .discussions_header {
-	border-bottom-width: 2px;
-	}
+    border-bottom-width: 2px;
+    }
 
 
 /*
@@ -1421,10 +1411,10 @@ html body .discussions_header {
  */
 
 html body .gray_bevel.for_text_input {
-	/* fix height after remove box-shadow */
-	padding-top: 2px;
-	padding-bottom: 2px;
-	}
+    /* fix height after remove box-shadow */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    }
 html body input[type=text],
 html body input[type=password],
 html body select,
@@ -1448,34 +1438,34 @@ html body .commentthread_entry_quotebox,
 html body .profile_comment_area .commentthread_entry_quotebox,
 html body .blotter_status_entry .commentthread_entry_quotebox,
 html body .blotter_comment_thread .commentthread_entry_quotebox {
-	border-color: rgba(84, 145, 207, 0.4);
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}
+    border-color: rgba(84, 145, 207, 0.4);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    }
 html body input:focus,
 html body input:active,
 html body select:focus,
 html body select:active,
 html body textarea:focus,
 html body textarea:active {
-	outline: none;
-	}
+    outline: none;
+    }
 html body select,
 html body select.gray_bevel {
-	line-height: normal;
-	color: #C6D4DF;
-	background: rgba(0, 0, 0, 0.2) no-repeat;
-	background-image: url('data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==');
-	background-position: calc(100% - 6px) 50%;
-	padding: 4px 30px 4px 8px;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-	        appearance: none;
-	}
+    line-height: normal;
+    color: #C6D4DF;
+    background: rgba(0, 0, 0, 0.2) no-repeat;
+    background-image: url('data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==');
+    background-position: calc(100% - 6px) 50%;
+    padding: 4px 30px 4px 8px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    }
 
 
 /*
@@ -1661,14 +1651,14 @@ html body .slider_ctn .slider_right,
 html body .slider .handle,
 html body .pagebtn,
 html body a.pagebtn {
-	-webkit-border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
-	border-radius: 0 !important;
-	}
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    }
 /* fix square box with background image */
 html body .alertbox_header {
-	background: #5c7e10;
-	}
+    background: #5c7e10;
+    }
 /* remove buttons background */
 html body .apphub_BackToTopButton.leftcap,
 html body .apphub_BackToTopButton.rightcap,
@@ -1678,8 +1668,8 @@ html body .item_market_action_button_left,
 html body .item_market_action_button_right,
 html body .btn_addtocart .btn_addtocart_left,
 html body .btn_addtocart .btn_addtocart_right {
-	display: none;
-	}
+    display: none;
+    }
 
 
 /*
@@ -1694,8 +1684,8 @@ html body div#global_header .menuitem[href^="https://help.steampowered.com/"],
 html body div#global_header .menuitem[href="http://store.steampowered.com/about/"],
 html body div#global_header .submenuitem[href="http://store.steampowered.com/"],
 html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
-	display: none !important;
-	}
+    display: none !important;
+    }
 
 
 /*
@@ -1724,106 +1714,120 @@ html body .es_games_filter input.gray_bevel,
 html body #es_progress,
 html body .es_input_number,
 html body .es_input_text {
-	border-radius: 0 !important;
-	}
+    border-radius: 0 !important;
+    }
+html body #es_progress::-webkit-progress-inner-element {
+    border-radius: 0;
+    }
+html body #es_progress::-webkit-progress-bar {
+    border-radius: 0;
+    }
+html body #es_progress::-webkit-progress-value {
+    border-radius: 0;
+    }
+html body #es_progress.error::-webkit-progress-value {
+    border-radius: 0;
+    }
 
 @media (min-width: 1208px) and (max-width: 1440px) {
-	html body:not(.es_homepage_sidebar_hidden) div#global_header .content {
-		right: 0 !important;
-		}
-	}
+    html body:not(.es_homepage_sidebar_hidden) div#global_header .content {
+        right: 0 !important;
+        }
+    }
 
 html body #es_pulldown {
-	font: 0/0 a;
-	margin: 0;
-	height: 25px;
-	}
+    font: 0/0 a;
+    margin: 0;
+    height: 25px;
+    }
 html body #es_pulldown.focus {
-	border: none;
-	}
-	html body #es_pulldown:after {
-		content: 'ES';
-		font: 12px/25px Arial;
-		display: inline-block;
-		vertical-align: middle;
-		}
+    border: none;
+    }
+    html body #es_pulldown:after {
+        content: 'ES';
+        font: 12px/25px Arial;
+        display: inline-block;
+        vertical-align: middle;
+        }
 
 html body .es_progress_wrap {
-	position: static;
-	}
+    position: static;
+    }
 html body #es_progress {
-	margin-top: 0;
-	position: absolute;
-	z-index: 1;
-	right: 0;
-	bottom: 2px;
-	height: 2px;
-	}
-	html body #es_progress.error,
-	html body #es_progress.complete {
-		width: 36px; /* avatar width */
-		animation: none;
-		}
-	html body #es_progress::-webkit-progress-bar {
-		border-radius: 0;
-		box-shadow: none;
-		}
-	html body #es_progress::-webkit-progress-value {
-		border-radius: 0;
-		box-shadow: none;
-		}
-	html body #es_progress.error::-webkit-progress-value {
-		border-radius: 0;
-		box-shadow: none;
-		}
+    margin-top: 0;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    border-bottom: none;
+    max-width: 36px; /* avatar width */
+    }
+    html body #es_progress.error,
+    html body #es_progress.complete {
+        width: 36px; /* avatar width */
+        }
+        html body #es_progress.error:before {
+            content: '';
+            }
+        html body #es_progress:not(.error):not(.complete)::-webkit-progress-value {
+            background: #333;
+            }
+        html body #es_progress.error::-webkit-progress-value,
+        html body #es_progress.complete::-webkit-progress-value {
+            height: 3px;
+            }
 
 html body #wishlist_sort_options {
-	}
-	html body #wishlist_sort_options .popup_menu_item:hover {
-		background-color: rgba(0, 0, 0, 0.1);
-		}
-	html body #wishlist_sort_options .popup_menu_item.active {
-		background-color: rgba(0, 0, 0, 0.2);
-		}
+    }
+    html body #wishlist_sort_options .popup_menu_item:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        }
+    html body #wishlist_sort_options .popup_menu_item.active {
+        background-color: rgba(0, 0, 0, 0.2);
+        }
 
 html body #es_sort_flyout {
-	}
-	html body #es_sort_flyout .popup_menu_item {
-		margin: 0;
-		}
+    }
+    html body #es_sort_flyout .popup_menu_item {
+        margin: 0;
+        }
 
 html body #es_permalink_div {
-	display: table;
-	width: 100%;
-	}
-	html body #es_permalink_div .count_link_label,
-	html body #es_permalink {
-		display: table-cell;
-		vertical-align: middle;
-		margin: 0;
-		height: 30px;
-		}
-	html body #es_permalink_div .count_link_label {
-		white-space: nowrap;
-		width: 1%;
-		padding-right: 10px;
-		}
-	html body #es_permalink {
-		width: 99%;
-		padding: 4px 6px;
-		text-overflow: ellipsis;
-		box-sizing: border-box;
-		}
+    display: table;
+    width: 100%;
+    }
+    html body #es_permalink_div .count_link_label,
+    html body .es_copy_wrap {
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0;
+        float: none;
+        }
+    html body .count_link_label {
+        white-space: nowrap;
+        width: 1%;
+        padding-right: 10px;
+        }
+    html body .es_copy_wrap {
+        width: 99%;
+        padding: 0 4px;
+        }
+    html body #es_permalink {
+        border: none;
+        box-shadow: none;
+        width: calc(100% - 30px);
+        }
 
 html body .search_area .popup_body .match.es_highlighted,
 html body .search_area .popup_body .match.es_highlighted .match_name {
-	color: #fff;
-	}
+    color: #fff;
+    }
 
 html body .es_game_purchase_action {
-	width: 80px;
-	text-align: center;
-	}
+    width: 80px;
+    text-align: center;
+    }
 
 
 /*
@@ -1831,26 +1835,25 @@ html body .es_game_purchase_action {
  *  ---------------------------------------------
  */
 html body .steamdb_self_profile {
-	margin: -8px -10px -6px;
-	width: auto;
-	height: 14px;
-	}
+    margin: -8px -10px -6px;
+    width: auto;
+    height: 14px;
+    }
 html body .item_actions[style^="height:"] {
-	height: auto !important;
-	}
+    height: auto !important;
+    }
 html body .item_actions[style^="height:"]:after {
-	content: ' ';
-	display: table;
-	clear: both;
-	}
+    content: ' ';
+    display: table;
+    clear: both;
+    }
 html body .item_actions[style^="height:"] .btn_small {
-	float: left;
-	width: calc(100% - 90px);
-	}
+    float: left;
+    width: calc(100% - 90px);
+    }
 html body .item_market_actions .es-btn-spacer {
-	display: none;
-	}
-
+    display: none;
+    }
 
 /* --- END --- */
 }
