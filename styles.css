@@ -4,7 +4,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2017-10-03
+ * Last update: 2017-10-20
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui/issues
@@ -191,6 +191,13 @@ html body .discovery_queue_overlay,
 html body .game_description_column .block .block_content a {
     border-color: rgba(255, 255, 255, 0.1);
     }
+html body .carousel_container.maincap .carousel_items,
+html body .home_area_spotlight,
+html body .carousel_container.spotlight .carousel_items > * .store_capsule,
+html body .store_capsule,
+html body .big_button {
+    box-shadow: none;
+    }
 html body .home_recommended_spotlight {
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 0;
@@ -251,13 +258,12 @@ html body .rightcol.game_meta_data .block_content_inner {
     border: none;
     }
 
-html body .review_box,
-html body .review_developer_response_container {
+html body .review_box {
     border: 1px solid rgba(255, 255, 255, 0.05);
     }
     html body .review_box .leftcol {
         float: none;
-        width: auto;
+        width: 300px;
         padding: 20px;
         }
     html body .review_box .rightcol {
@@ -268,23 +274,12 @@ html body .review_developer_response_container {
         }
     html body .review_box a.vote_header {
         float: right;
-        margin-top: -62px;
+        width: 230px;
+        margin: -62px 0 0;
         }
-html body .review_developer_response_container.multiple_listing {
-    margin-top: -27px;
-    }
-    html body .review_developer_response_container .leftcol,
-    html body .review_developer_response_container .rightcol {
-        float: none;
-        width: auto;
-        }
-    html body .review_developer_response_container .leftcol {
-        padding-left: 20px;
-        padding-right: 20px;
-        }
-    html body .review_developer_response_container .rightcol {
-        margin-left: 20px;
-        }
+        html body .review_box .vote_header .review_source {
+            margin-left: 10px;
+            }
 
 html body .game_description_column .block_header {
     border: none;
@@ -318,29 +313,44 @@ html body .dynamiclink_box {
     box-shadow: none;
     }
 
+html body #review_recent_events_container {
+    box-shadow: none;
+    }
 html body .user_reviews_header {
     background: none;
     }
-html body .user_reviews_summary_bar {
-    padding: 10px 10px 0;
-    background: rgba(42, 71, 94, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: none;
-    }
-html body .user_reviews_summary_bar.new {
-    margin-bottom: 0;
-    }
-html body .user_reviews_summary_bar .game_review_summary {
-    text-shadow: none;
-    }
-html body .user_reviews_filter_options {
-    background: rgba(42, 71, 94, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: none;
-    }
-    html body .user_reviews_filter_score {
-        border-top-color: rgba(255, 255, 255, 0.1);
+    html body #review_histograms_container {
+        box-shadow: none;
         }
+        html body .review_histogram_section .user_reviews_summary_bar {
+            border-bottom: none;
+            }
+        html body .review_histogram_section.recent {
+            box-shadow: none;
+            }
+    html body .user_reviews_summary_bar .game_review_summary {
+        text-shadow: none;
+        }
+    html body .user_reviews_filter_options {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        html body .user_reviews_filter_score {
+            border-top-color: rgba(255, 255, 255, 0.1);
+            }
+        html body .user_reviews_filter_score .game_review_summary:after {
+            content: '- ' attr(data-store-tooltip);
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 11px;
+            font-weight: lighter;
+            margin-left: 0.5em;
+            opacity: 0.6;
+            }
+    html body .user_reviews_filter_menu {
+        }
+        html body .user_reviews_filter_menu .title {
+            padding-top: 12px;
+            }
 
 html body .app_tag:hover,
 html body .app_tag.add_your_own:hover,
@@ -495,6 +505,12 @@ html body .profile_customization {
     background: rgba(34, 45, 62, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.05);
     }
+html body .profile_subpage_general .maincontent {
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-top: none;
+    background-color: rgba(33, 33, 33, 0.7);
+    box-shadow: none;
+    }
 
 html body #NamePopup.popup_block_new .popup_menu {
     background: rgba(0, 0, 0, 0.75);
@@ -561,7 +577,6 @@ html body .game_info_achievement_summary .ellipsis {
 html body .achieveBar,
 html body .achievementProgressBar,
 html body .achievement_progress_bar_ctn {
-    border: none;
     box-shadow: none;
     padding: 0;
     margin-right: 4px;
@@ -673,6 +688,13 @@ html body .profile_ban_status {
             text-decoration: underline;
             }
 
+html body .commentnotification {
+    background-image: none;
+    }
+    html body .commentnotification.unread {
+        background-color: rgba(103, 193, 245, 0.2);
+        }
+
 
 /*
  *  Inventory
@@ -773,6 +795,37 @@ html body #market_sell_buyercurrency_input {
     padding: 8px 10px;
     font-size: 14px;
     }
+
+
+/*
+ *  Trades
+ *  ---------------------------------------------
+ */
+
+html body .trade_confirmbtn {
+    color: #fff;
+    background: #799905;
+    }
+    html body .trade_confirmbtn:hover {
+        background: #A4D007;
+        }
+    html body .trade_confirmbtn .cap.left,
+    html body .trade_confirmbtn .cap.right {
+        display: none;
+        }
+
+html body div.appselect_options {
+    }
+    html body div.appselect_options div.option {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+html body #trade_action_popup_itemstaticsep {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    html body #trade_action_popup_itemstaticsep hr {
+        display: none;
+        }
 
 
 /*
@@ -886,7 +939,6 @@ html body #term {
  *  ---------------------------------------------
  */
 
-html body .checkout_content_box,
 html body .block_header,
 html body .block_content_inner {
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -926,7 +978,6 @@ html body #review_create .input_box {
     box-shadow: none;
     }
 html body .sharedfiles_usercontrols_label {
-    /* ui fix */
     vertical-align: middle;
     }
 html body blockquote.bb_blockquote {
@@ -987,8 +1038,12 @@ html body.v6.checkout .checkout_content_box h2 {
 html body .checkout_content_box h3.tab_header {
     padding: 0 15px;
     }
-html body .checkout_content .rule {
-    margin: 0;
+html body .cart_total_rule {
+    border-top-color: rgba(255, 255, 255, 0.1);
+    }
+
+html body .dailydeal_ctn {
+    box-shadow: none;
     }
 
 html body .checkout_gotsteam_area a.btn_blue {
@@ -1497,6 +1552,7 @@ html body .recent_game .game_info_stats,
 html body .favoritegame_showcase .game_info_stats,
 html body .showcase_content_bg,
 html body .game_purchase_action_bg,
+html body .user_reviews_active_filters .active_filter,
 html body #package_savings_bar,
 html body .authcode_entry_box,
 html body .twofactorauthcode_entry_box,
@@ -1531,11 +1587,15 @@ html body .group_list_option,
 html body .notice_box_content,
 html body .searchedForTerm,
 html body .showcase_stat.favoritegroup_inchat,
+html body .economy_popup_msg,
+html body .trade_box.trade_box_withbg > .trade_box_contents,
 html body #topSummaryBoxContent,
 html body .manage_actions_ctn,
 html body .forum_paging,
 html body .block_content,
 html body .jsTooltip,
+html body .notification_paging,
+html body .commentnotification,
 /* all tabs */
 html body .home_tab,
 html body .home_tab .tab_content,
@@ -1559,6 +1619,8 @@ html body .tabOff,
 html body .tabOn,
 html body .tab_filter,
 html body .tabarea .tab,
+html body .inventory_user_tab,
+html body a.inventory_user_tab,
 /* all progress bars */
 html body .achievement_progress_bar_ctn,
 html body .achievement_progress_bar_ctn .progress_bar,
@@ -1618,6 +1680,7 @@ html body a.forum_comment_action,
 html body .new_on_steam_button > div,
 html body a.votenow_btn,
 html body .checkout_gotsteam_area a.btn_blue,
+html body #btn_remote_install,
 /* all inputs */
 html body input[type="text"],
 html body input[type="password"],
@@ -1780,12 +1843,12 @@ html body #es_progress {
 
 html body #wishlist_sort_options {
     }
-    html body #wishlist_sort_options .popup_menu_item:hover {
-        background-color: rgba(0, 0, 0, 0.1);
+    html body #wishlist_sort_options .popup_block_new .popup_body {
+        padding: 0;
         }
-    html body #wishlist_sort_options .popup_menu_item.active {
-        background-color: rgba(0, 0, 0, 0.2);
-        }
+        html body #wishlist_sort_options .popup_menu_item {
+            color: #fff;
+            }
 
 html body #es_sort_flyout {
     }
@@ -1801,7 +1864,6 @@ html body #es_permalink_div {
     html body .es_copy_wrap {
         display: table-cell;
         vertical-align: middle;
-        margin: 0;
         float: none;
         }
     html body .count_link_label {
