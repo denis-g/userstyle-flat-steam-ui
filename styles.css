@@ -4,7 +4,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2017-10-20
+ * Last update: 2018-25-04
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui/issues
@@ -30,6 +30,8 @@ html body div#global_header {
     top: 0;
     width: 100%;
     z-index: 900;
+    padding-left: 0;
+    padding-right: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     box-sizing: border-box;
@@ -58,9 +60,9 @@ html body div#global_header {
             }
             html body div#global_header div.logo a {
                 display: block;
-                width: 140px;
+                width: 130px;
                 height: 48px; /* menu height */
-                background: url(http://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png) no-repeat 0 50%;
+                background: url(https://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png) no-repeat -12px 50%;
                 background-size: auto 34px;
                 opacity: 0.7;
                 }
@@ -71,15 +73,18 @@ html body div#global_header {
                 display: none;
                 }
         html body div#global_header .supernav_container {
-            left: 170px;
+            left: 140px;
             }
             html body div#global_header .menuitem {
-                width: 160px;
+                width: 170px;
                 text-align: center;
-                padding: 0 10px;
+                padding: 0 5px;
                 font-size: 13px;
                 line-height: 48px; /* menu height */
                 border-right: 1px solid rgba(255, 255, 255, 0.1);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 }
             html body div#global_header .menuitem:first-child {
                 border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -93,7 +98,7 @@ html body div#global_header {
                     font-size: 12px;
                     font-weight: normal;;
                     line-height: 1.1;
-                    padding: 10px 14px;
+                    padding: 10px 5px;
                     text-align: center;
                     }
                 html body div#global_header .submenuitem:not(:last-child) {
@@ -121,14 +126,13 @@ html body div#global_header {
             }
         /* user menu */
         html body #account_pulldown {
-            max-width: 66px;
+            max-width: 140px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             }
         html body #language_pulldown.focus,
         html body #account_pulldown.focus {
-            margin: 1px; /* revert to default */
             border: none;
             }
         html body div#global_action_menu .popup_block_new {
@@ -338,7 +342,7 @@ html body .user_reviews_header {
             border-top-color: rgba(255, 255, 255, 0.1);
             }
         html body .user_reviews_filter_score .game_review_summary:after {
-            content: '- ' attr(data-store-tooltip);
+            content: '- ' attr(data-tooltip-text);
             display: inline-block;
             vertical-align: middle;
             font-size: 11px;
@@ -381,28 +385,17 @@ html body .achieveRow:not(.unlocked) .compareImg {
  *  ---------------------------------------------
  */
 
-html body .gameListRow {
-    border: 1px solid rgba(255, 255, 255, 0.075);
+html body #wishlist_search {
+    vertical-align: top;
+    padding: 11px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
     }
-html body .wishlistRow {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-html body .wishlistRowItem {
-    overflow: inherit;
-    }
-html body #wishlist_items input.wishlist_rank {
-    font-size: 11px;
-    }
-html body #wishlist_items .price,
-html body #wishlist_items .discount_block_inline {
-    font-size: 16px;
-    }
-html body #wishlist_items .price {
-    color: #eee;
-    }
-html body input.wishlist_rank {
-    background: rgba(0, 0, 0, 0.6);
-    }
+    html body #wishlist_search:hover,
+    html body #wishlist_search:active {
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: none;
+        }
 
 
 /*
@@ -516,18 +509,19 @@ html body #NamePopup.popup_block_new .popup_menu {
     background: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(0, 0, 0, 0.4);
     }
-html body #NamePopup.popup_block_new .popup_menu > div:first-child:not(#NamePopupAliases) {
-    padding: 4px 12px 0;
-    font-size: 11px;
-    opacity: 0.5;
-    }
+    html body #NamePopup.popup_block_new .popup_menu > div:first-child:not(#NamePopupAliases) {
+        padding: 4px 12px 0;
+        font-size: 11px;
+        opacity: 0.5;
+        }
 
 html body .profile_header_actions {
     text-align: right;
     }
-html body .profile_header_actions .popup_menu a.popup_menu_item {
-    text-align: left;
-    }
+    html body .profile_header_actions .popup_menu a.popup_menu_item {
+        text-align: left;
+        }
+
 html body .btn_profile_action {
     display: inline-block;
     vertical-align: top;
@@ -536,31 +530,31 @@ html body .btn_profile_action {
     border: 1px solid rgba(0, 0, 0, 0.3);
     background: rgba(0, 0, 0, 0.2) !important;
     }
-html body .btn_profile_action:hover,
-html body .btn_profile_action.focus {
-    color: rgba(255, 255, 255, 0.8) !important;
-    border-color: rgba(0, 0, 0, 0.6);
-    background: rgba(0, 0, 0, 0.3) !important;
-    }
-html body .btn_profile_action > span {
-    font-size: 8px;
-    font-weight: bold;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 0.10em;
-    padding: 8px 10px 6px;
-    background: none !important;
-    }
-html body .btn_profile_action img {
-    vertical-align: middle;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    }
-html body .btn_profile_action > span,
-html body .btn_profile_action:hover > span,
-html body .btn_profile_action.focus > span {
-    background: none;
-    }
+    html body .btn_profile_action:hover,
+    html body .btn_profile_action.focus {
+        color: rgba(255, 255, 255, 0.8) !important;
+        border-color: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0.3) !important;
+        }
+    html body .btn_profile_action > span {
+        font-size: 8px;
+        font-weight: bold;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 0.10em;
+        padding: 8px 10px 6px;
+        background: none !important;
+        }
+    html body .btn_profile_action img {
+        vertical-align: middle;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        }
+    html body .btn_profile_action > span,
+    html body .btn_profile_action:hover > span,
+    html body .btn_profile_action.focus > span {
+        background: none;
+        }
 
 html body .game_info_achievement.plus_more,
 html body .showcase_achievement.plus_more {
@@ -756,9 +750,7 @@ html body #contextselect_options .context_name {
 html body .item_actions .btn_small,
 html body .item_owner_actions .btn_small,
 html body .item_scrap_actions .btn_small,
-html body .item_market_actions .btn_small,
-html body .item_market_actions .item_market_action_button,
-html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
+html body .item_market_actions .btn_small {
     display: block;
     height: auto;
     text-align: center;
@@ -768,18 +760,13 @@ html body .item_market_actions .item_market_action_button .item_market_action_bu
 html body .item_actions .btn_small > span,
 html body .item_owner_actions .btn_small > span,
 html body .item_scrap_actions .btn_small > span,
-html body .item_market_actions .btn_small > span,
-html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
+html body .item_market_actions .btn_small > span {
     float: none;
     height: auto;
     line-height: inherit;
     padding-top: 8px;
     padding-bottom: 8px;
     font-size: 14px;
-    }
-html body .item_market_actions .item_market_action_button .item_market_action_button_contents {
-    padding-left: 0;
-    padding-right: 0;
     }
 
 html body #market_sell_dialog_accept {
@@ -922,7 +909,7 @@ html body .searchbox:hover {
         height: 26px;
         right: 0;
         font: 0/0 a;
-        background: url('http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/searchbox_workshop_submit.gif') no-repeat 50%;
+        background: url('https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/searchbox_workshop_submit.gif') no-repeat 50%;
         }
         html body a#store_search_link img {
             display: none;
@@ -1707,6 +1694,8 @@ html body .newmodal_header,
 html body #modalContent.modal_frame,
 html body .screenshot_popup_modal_content,
 /* other elements */
+html body .wishlist_row .tag,
+html body #filters_container > div,
 html body .app_tag,
 html body .slider,
 html body .slider_ctn .slider_left,
@@ -1744,9 +1733,9 @@ html body .btn_addtocart .btn_addtocart_right {
 html body .header_installsteam_btn,
 /* duplicate links from main menu */
 html body div#global_header .menuitem[href^="https://help.steampowered.com/"],
-html body div#global_header .menuitem[href="http://store.steampowered.com/about/"],
-html body div#global_header .submenuitem[href="http://store.steampowered.com/"],
-html body div#global_header .submenuitem[href="http://steamcommunity.com/"] {
+html body div#global_header .menuitem[href="https://store.steampowered.com/about/"],
+html body div#global_header .submenuitem[href="https://store.steampowered.com/"],
+html body div#global_header .submenuitem[href="https://steamcommunity.com/"] {
     display: none !important;
     }
 
@@ -1774,22 +1763,14 @@ html body .performance-graph,
 html body .es-group-leave-button,
 html body .es_wishlist_total .game_purchase_action_bg,
 html body .es_games_filter input.gray_bevel,
-html body #es_progress,
 html body .es_input_number,
-html body .es_input_text {
+html body .es_input_text,
+html body #es_empty_wishlist,
+html body #es_progress,
+html body #es_progress .progress-inner-element,
+html body #es_progress .progress-bar,
+html body #es_progress .progress-value {
     border-radius: 0 !important;
-    }
-html body #es_progress::-webkit-progress-inner-element {
-    border-radius: 0;
-    }
-html body #es_progress::-webkit-progress-bar {
-    border-radius: 0;
-    }
-html body #es_progress::-webkit-progress-value {
-    border-radius: 0;
-    }
-html body #es_progress.error::-webkit-progress-value {
-    border-radius: 0;
     }
 
 @media (min-width: 1208px) and (max-width: 1440px) {
@@ -1830,24 +1811,8 @@ html body #es_progress {
     html body #es_progress.complete {
         width: 36px; /* avatar width */
         }
-        html body #es_progress.error:before {
-            content: '';
-            }
-        html body #es_progress:not(.error):not(.complete)::-webkit-progress-value {
-            background: #333;
-            }
-        html body #es_progress.error::-webkit-progress-value,
-        html body #es_progress.complete::-webkit-progress-value {
+        html body #es_progress .progress-value {
             height: 3px;
-            }
-
-html body #wishlist_sort_options {
-    }
-    html body #wishlist_sort_options .popup_block_new .popup_body {
-        padding: 0;
-        }
-        html body #wishlist_sort_options .popup_menu_item {
-            color: #fff;
             }
 
 html body #es_sort_flyout {
@@ -1859,12 +1824,14 @@ html body #es_sort_flyout {
 html body #es_permalink_div {
     display: table;
     width: 100%;
+    background: none;
     }
     html body #es_permalink_div .count_link_label,
     html body .es_copy_wrap {
         display: table-cell;
         vertical-align: middle;
         float: none;
+        border-radius: 0;
         }
     html body .count_link_label {
         white-space: nowrap;
@@ -1879,6 +1846,7 @@ html body #es_permalink_div {
         border: none;
         box-shadow: none;
         width: calc(100% - 30px);
+        padding: 4px 2px;
         }
 
 html body .search_area .popup_body .match.es_highlighted,
@@ -1916,6 +1884,62 @@ html body .item_actions[style^="height:"] .btn_small {
 html body .item_market_actions .es-btn-spacer {
     display: none;
     }
+
+
+/*
+ *  Extension support: Steam Economy Enhancer
+ *  ---------------------------------------------
+ */
+html body #see_settings {
+    background: none;
+    margin-right: 0;
+    height: 25px;
+    line-height: 28px;
+    }
+    html body #see_settings a {
+        font: 0/0 a;
+        color: #b8b6b4;
+        }
+    html body #see_settings a:hover {
+        color: #fff;
+        }
+    html body #see_settings a:after {
+        content: 'ES';
+        font: 12px/25px Arial;
+        }
+html body #listings_group {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    }
+    html body #listings_group > div {
+        width: 49%;
+        }
+    html body #listings_group > div:first-of-type {
+        float: left;
+        }
+    html body #listings_group > div:last-of-type {
+        float: right;
+        }
+html body #listings_sell,
+html body #listings_buy {
+    padding: 0 4px;
+    }
+html body .market_commodity_orders_table {
+    border-spacing: 0;
+    width: 100%;
+    }
+    html body .market_commodity_orders_table th,
+    html body .market_commodity_orders_table td {
+        padding: 3px 4px;
+        }
+    html body .market_commodity_orders_table td {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+html body .market_listing_table_header {
+    }
+    html body .market_listing_table_header span:not([class]) {
+        padding-left: 5px;
+        }
 
 /* --- END --- */
 }
