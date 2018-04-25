@@ -7,6 +7,7 @@ Make your Steam better!
 
 * [EnhancedSteam](http://enhancedsteam.com)
 * [SteamDB](https://steamdb.info/extension/)
+* [Steam Economy Enhancer](https://github.com/Nuklon/Steam-Economy-Enhancer)
 
 
 ## Overview
@@ -38,10 +39,6 @@ Make your Steam better!
 ###### User Badges: flat progress bars
 
 ![User Badges with Flat Steam UI](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/user_badges.jpg)
-
-###### User Wishlist: normalize toolbars
-
-![User Wishlist with Flat Steam UI](https://raw.githubusercontent.com/denis-g/userstyle-simply-steam-ui/master/screenshots/user_wishlist.jpg)
 
 ... and more!
 
