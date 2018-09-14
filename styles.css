@@ -3,12 +3,12 @@
 
 /*
  * Flat Steam UI
- * Created by Denis G. <http://github.com/denis-g/>
- * Last update: 2018-22-05
+ * Created by Denis G. <https://github.com/denis-g/>
+ * Last update: 2018-14-09
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui/issues
- * http://steamcommunity.com/groups/flat-steam-ui/discussions/0/133259227524504224/
+ * https://steamcommunity.com/groups/flat-steam-ui/discussions/0/133259227524504224/
  */
 
 /*
@@ -258,6 +258,9 @@ html body .rightcol.game_meta_data .block,
 html body .explore_rightcol_box {
     border: 1px solid rgba(255, 255, 255, 0.1);
     }
+html body .rightcol.game_meta_data .block {
+    padding: 14px;
+    }
 html body .rightcol.game_meta_data .block_content_inner {
     border: none;
     }
@@ -269,6 +272,10 @@ html body .review_box {
         float: none;
         width: 300px;
         padding: 20px;
+        opacity: 1;
+        }
+    html body .friend_reviews .review_box .leftcol {
+        margin-top: 0;
         }
     html body .review_box .rightcol {
         float: none;
@@ -281,8 +288,18 @@ html body .review_box {
         width: 230px;
         margin: -62px 0 0;
         }
+    html body .friend_reviews .review_box a.vote_header {
+        margin-top: -62px;
+        }
         html body .review_box .vote_header .review_source {
             margin-left: 10px;
+            }
+    html body .review_box .postedDate {
+        clear: both;
+        display: block;
+        }
+        html body .review_box .postedDate br {
+            display: none;
             }
 
 html body .game_description_column .block_header {
@@ -377,6 +394,7 @@ html body .game_hover .hover_arrow_right {
 
 html body .achieveRow:not(.unlocked) .compareImg {
     opacity: 0.5;
+    filter: blur(1px);
     }
 
 
@@ -408,11 +426,13 @@ html body .profile_xp_block {
     }
 html body .profile_xp_block_remaining_bar {
     height: 10px;
-    border: 1px solid #666;
+    padding: 1px;
+    border: 1px solid #76b7e4;
+    background: #232323;
     }
 html body .profile_xp_block_remaining_bar_progress {
     height: 10px;
-    background: #999;
+    background: #76b7e4;
     }
 html body .badge_row.is_link:hover,
 html body .badge_row.depressed {
@@ -448,6 +468,34 @@ html body .mainLoginPanel {
     border-radius: 0;
     background: rgba( 64, 128, 183, 0.4);
     }
+html body .authcode_entry_box,
+html body .twofactorauthcode_entry_box {
+    width: auto;
+    height: auto;
+    background-image: none;
+    }
+html body input.authcode_entry_input,
+html body input.twofactorauthcode_entry_input {
+    width: 100%;
+    padding: 14px 10px;
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.25em;
+    box-sizing: border-box;
+    }
+    html body input.authcode_entry_input::-webkit-input-placeholder,
+    html body input.twofactorauthcode_entry_input::-webkit-input-placeholder {
+        letter-spacing: normal;
+        font-size: 20px;
+        text-align: center;
+        }
+    html body input.authcode_entry_input::-moz-placeholder,
+    html body input.twofactorauthcode_entry_input::-moz-placeholder {
+        letter-spacing: normal;
+        font-size: 20px;
+        text-align: center;
+        }
 html body .help_section_content,
 html body .account_recovery_box {
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -562,9 +610,6 @@ html body .showcase_achievement.plus_more {
     -moz-box-shadow: none;
     box-shadow: none;
     }
-html body .achievement_progress_bar_ctn {
-    width: 130px;
-    }
 html body .game_info_achievement_summary .ellipsis {
     margin-left: 10px;
     }
@@ -572,10 +617,9 @@ html body .achieveBar,
 html body .achievementProgressBar,
 html body .achievement_progress_bar_ctn {
     box-shadow: none;
-    padding: 0;
-    margin-right: 4px;
-    border: 1px solid #666;
-    background: #58595e;
+    padding: 1px;
+    border: 1px solid #76b7e4;
+    background: #232323;
     }
 html body .achieveBar,
 html body .achievementProgressBar {
@@ -583,13 +627,15 @@ html body .achievementProgressBar {
     line-height: 10px;
     }
 html body .achievement_progress_bar_ctn {
+    width: 130px;
     height: 6px;
     line-height: 6px;
+    border-color: #323232;
     }
 html body .achieveBarProgress,
 html body .achievementProgressBar .progress,
 html body .achievement_progress_bar_ctn .progress_bar {
-    background: #999;
+    background: #76b7e4;
     filter: none;
     vertical-align: top;
     }
@@ -599,6 +645,7 @@ html body .achievementProgressBar .progress {
     }
 html body .achievement_progress_bar_ctn .progress_bar {
     height: 6px;
+    background: #364359;
     }
 html body .achieveBarProgress[style="width:100%;"],
 html body .achieveBarProgress[style="width: 100%;"],
@@ -688,6 +735,33 @@ html body .commentnotification {
     html body .commentnotification.unread {
         background-color: rgba(103, 193, 245, 0.2);
         }
+
+/* statistics page */
+html body #topSummaryBox {
+    }
+    html body #topSummaryBox > img {
+        display: none;
+        }
+html body .charHolder_on,
+html body .charHolder_off {
+    font: 0/0 a;
+    width: auto;
+    height: auto;
+    padding: 1px;
+    margin-right: 2px;
+    border: 2px solid #333;
+    }
+html body .charHolder_on {
+    border-color: #fff;
+    background: none;
+    }
+    html body .charImg {
+        position: static;
+        }
+html body #statsContainer {
+    clear: both;
+    padding-top: 30px;
+    }
 
 
 /*
@@ -1400,7 +1474,9 @@ html body .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_activ
 
 html body .sectionTab.active,
 html body .tabOn,
+html body .subtabOnC,
 html body .group_tab.active {
+    color: #fff;
     background: #417B9C;
     }
     html body .sectionTab.active > span,
@@ -1428,6 +1504,20 @@ html body .tab_see_more {
 html body .tab_filter {
     background: #8aaf05;
     }
+html body #tabs {
+    }
+    html body #tabs .tab {
+        margin-right: 4px;
+        }
+html body #subtabs {
+    }
+    html body .subtabOnC,
+    html body .subtabOffC {
+        padding: 6px 20px 1px;
+        }
+    html body .subtabOffC {
+        background: #3a3a3a;
+        }
 
 html body .grouppage_header {
     border-bottom-width: 2px;
@@ -1711,6 +1801,15 @@ html body a.pagebtn {
 html body .alertbox_header {
     background: #5c7e10;
     }
+/* remove tabs background */
+html body .tabOnL,
+html body .tabOnR,
+html body .tabOffL,
+html body .tabOffR,
+html body .subtabOnL,
+html body .subtabOnR,
+html body .subtabOffL,
+html body .subtabOffR,
 /* remove buttons background */
 html body .apphub_BackToTopButton.leftcap,
 html body .apphub_BackToTopButton.rightcap,
