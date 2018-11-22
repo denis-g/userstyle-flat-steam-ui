@@ -4,7 +4,7 @@
 /*
  * Flat Steam UI
  * Created by Denis G. <https://github.com/denis-g/>
- * Last update: 2018-14-09
+ * Last update: 2018-22-11
  *
  * Use GitHub or Steam Group for submit your request or issues.
  * https://github.com/denis-g/userstyle-flat-steam-ui/issues
@@ -60,9 +60,9 @@ html body div#global_header {
             }
             html body div#global_header div.logo a {
                 display: block;
-                width: 60px;
+                width: 80px;
                 height: 48px; /* menu height */
-                background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233 233"><path fill="%23cccccc" d="m4.8911 150.01c14.393 48.01 58.916 82.99 111.61 82.99 64.34 0 116.5-52.16 116.5-116.5 0-64.341-52.16-116.5-116.5-116.5-61.741 0-112.26 48.029-116.25 108.76 7.5391 12.66 10.481 20.49 4.6411 41.25z" /><path d="m110.5 87.322c0 0.196 0 0.392 0.01 0.576l-28.508 41.412c-4.618-0.21-9.252 0.6-13.646 2.41-1.937 0.79-3.752 1.76-5.455 2.88l-62.599-25.77c0.00049 0-1.4485 23.83 4.588 41.59l44.254 18.26c2.222 9.93 9.034 18.64 19.084 22.83 16.443 6.87 35.402-0.96 42.242-17.41 1.78-4.3 2.61-8.81 2.49-13.31l40.79-29.15c0.33 0.01 0.67 0.02 1 0.02 24.41 0 44.25-19.9 44.25-44.338 0-24.44-19.84-44.322-44.25-44.322-24.4 0-44.25 19.882-44.25 44.322zm-6.84 83.918c-5.294 12.71-19.9 18.74-32.596 13.45-5.857-2.44-10.279-6.91-12.83-12.24l14.405 5.97c9.363 3.9 20.105-0.54 23.997-9.9 3.904-9.37-0.525-20.13-9.883-24.03l-14.891-6.17c5.746-2.18 12.278-2.26 18.381 0.28 6.153 2.56 10.927 7.38 13.457 13.54s2.52 12.96-0.04 19.1m51.09-54.38c-16.25 0-29.48-13.25-29.48-29.538 0-16.275 13.23-29.529 29.48-29.529 16.26 0 29.49 13.254 29.49 29.529 0 16.288-13.23 29.538-29.49 29.538m-22.09-29.583c0-12.253 9.92-22.191 22.14-22.191 12.23 0 22.15 9.938 22.15 22.191 0 12.254-9.92 22.183-22.15 22.183-12.22 0-22.14-9.929-22.14-22.183z" /></svg>') no-repeat 50%;
+                background: url('data:image/svg+xml;utf8,<svg%20xmlns="http://www.w3.org/2000/svg"%20viewBox="0%200%20233%20233"><path%20fill="%23cccccc"%20d="m4.8911%20150.01c14.393%2048.01%2058.916%2082.99%20111.61%2082.99%2064.34%200%20116.5-52.16%20116.5-116.5%200-64.341-52.16-116.5-116.5-116.5-61.741%200-112.26%2048.029-116.25%20108.76%207.5391%2012.66%2010.481%2020.49%204.6411%2041.25z"%20/><path%20d="m110.5%2087.322c0%200.196%200%200.392%200.01%200.576l-28.508%2041.412c-4.618-0.21-9.252%200.6-13.646%202.41-1.937%200.79-3.752%201.76-5.455%202.88l-62.599-25.77c0.00049%200-1.4485%2023.83%204.588%2041.59l44.254%2018.26c2.222%209.93%209.034%2018.64%2019.084%2022.83%2016.443%206.87%2035.402-0.96%2042.242-17.41%201.78-4.3%202.61-8.81%202.49-13.31l40.79-29.15c0.33%200.01%200.67%200.02%201%200.02%2024.41%200%2044.25-19.9%2044.25-44.338%200-24.44-19.84-44.322-44.25-44.322-24.4%200-44.25%2019.882-44.25%2044.322zm-6.84%2083.918c-5.294%2012.71-19.9%2018.74-32.596%2013.45-5.857-2.44-10.279-6.91-12.83-12.24l14.405%205.97c9.363%203.9%2020.105-0.54%2023.997-9.9%203.904-9.37-0.525-20.13-9.883-24.03l-14.891-6.17c5.746-2.18%2012.278-2.26%2018.381%200.28%206.153%202.56%2010.927%207.38%2013.457%2013.54s2.52%2012.96-0.04%2019.1m51.09-54.38c-16.25%200-29.48-13.25-29.48-29.538%200-16.275%2013.23-29.529%2029.48-29.529%2016.26%200%2029.49%2013.254%2029.49%2029.529%200%2016.288-13.23%2029.538-29.49%2029.538m-22.09-29.583c0-12.253%209.92-22.191%2022.14-22.191%2012.23%200%2022.15%209.938%2022.15%2022.191%200%2012.254-9.92%2022.183-22.15%2022.183-12.22%200-22.14-9.929-22.14-22.183z"%20/></svg>') no-repeat 0 50%;
                 background-size: auto 32px;
                 opacity: 0.7;
                 }
@@ -76,9 +76,9 @@ html body div#global_header {
             left: 60px;
             }
             html body div#global_header .menuitem {
-                width: 180px;
+                max-width: 170px;
                 text-align: center;
-                padding: 0 5px;
+                padding: 0 20px;
                 font-size: 13px;
                 line-height: 48px; /* menu height */
                 border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -93,13 +93,32 @@ html body div#global_header {
                 color: #000;
                 background: #ccc;
                 }
+                html body div#global_header .menuitem[href="https://steamcommunity.com/chat/"] {
+                    font: 0/0 a;
+                    width: auto;
+                    }
+                html body div#global_header .menuitem[href="https://steamcommunity.com/chat/"]:hover {
+                    background: none;
+                    }
+                    html body div#global_header .menuitem[href="https://steamcommunity.com/chat/"]:before {
+                        content: '';
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 20px;
+                        height: 48px; /* menu height */
+                        background: url('data:image/svg+xml;utf8,<svg%20xmlns="http://www.w3.org/2000/svg"%20viewBox="0%200%20297%20297"><path%20fill="%23cccccc"%20d="M206.093,181.516c17.379,0,31.515-14.138,31.515-31.515V54.593c0-17.378-14.136-31.518-31.515-31.518H31.51C14.135,23.075,0,37.215,0,54.593v95.408c0,17.377,14.135,31.515,31.51,31.515h22.933v32.988c0,4.012,2.416,7.627,6.121,9.162c1.228,0.507,2.516,0.753,3.792,0.753c2.58,0,5.117-1.007,7.014-2.904l39.991-39.999H206.093z"/><path%20fill="%23cccccc"%20d="M269.415,105.583h-15.944v44.418c0,26.125-21.253,47.378-47.378,47.378h-88.161l-18.537,18.542c2.234,12.987,13.567,22.902,27.181,22.902h76.762l32.191,32.196c1.896,1.897,4.434,2.905,7.014,2.905c1.276,0,2.564-0.249,3.792-0.756c3.705-1.535,6.12-5.149,6.12-9.16v-25.186h16.961c15.211,0,27.585-12.378,27.585-27.591v-78.061C297,117.959,284.626,105.583,269.415,105.583z"/></svg>') no-repeat 50%;
+                        background-size: auto 20px;
+                        opacity: 0.7;
+                        }
+                    html body div#global_header .menuitem[href="https://steamcommunity.com/chat/"]:hover:before {
+                        opacity: 1;
+                        }
                 html body div#global_header .submenuitem {
                     color: #8F98A0;
                     font-size: 12px;
                     font-weight: normal;;
                     line-height: 1.1;
-                    padding: 10px 5px;
-                    text-align: center;
+                    padding: 10px 20px;
                     }
                 html body div#global_header .submenuitem:not(:last-child) {
                     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -266,12 +285,18 @@ html body .rightcol.game_meta_data .block_content_inner {
     }
 
 html body .review_box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
     }
+    html body .review_box_content {
+        position: relative;
+        }
     html body .review_box .leftcol {
         float: none;
         width: 300px;
         padding: 20px;
+        margin: 0;
         opacity: 1;
         }
     html body .friend_reviews .review_box .leftcol {
@@ -282,24 +307,54 @@ html body .review_box {
         width: auto;
         padding: 0 20px;
         margin: 0;
+        overflow: inherit;
+        position: static;
         }
-    html body .review_box a.vote_header {
+    html body .review_box .vote_header {
         float: right;
         width: 230px;
-        margin: -62px 0 0;
+        margin: 0;
+        position: absolute;
+        top: 20px;
+        right: 20px;
         }
-    html body .friend_reviews .review_box a.vote_header {
-        margin-top: -62px;
+    html body .review_box .content {
+        margin: 0;
         }
-        html body .review_box .vote_header .review_source {
-            margin-left: 10px;
-            }
+    html body .review_box blockquote.bb_blockquote,
+    html body .review_box .bb_wysiwyg blockquote {
+        margin: 0 0 10px;
+        }
+    html body .review_box .posted {
+        margin-left: 0;
+        margin-right: 0;
+        }
     html body .review_box .postedDate {
         clear: both;
         display: block;
         }
         html body .review_box .postedDate br {
             display: none;
+            }
+    html body .review_box .control_block {
+        padding-left: 0;
+        padding-right: 0;
+        }
+
+html body .review_page_content {
+    }
+    html body .review_page_content #leftContents {
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        html body .review_page_content .ratingSummaryBlock {
+            padding: 20px 20px 0;
+            }
+        html body .review_page_content .review_area {
+            padding: 20px;
+            }
+        html body .review_page_content .commentthread_area {
+            padding: 0 20px 20px;
             }
 
 html body .game_description_column .block_header {
@@ -543,8 +598,9 @@ html body .profile_background_overlay_content {
     -webkit-backdrop-filter: saturate(150%) blur(5px);
     }
 html body .profile_customization {
-    background: rgba(34, 45, 62, 0.85);
+    background: rgba(34, 45, 62, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
     }
 html body .profile_subpage_general .maincontent {
     border: 1px solid rgba(255, 255, 255, 0.075);
@@ -603,6 +659,11 @@ html body .btn_profile_action {
     html body .btn_profile_action.focus > span {
         background: none;
         }
+
+html body .showcase_stat.favoritegroup_inchat {
+    background: rgba(34, 45, 62, 0.4);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
 
 html body .game_info_achievement.plus_more,
 html body .showcase_achievement.plus_more {
@@ -664,13 +725,21 @@ html body .profile_header_badge {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    border-color: #333;
+    border-color: rgba(20, 20, 20, 0.35);
     }
-html body .recent_game .game_info_stats,
-html body .favoritegame_showcase .game_info_stats {
-    border-top: none;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+html body .profile_header_badge {
+    background: rgba(30, 30, 30, 0.6);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+}
+html body .recent_game {
+    background: rgba(20, 20, 20, 0.75);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
     }
+    html body .recent_game .game_info_stats,
+    html body .favoritegame_showcase .game_info_stats {
+        border-top: none;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
 html body .blotter_status_entry .commentthread_entry {
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -734,6 +803,21 @@ html body .commentnotification {
     }
     html body .commentnotification.unread {
         background-color: rgba(103, 193, 245, 0.2);
+        }
+
+
+html body .profile_comment_area .commentthread_header,
+html body .profile_leftcol_header {
+    background: rgba(30, 30, 30, 0.6);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
+
+html body .profile_comment_area .commentthread_entry_quotebox {
+    background: rgba(44, 44, 44, 0.6);
+    -webkit-backdrop-filter: saturate(150%) blur(5px);
+    }
+    html body .profile_comment_area .commentthread_textarea {
+        background: transparent;
         }
 
 /* statistics page */
@@ -1062,11 +1146,23 @@ html body #ig_bottom .sidebar .detailPanel {
 html body .guideTop {
     border: 1px solid rgba(255, 255, 255, 0.1);
     }
-html body .guideTop .workshopItemControls {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    }
+    html body .guideTop .workshopItemControls {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        }
+    html body .guideTop .workshopItemControlsCtn.fixed_in_scroll {
+        top: 48px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        html body .guideTop .workshopItemControlsCtn.fixed_in_scroll .workshopItemControls {
+            background: #1b2838;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            }
+    html body .responsive_OnClickDismissMenu.fixed_in_scroll {
+        top: 105px !important;
+        }
 
 html body .membercount.members {
     width: 105px;
@@ -1102,6 +1198,9 @@ html body .checkout_content_box h3.tab_header {
 html body .cart_total_rule {
     border-top-color: rgba(255, 255, 255, 0.1);
     }
+html body .cart_tab_left_on {
+    top: 99%;
+    }
 
 html body .dailydeal_ctn {
     box-shadow: none;
@@ -1112,11 +1211,28 @@ html body .checkout_gotsteam_area a.btn_blue {
     width: auto;
     display: block;
     text-align: center;
+    background: rgba(102, 192, 244, 0.2);
+    }
+html body .checkout_gotsteam_area a.btn_blue:hover {
+    background: #2f89bc;
     }
 html body .checkout_gotsteam_area a.btn_blue.leftbtn {
     margin-right: 0;
     margin-bottom: 10px;
     }
+html body #btn_remote_install {
+    float: none;
+    display: block;
+    width: auto;
+    text-align: center;
+    background: rgba(121, 153, 5, 0.8);
+    }
+html body #btn_remote_install:hover {
+    background: #a4d007;
+    }
+    html body .cart_clientconn_icon {
+        float: none;
+        }
 
 html body .card_drop_info_progress_bar_ctn {
     border: 1px solid rgba(0, 0, 0, 0.7);
@@ -1146,6 +1262,24 @@ html body .warningSign {
     }
 html body .friendlyInterstital .warningSign {
     background: #E3BA14;
+    }
+
+
+/*
+ *  Groups
+ *  ---------------------------------------------
+ */
+
+html body .groupadmin_announcement_controls {
+    padding-bottom: 0;
+    background: rgba(30, 30, 30, 0.6);
+    }
+    html body .groupadmin_announcement_controls .btn_medium {
+        margin-bottom: 10px;
+        }
+
+html body .forum_manage_actions .btn_medium {
+    margin-left: 10px;
     }
 
 
@@ -1599,6 +1733,10 @@ html body select.gray_bevel {
             appearance: none;
     }
 
+html body .commentthread_textarea {
+    font-size: 12px;
+    }
+
 
 /*
  *  Squared
@@ -1673,6 +1811,10 @@ html body .block_content,
 html body .jsTooltip,
 html body .notification_paging,
 html body .commentnotification,
+html body .franchise_notice,
+html body .dynamiclink_box,
+html body .profile_comment_area .commentthread_header,
+html body .profile_leftcol_header,
 /* all tabs */
 html body .home_tab,
 html body .home_tab .tab_content,
@@ -1832,7 +1974,8 @@ html body .btn_addtocart .btn_addtocart_right {
 html body .header_installsteam_btn,
 /* duplicate links from main menu */
 html body div#global_header .menuitem[href^="https://help.steampowered.com/"],
-html body div#global_header .menuitem[href="https://store.steampowered.com/about/"],
+html body div#global_header .submenuitem[href="https://store.steampowered.com/explore/"],
+html body div#global_header .submenuitem[href="https://store.steampowered.com/about/"],
 html body div#global_header .submenuitem[href="https://store.steampowered.com/"],
 html body div#global_header .submenuitem[href="https://steamcommunity.com/"] {
     display: none !important;
